@@ -50,9 +50,9 @@
 <!-- Progress Stepper -->
 <div class="w-full flex justify-between items-start relative mb-10">
 <div class="absolute top-5 left-0 w-full h-0.5 bg-slate-200 dark:bg-slate-700 -z-10"></div>
-<!-- Step 1 -->
+<!-- Step 1 - Activo (en progreso, no completado) -->
 <div class="flex flex-col items-center gap-2 bg-background-light dark:bg-background-dark px-2">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold ring-4 ring-white dark:ring-background-dark">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 border-2 border-primary flex items-center justify-center text-primary font-bold ring-4 ring-primary/20">
                         1
                     </div>
 <span class="text-xs sm:text-sm step-active">Datos personales</span>
@@ -75,7 +75,7 @@
 </header>
 <!-- Registration Form -->
 <main class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 sm:p-8">
-<form action="#" class="space-y-8" method="POST" onsubmit="event.preventDefault(); window.location.href='1.5 Verificación de Correo.html'; return false;">
+<form action="#" class="space-y-8" method="POST" onsubmit="event.preventDefault(); window.location.href='1.3.5 Formulario de Registro Ubicacion (Comprador).html'; return false;">
 <!-- Section 1: Personal Data -->
 <section>
 <h2 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
@@ -129,37 +129,6 @@
 <label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="confirm-password">Confirmar contraseña <span class="text-red-500">*</span></label>
 <input class="w-full px-3 py-2 border border-red-500 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none text-slate-900 dark:text-slate-100" id="confirm-password" name="confirm-password" required="" type="password" value="password124"/>
 <p class="text-xs text-red-600 mt-1 font-medium">Las contraseñas no coinciden</p>
-</div>
-</section>
-<hr class="border-slate-200 dark:border-slate-800"/>
-<!-- Section 2: Location -->
-<section>
-<h2 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">location_on</span>
-                        Paso 2: Ubicación
-                    </h2>
-<div class="space-y-4">
-<div class="flex flex-col gap-1.5">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="departamento">Departamento</label>
-<select class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="departamento" name="departamento">
-<option disabled="" selected="" value="">Selecciona un departamento</option>
-<option value="san-salvador">San Salvador</option>
-<option value="la-libertad">La Libertad</option>
-<option value="santa-ana">Santa Ana</option>
-</select>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="municipio">Municipio</label>
-<select class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="municipio" name="municipio">
-<option disabled="" selected="" value="">Selecciona un municipio</option>
-</select>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="distrito">Distrito/Zona</label>
-<select class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="distrito" name="distrito">
-<option disabled="" selected="" value="">Selecciona un distrito</option>
-</select>
-</div>
 </div>
 </section>
 <!-- Navigation Buttons -->
