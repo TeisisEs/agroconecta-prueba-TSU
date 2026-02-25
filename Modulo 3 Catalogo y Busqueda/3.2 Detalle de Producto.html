@@ -31,40 +31,74 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<body class="bg-background-light font-display text-slate-900 min-h-screen">
 <!-- Top Navbar -->
-<header class="sticky top-0 z-50 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm">
-<div class="max-w-[1280px] mx-auto px-4 h-16 flex items-center justify-between gap-8">
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between gap-6">
 <!-- Logo -->
-<div class="flex items-center gap-2 shrink-0 cursor-pointer" onclick="window.location.href='3.1 Home  Catálogo General.html'">
+<a href="3.1 Home  Catálogo General.html" class="flex items-center gap-2 shrink-0" style="text-decoration:none;">
 <span class="material-symbols-outlined text-primary text-3xl">eco</span>
-<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">AgroConecta</h1>
-</div>
+<h1 class="text-xl font-extrabold tracking-tight text-primary">AgroConecta</h1>
+</a>
 <!-- Search Bar -->
-<div class="flex-1 max-w-2xl relative">
+<div class="flex-1 max-w-xl">
+<div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm" placeholder="Buscar productos orgánicos, herramientas..." type="text"/>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Buscar productos, comercios..." type="text"/>
+</div>
 </div>
 <!-- Actions -->
-<div class="flex items-center gap-4 shrink-0">
-<button class="relative p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<div class="flex items-center gap-3 shrink-0">
+<button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative">
 <span class="material-symbols-outlined">notifications</span>
-<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
 </button>
-<button class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html'">
+<button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html'">
 <span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">3</span>
 </button>
-<div class="h-8 w-px bg-slate-200 dark:bg-slate-700 mx-1"></div>
-<div class="flex items-center gap-2 cursor-pointer group">
-<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border border-primary/20">
-<img class="w-full h-full object-cover" data-alt="User profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlVHxW1ZG45WXyRva9KscNC2MG0JYLzHCllBY-dqj2KRR_M2b7n8vKI6WdtQv-dBXKyLppxzeabk5SPZXjlnIkCFMA5lDmr84RrX_z_tGgOWpBeoaObRs7HXx6UfLAvL2Y80CKc7bg2IaL1CrTh839-QIx9-B6s0I7dl3fD2Ua--FVfGCNd3zSR3ZVZqknUiDysLKtfKqa7rsxSDKNK_gLOgt-hvwwjQo2GHxdCvy75HdFME6NZwvL4Xm5G_Pex0GLthTb2BysFf8"/>
+<div class="h-8 w-px bg-slate-200 mx-1"></div>
+<div class="relative" id="profileDropdown">
+<div class="flex items-center gap-2 cursor-pointer" onclick="document.getElementById('profileMenu').classList.toggle('hidden')">
+<div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg">person</span>
 </div>
-<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">expand_more</span>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+<div id="profileMenu" class="hidden absolute right-0 top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
+<div class="px-4 py-3 border-b border-slate-100">
+<p class="text-sm font-semibold text-slate-900">María García</p>
+<p class="text-xs text-slate-500">Comprador</p>
+</div>
+<a href="../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+Mis Pedidos
+</a>
+<a href="../Modulo 1 Autenticacion y Usuarios/1.6 Mi Perfil.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">person</span>
+Mi Perfil
+</a>
+<div class="border-t border-slate-100 my-1"></div>
+<p class="px-4 py-1 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Cambiar rol</p>
+<a href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg text-secondary">storefront</span>
+Modo Vendedor
+</a>
+<a href="../Modulo 9 Panel Administrador/9.1 Dashboard del Administrador.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg text-orange-600">admin_panel_settings</span>
+Modo Administrador
+</a>
+<div class="border-t border-slate-100 my-1"></div>
+<a href="../Modulo 1 Autenticacion y Usuarios/1.1 login.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors">
+<span class="material-symbols-outlined text-lg">logout</span>
+Cerrar sesión
+</a>
+</div>
 </div>
 </div>
 </div>
 </header>
-<main class="max-w-[1280px] mx-auto px-4 py-6">
+<main class="max-w-[1280px] mx-auto px-6 py-8">
 <!-- Breadcrumb -->
 <nav class="flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400 mb-8">
 <a class="hover:text-primary" href="3.1 Home  Catálogo General.html">Inicio</a>
@@ -228,7 +262,7 @@
 <span class="material-symbols-outlined text-primary">eco</span>
 <span class="font-bold text-slate-900 dark:text-white">AgroConecta</span>
 </div>
-<p class="text-slate-500 text-sm">© 2024 AgroConecta Marketplace. Conectando agricultores con el mundo.</p>
+<p class="text-slate-500 text-sm">© 2026 AgroConecta Marketplace. Conectando agricultores con el mundo.</p>
 </div>
 </footer>
 </body></html>

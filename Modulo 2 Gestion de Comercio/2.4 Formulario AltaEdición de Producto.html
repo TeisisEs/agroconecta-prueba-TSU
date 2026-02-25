@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="light" lang="es"><head>
+<html lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Nuevo Producto - AgroConecta</title>
@@ -8,95 +8,117 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#2E7D32",
-                        "secondary": "#00695C",
-                        "background-light": "#FAFAFA",
-                        "background-dark": "#141e15",
-                    },
-                    fontFamily: {
-                        "display": ["Inter"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#2E7D32",
+                    "secondary": "#00695C",
+                    "background-light": "#FAFAFA",
+                    "background-dark": "#141e15",
+                },
+                fontFamily: {
+                    "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
                 },
             },
-        }
-    </script>
+        },
+    }
+</script>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .sidebar-active { background-color: #00695C; color: white; }
+</style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex">
+<body class="bg-background-light font-display text-slate-900">
+<div class="flex min-h-screen">
 <!-- Fixed Sidebar -->
-<aside class="w-[240px] fixed h-screen bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col z-50">
-<div class="p-6">
-<div class="flex flex-col items-center gap-3 mb-8">
-<div class="size-16 rounded-full bg-secondary/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-secondary text-3xl">eco</span>
-</div>
-<div class="text-center">
-<h2 class="text-slate-900 dark:text-slate-100 font-bold text-sm">Finca El Provenir</h2>
-<span class="inline-block mt-1 px-2 py-0.5 bg-secondary text-white text-[10px] font-bold uppercase tracking-wider rounded">Vendedor</span>
-</div>
-</div>
-<nav class="flex flex-col gap-1">
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="2.1 Dashboard del Vendedor.html">
-<span class="material-symbols-outlined text-[20px]">dashboard</span>
-<span class="text-sm font-medium">Inicio / Dashboard</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="2.2 RegistroEdicion de Comercio.html">
-<span class="material-symbols-outlined text-[20px]">storefront</span>
-<span class="text-sm font-medium">Mi Comercio</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-secondary text-white" href="2.3  Lista de Productos del Vendedor.html">
-<span class="material-symbols-outlined text-[20px]">inventory_2</span>
-<span class="text-sm font-medium">Mis Productos</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="../Modulo 4 Pedidos y Carrito/4.4 Bandeja de Pedidos (Vendedor).html">
-<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
-<span class="text-sm font-medium">Pedidos</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">
-<span class="material-symbols-outlined text-[20px]">local_shipping</span>
-<span class="text-sm font-medium">Entregas</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="../Modulo 7 Gestion Documental/7.1 Centro de Documentos.html">
-<span class="material-symbols-outlined text-[20px]">description</span>
-<span class="text-sm font-medium">Documentos</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="../Modulo 8 Reportes e indicadores/8.1 Reportes de Ventas.html">
-<span class="material-symbols-outlined text-[20px]">bar_chart</span>
-<span class="text-sm font-medium">Reportes</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
-<span class="material-symbols-outlined text-[20px]">settings</span>
-<span class="text-sm font-medium">Configuración</span>
-</a>
-</nav>
-</div>
-<div class="mt-auto p-4 border-t border-slate-100 dark:border-slate-800">
-<a class="flex items-center gap-3 px-3 py-2 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors" href="../Modulo 1 Autenticacion y Usuarios/1.1 login.html">
-<span class="material-symbols-outlined text-[20px]">logout</span>
-<span class="text-sm font-medium">Cerrar sesión</span>
-</a>
-</div>
+<aside class="w-[240px] fixed inset-y-0 left-0 bg-white border-r border-slate-200 flex flex-col z-50">
+    <div class="p-6">
+        <div class="flex flex-col items-center gap-3 mb-8">
+            <div class="size-16 rounded-full bg-secondary/10 flex items-center justify-center">
+                <span class="material-symbols-outlined text-secondary text-3xl">eco</span>
+            </div>
+            <div class="text-center">
+                <h2 class="text-slate-900 font-bold text-sm">Finca El Provenir</h2>
+                <span class="inline-block mt-1 px-2 py-0.5 bg-secondary text-white text-[10px] font-bold uppercase tracking-wider rounded">Vendedor</span>
+            </div>
+        </div>
+        <nav class="flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="2.1 Dashboard del Vendedor.html">
+                <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                <span class="text-sm font-medium">Dashboard</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="2.2 RegistroEdicion de Comercio.html">
+                <span class="material-symbols-outlined text-[20px]">storefront</span>
+                <span class="text-sm font-medium">Mi Comercio</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-active" href="2.3  Lista de Productos del Vendedor.html">
+                <span class="material-symbols-outlined text-[20px]">inventory_2</span>
+                <span class="text-sm font-medium">Mis Productos</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 4 Pedidos y Carrito/4.4 Bandeja de Pedidos (Vendedor).html">
+                <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                <span class="text-sm font-medium">Pedidos</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">
+                <span class="material-symbols-outlined text-[20px]">local_shipping</span>
+                <span class="text-sm font-medium">Entregas</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 7 Gestion Documental/7.1 Centro de Documentos.html">
+                <span class="material-symbols-outlined text-[20px]">description</span>
+                <span class="text-sm font-medium">Documentos</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 8 Reportes e indicadores/8.1 Reportes de Ventas.html">
+                <span class="material-symbols-outlined text-[20px]">bar_chart</span>
+                <span class="text-sm font-medium">Reportes</span>
+            </a>
+        </nav>
+    </div>
+    <div class="mt-auto p-4 border-t border-slate-100">
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="#">
+            <span class="material-symbols-outlined text-[20px]">settings</span>
+            <span class="text-sm font-medium">Configuración</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors mt-1" href="../Modulo 1 Autenticacion y Usuarios/1.1 login.html">
+            <span class="material-symbols-outlined text-[20px]">logout</span>
+            <span class="text-sm font-medium">Cerrar sesión</span>
+        </a>
+    </div>
 </aside>
 <!-- Main Content Area -->
-<main class="ml-[240px] flex-1 flex flex-col min-h-screen relative bg-[#FAFAFA] dark:bg-background-dark/50">
+<main class="flex-1 ml-[240px]">
 <!-- Header Section -->
-<header class="p-8 pb-4">
-<nav class="flex text-sm text-slate-500 dark:text-slate-400 mb-4 items-center gap-2">
-<a class="hover:text-primary" href="2.1 Dashboard del Vendedor.html">Inicio</a>
-<span class="material-symbols-outlined text-xs">chevron_right</span>
-<a class="hover:text-primary" href="2.3  Lista de Productos del Vendedor.html">Mis Productos</a>
-<span class="material-symbols-outlined text-xs">chevron_right</span>
-<span class="text-primary font-medium">Nuevo Producto</span>
-</nav>
-<h1 class="text-3xl font-extrabold text-[#2E7D32] dark:text-[#4caf50]">Nuevo Producto</h1>
-</header>
+    <header class="sticky top-0 bg-white border-b border-slate-200 z-40 px-8 h-16 flex items-center justify-between">
+        <div>
+            <nav class="flex items-center text-xs text-slate-400 font-medium uppercase tracking-wider gap-1">
+                <a class="hover:text-primary" href="2.1 Dashboard del Vendedor.html">Inicio</a>
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                <a class="hover:text-primary" href="2.3  Lista de Productos del Vendedor.html">Mis Productos</a>
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                <span class="text-primary">Nuevo Producto</span>
+            </nav>
+            <h2 class="text-primary text-xl font-bold leading-none">Nuevo Producto</h2>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors relative">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+            </button>
+            <div class="h-9 w-9 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center overflow-hidden">
+                <span class="material-symbols-outlined text-secondary">person</span>
+            </div>
+        </div>
+    </header>
 <!-- Form Grid -->
-<div class="px-8 pb-32">
+<div class="p-8 pb-32 max-w-[1280px] mx-auto">
 <div class="grid grid-cols-10 gap-8">
 <!-- Left Column (60%) -->
 <div class="col-span-10 lg:col-span-6 space-y-6">
@@ -256,4 +278,5 @@
 </div>
 </div>
 </main>
+</div>
 </body></html>

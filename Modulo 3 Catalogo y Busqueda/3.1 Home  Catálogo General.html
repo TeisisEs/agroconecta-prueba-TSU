@@ -28,34 +28,73 @@
     </script>
 <style>
         body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
-<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-sm">
-<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between gap-8">
-<div class="flex items-center gap-2 shrink-0">
-<span class="material-symbols-outlined text-primary text-3xl font-bold">eco</span>
-<h1 class="text-2xl font-black tracking-tight text-slate-900 dark:text-white">AgroConecta</h1>
+<body class="bg-background-light font-display text-slate-900 min-h-screen">
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between gap-6">
+<!-- Logo -->
+<a href="3.1 Home  Catálogo General.html" class="flex items-center gap-2 shrink-0" style="text-decoration:none;">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h1 class="text-xl font-extrabold tracking-tight text-primary">AgroConecta</h1>
+</a>
+<!-- Search Bar -->
+<div class="flex-1 max-w-xl">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Buscar productos, comercios..." type="text"/>
 </div>
-<div class="flex-1 max-w-2xl">
-<div class="relative group">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
-<input class="w-full h-12 pl-12 pr-4 bg-slate-100 dark:bg-slate-800 border-none rounded-full focus:ring-2 focus:ring-primary/20 text-sm placeholder:text-slate-500" placeholder="Buscar productos, comercios..." type="text"/>
 </div>
-</div>
-<div class="flex items-center gap-4 shrink-0">
-<button class="relative p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
-<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
-<span class="absolute top-1.5 right-1.5 w-4 h-4 bg-red-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-slate-900">3</span>
+<!-- Actions -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
 </button>
-<button class="relative p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html'">
-<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">shopping_cart</span>
-<span class="absolute top-1.5 right-1.5 w-4 h-4 bg-red-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-slate-900">1</span>
+<button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html'">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">3</span>
 </button>
-<div class="w-10 h-10 rounded-full bg-primary/10 border-2 border-primary/20 overflow-hidden cursor-pointer" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html'">
-<img class="w-full h-full object-cover" data-alt="User profile avatar of a smiling person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbwuE51XTII-nFL7uW6yQDL10coJ2lzCwwmRfH3YpwteyAcYKxNxWc3Pz2B4FEiW2Tb8aLsa-R-sKDmxdOWIN2T0-cq-y9CRxjsSG2AMxz0taEZvhNC-GIfDTApy4M8SCmYqZh8ONlPWgSil-0vD4aKjAe_kotuenjwH1fbebNth44Hru28eKKwuNoCyyB7U5krD_CPIROe1pPYzAfzBNUQtR8kwXt1-u7-36nuUA5kbwqfrzFwzV9eZda3O7or8PUqkq5HtAbzBA"/>
+<div class="h-8 w-px bg-slate-200 mx-1"></div>
+<div class="relative" id="profileDropdown">
+<div class="flex items-center gap-2 cursor-pointer" onclick="document.getElementById('profileMenu').classList.toggle('hidden')">
+<div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg">person</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+<div id="profileMenu" class="hidden absolute right-0 top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
+<div class="px-4 py-3 border-b border-slate-100">
+<p class="text-sm font-semibold text-slate-900">María García</p>
+<p class="text-xs text-slate-500">Comprador</p>
+</div>
+<a href="../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+Mis Pedidos
+</a>
+<a href="../Modulo 1 Autenticacion y Usuarios/1.6 Mi Perfil.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">person</span>
+Mi Perfil
+</a>
+<div class="border-t border-slate-100 my-1"></div>
+<p class="px-4 py-1 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Cambiar rol</p>
+<a href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg text-secondary">storefront</span>
+Modo Vendedor
+</a>
+<a href="../Modulo 9 Panel Administrador/9.1 Dashboard del Administrador.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg text-orange-600">admin_panel_settings</span>
+Modo Administrador
+</a>
+<div class="border-t border-slate-100 my-1"></div>
+<a href="../Modulo 1 Autenticacion y Usuarios/1.1 login.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors">
+<span class="material-symbols-outlined text-lg">logout</span>
+Cerrar sesión
+</a>
+</div>
 </div>
 </div>
 </div>
@@ -307,7 +346,7 @@
 </div>
 </div>
 <div class="max-w-[1280px] mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
-            © 2024 AgroConecta. Todos los derechos reservados. Hecho con ❤️ para el agro.
+            © 2026 AgroConecta. Todos los derechos reservados.
         </div>
 </footer>
 </body></html>

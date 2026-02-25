@@ -26,22 +26,72 @@
     </script>
 <style>
         body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
-<header class="sticky top-0 z-50 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
-<div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
-<a href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="flex items-center gap-2" style="text-decoration:none;">
-<div class="text-primary">
-<span class="material-symbols-outlined text-3xl fill-1">eco</span>
-</div>
-<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">AgroConecta</h1>
+<body class="bg-background-light font-display text-slate-900 min-h-screen">
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between gap-6">
+<!-- Logo -->
+<a href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="flex items-center gap-2 shrink-0" style="text-decoration:none;">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h1 class="text-xl font-extrabold tracking-tight text-primary">AgroConecta</h1>
 </a>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border border-primary/20">
-<img alt="Avatar de usuario" data-alt="User profile avatar circle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmmL2Qx6HKYe20X8NMkKN-wAQT-33yKDDX9_hVVam-n5LOGd5KSdDXV2M1avydV66AmRpk23cBYyijDJ9dp4midkF3ZAzBrMrVHQ5PmZjqKyt13hDDlC7YWqrm5tYqGdRVYOtZwNCFn99LK2czKlLXXsXMPMcUDr0TsdQ08cBXVgUoeD7EA759vMlkQb6XvgxPBFIe4BmxEaPfU-ZSwZpgIoi51FeMawhJRxIcaHwfFazKOrOLmt5h14WOiqygKQ8zIOUU2ApfJx0"/>
+<!-- Search Bar -->
+<div class="flex-1 max-w-xl">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Buscar productos, comercios..." type="text"/>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative" onclick="window.location.href='4.1 Carrito de Compras.html'">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">3</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-1"></div>
+<div class="relative" id="profileDropdown">
+<div class="flex items-center gap-2 cursor-pointer" onclick="document.getElementById('profileMenu').classList.toggle('hidden')">
+<div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg">person</span>
 </div>
 <span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+<div id="profileMenu" class="hidden absolute right-0 top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
+<div class="px-4 py-3 border-b border-slate-100">
+<p class="text-sm font-semibold text-slate-900">María García</p>
+<p class="text-xs text-slate-500">Comprador</p>
+</div>
+<a href="4.3 Historial de Pedidos (Comprador).html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+Mis Pedidos
+</a>
+<a href="../Modulo 1 Autenticacion y Usuarios/1.6 Mi Perfil.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">person</span>
+Mi Perfil
+</a>
+<div class="border-t border-slate-100 my-1"></div>
+<p class="px-4 py-1 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Cambiar rol</p>
+<a href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg text-secondary">storefront</span>
+Modo Vendedor
+</a>
+<a href="../Modulo 9 Panel Administrador/9.1 Dashboard del Administrador.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg text-orange-600">admin_panel_settings</span>
+Modo Administrador
+</a>
+<div class="border-t border-slate-100 my-1"></div>
+<a href="../Modulo 1 Autenticacion y Usuarios/1.1 login.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors">
+<span class="material-symbols-outlined text-lg">logout</span>
+Cerrar sesión
+</a>
+</div>
+</div>
 </div>
 </div>
 </header>
@@ -169,8 +219,8 @@
 <h2 class="text-xl font-bold mb-6">Resumen del pedido</h2>
 <div class="space-y-4 mb-6">
 <div class="flex justify-between text-slate-600 dark:text-slate-400">
-<span>Subtotal (4 productos)</span>
-<span>$12,450.00</span>
+<span>Subtotal (3 productos)</span>
+<span>$11.75</span>
 </div>
 <div class="flex justify-between text-slate-600 dark:text-slate-400">
 <span>Gastos de envío</span>
@@ -178,11 +228,11 @@
 </div>
 <div class="flex justify-between text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-4">
 <span>Impuestos aplicables</span>
-<span>$1,992.00</span>
+<span>$0.00</span>
 </div>
 <div class="flex justify-between items-end pt-2">
 <span class="text-lg font-bold">Total</span>
-<span class="text-2xl font-bold text-primary">$14,442.00</span>
+<span class="text-2xl font-bold text-primary">$11.75</span>
 </div>
 </div>
 <div class="bg-primary/5 rounded-lg p-4 mb-6">
@@ -193,7 +243,7 @@
                             </span>
 </label>
 </div>
-<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all mb-4 flex items-center justify-center gap-2" onclick="window.location.href='../Modulo 5 Pagos y Reembolsos/5.1 Confirmacion de Pago.html';">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all mb-4 flex items-center justify-center gap-2" onclick="window.location.href='4.2.5 Procesando Pago.html';">
                         Confirmar pedido
                         <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </button>
@@ -214,6 +264,6 @@
 </div>
 </main>
 <footer class="max-w-[1280px] mx-auto px-6 py-12 text-center text-slate-400 text-sm">
-<p>© 2024 AgroConecta S.A. - El marketplace del campo. Todos los derechos reservados.</p>
+<p>© 2026 AgroConecta S.A. - El marketplace del campo. Todos los derechos reservados.</p>
 </footer>
 </body></html>

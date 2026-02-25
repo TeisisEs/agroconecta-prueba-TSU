@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mi Perfil - AgroConecta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#2E7D32",
+                    "secondary": "#00695C",
+                    "background-light": "#FAFAFA",
+                },
+                fontFamily: {
+                    "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background-light font-display text-slate-900 min-h-screen">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+    <div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between gap-6">
+        <a href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="flex items-center gap-2 shrink-0" style="text-decoration:none;">
+            <span class="material-symbols-outlined text-primary text-3xl">eco</span>
+            <h1 class="text-xl font-extrabold tracking-tight text-primary">AgroConecta</h1>
+        </a>
+        <div class="flex-1 max-w-xl">
+            <div class="relative">
+                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                <input class="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Buscar productos, comercios..." type="text"/>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+            <button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+            </button>
+            <button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html'">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">3</span>
+            </button>
+            <div class="h-8 w-px bg-slate-200 mx-1"></div>
+            <div class="relative" id="profileDropdown">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="document.getElementById('profileMenu').classList.toggle('hidden')">
+                    <div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-lg">person</span>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400">expand_more</span>
+                </div>
+                <div id="profileMenu" class="hidden absolute right-0 top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
+                    <div class="px-4 py-3 border-b border-slate-100">
+                        <p class="text-sm font-semibold text-slate-900">María García</p>
+                        <p class="text-xs text-slate-500">Comprador</p>
+                    </div>
+                    <a href="../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+                        <span class="material-symbols-outlined text-lg">receipt_long</span>
+                        Mis Pedidos
+                    </a>
+                    <a href="1.6 Mi Perfil.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 bg-slate-50">
+                        <span class="material-symbols-outlined text-lg">person</span>
+                        Mi Perfil
+                    </a>
+                    <div class="border-t border-slate-100 my-1"></div>
+                    <p class="px-4 py-1 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Cambiar rol</p>
+                    <a href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+                        <span class="material-symbols-outlined text-lg text-secondary">storefront</span>
+                        Modo Vendedor
+                    </a>
+                    <a href="../Modulo 9 Panel Administrador/9.1 Dashboard del Administrador.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+                        <span class="material-symbols-outlined text-lg text-orange-600">admin_panel_settings</span>
+                        Modo Administrador
+                    </a>
+                    <div class="border-t border-slate-100 my-1"></div>
+                    <a href="1.1 login.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors">
+                        <span class="material-symbols-outlined text-lg">logout</span>
+                        Cerrar sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-[1280px] mx-auto px-6 py-8">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs text-slate-500 mb-6">
+        <a class="hover:text-primary" href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html">Inicio</a>
+        <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+        <span class="font-medium text-slate-700">Mi Perfil</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Left Column: Profile Card -->
+        <div class="lg:col-span-1">
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 text-center">
+                <div class="w-24 h-24 mx-auto rounded-full bg-primary/10 border-4 border-primary/20 flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-primary text-5xl">person</span>
+                </div>
+                <h2 class="text-xl font-bold text-slate-900">María García</h2>
+                <p class="text-slate-500 text-sm mb-4">maria.garcia@email.com</p>
+                <span class="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">
+                    <span class="material-symbols-outlined text-sm">verified</span>
+                    Cuenta verificada
+                </span>
+                
+                <div class="mt-6 pt-6 border-t border-slate-100 space-y-3 text-left">
+                    <div class="flex items-center gap-3 text-sm">
+                        <span class="material-symbols-outlined text-slate-400">calendar_month</span>
+                        <span class="text-slate-600">Miembro desde <strong>Enero 2026</strong></span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm">
+                        <span class="material-symbols-outlined text-slate-400">shopping_bag</span>
+                        <span class="text-slate-600"><strong>12</strong> pedidos realizados</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm">
+                        <span class="material-symbols-outlined text-slate-400">favorite</span>
+                        <span class="text-slate-600"><strong>5</strong> productos favoritos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 mt-6">
+                <h3 class="font-bold text-slate-900 mb-3">Acciones rápidas</h3>
+                <div class="space-y-2">
+                    <a href="../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+                        <span class="material-symbols-outlined text-primary">receipt_long</span>
+                        <span class="text-sm font-medium">Ver mis pedidos</span>
+                    </a>
+                    <a href="../Modulo 6 Envios y Entregas/6.1 Seguimiento de Entrega (Comprador).html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+                        <span class="material-symbols-outlined text-secondary">local_shipping</span>
+                        <span class="text-sm font-medium">Rastrear entregas</span>
+                    </a>
+                    <a href="../Modulo 5 Pagos y Reembolsos/5.2 Gestion de Reembolsos.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+                        <span class="material-symbols-outlined text-orange-500">currency_exchange</span>
+                        <span class="text-sm font-medium">Solicitar reembolso</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Profile Forms -->
+        <div class="lg:col-span-2 space-y-6">
+            <!-- Personal Info -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">badge</span>
+                        <h3 class="font-bold text-slate-900">Información personal</h3>
+                    </div>
+                    <button class="text-primary text-sm font-semibold hover:underline" onclick="alert('Modo edición activado (demo)')">Editar</button>
+                </div>
+                <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Nombre completo</label>
+                        <input type="text" value="María García" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 font-medium" readonly/>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Correo electrónico</label>
+                        <input type="email" value="maria.garcia@email.com" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 font-medium" readonly/>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Teléfono</label>
+                        <input type="tel" value="+503 7890-1234" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 font-medium" readonly/>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">DUI</label>
+                        <input type="text" value="01234567-8" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 font-medium" readonly/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Addresses -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <h3 class="font-bold text-slate-900">Direcciones de entrega</h3>
+                    </div>
+                    <button class="text-primary text-sm font-semibold hover:underline flex items-center gap-1" onclick="alert('Agregar dirección (demo)')">
+                        <span class="material-symbols-outlined text-sm">add</span>
+                        Agregar
+                    </button>
+                </div>
+                <div class="p-6 space-y-4">
+                    <!-- Address 1 - Default -->
+                    <div class="p-4 border border-primary/30 bg-primary/5 rounded-lg">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-0.5">home</span>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <h4 class="font-bold text-slate-900">Casa</h4>
+                                        <span class="px-2 py-0.5 bg-primary text-white text-[10px] font-bold rounded">PREDETERMINADA</span>
+                                    </div>
+                                    <p class="text-sm text-slate-600">Av. Principal 123, Colonia Agrícola</p>
+                                    <p class="text-sm text-slate-500">Sector 4, Municipio El Campo, CP 45000</p>
+                                    <p class="text-xs text-slate-400 mt-1">Referencia: Portón verde frente a la cooperativa</p>
+                                </div>
+                            </div>
+                            <button class="text-slate-400 hover:text-primary" onclick="alert('Editar dirección (demo)')">
+                                <span class="material-symbols-outlined">edit</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Address 2 -->
+                    <div class="p-4 border border-slate-200 rounded-lg hover:border-slate-300 transition-colors">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-slate-400 mt-0.5">apartment</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 mb-1">Trabajo</h4>
+                                    <p class="text-sm text-slate-600">Centro Comercial Las Américas, Local 45</p>
+                                    <p class="text-sm text-slate-500">San Salvador, CP 01101</p>
+                                </div>
+                            </div>
+                            <button class="text-slate-400 hover:text-primary" onclick="alert('Editar dirección (demo)')">
+                                <span class="material-symbols-outlined">edit</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-100 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary">shield</span>
+                    <h3 class="font-bold text-slate-900">Seguridad</h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-slate-500">lock</span>
+                            <div>
+                                <p class="font-medium text-slate-900">Contraseña</p>
+                                <p class="text-xs text-slate-500">Última actualización hace 3 meses</p>
+                            </div>
+                        </div>
+                        <button class="px-4 py-2 text-sm font-semibold text-primary border border-primary rounded-lg hover:bg-primary/5 transition-colors" onclick="alert('Cambiar contraseña (demo)')">
+                            Cambiar
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-slate-500">phonelink_lock</span>
+                            <div>
+                                <p class="font-medium text-slate-900">Verificación en dos pasos</p>
+                                <p class="text-xs text-slate-500">Protege tu cuenta con un código adicional</p>
+                            </div>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" class="sr-only peer">
+                            <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="bg-white rounded-xl shadow-sm border border-red-200 overflow-hidden">
+                <div class="p-6 border-b border-red-100 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-red-500">warning</span>
+                    <h3 class="font-bold text-red-600">Zona de peligro</h3>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="font-medium text-slate-900">Eliminar cuenta</p>
+                            <p class="text-sm text-slate-500">Esta acción es permanente y no se puede deshacer</p>
+                        </div>
+                        <button class="px-4 py-2 text-sm font-semibold text-red-600 border border-red-300 rounded-lg hover:bg-red-50 transition-colors" onclick="alert('Función deshabilitada en demo')">
+                            Eliminar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="max-w-[1280px] mx-auto px-6 py-12 text-center text-slate-400 text-sm">
+    <p>© 2026 AgroConecta S.A. - El marketplace del campo. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

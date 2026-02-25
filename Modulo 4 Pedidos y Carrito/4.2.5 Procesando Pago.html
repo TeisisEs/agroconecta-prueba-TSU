@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConecta - Procesando Pago</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#2E7D32",
+                    "secondary": "#00695C",
+                    "background-light": "#FAFAFA",
+                    "background-dark": "#141e15",
+                },
+                fontFamily: {
+                    "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+        animation: spin 1.5s linear infinite;
+    }
+    
+    @keyframes pulse-ring {
+        0% { transform: scale(0.8); opacity: 1; }
+        100% { transform: scale(1.4); opacity: 0; }
+    }
+    .pulse-ring {
+        animation: pulse-ring 1.5s ease-out infinite;
+    }
+    
+    @keyframes fade-in {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-delayed {
+        opacity: 0;
+        animation: fade-in 0.5s ease-out forwards;
+    }
+    .delay-1 { animation-delay: 0.5s; }
+    .delay-2 { animation-delay: 1s; }
+    .delay-3 { animation-delay: 1.5s; }
+</style>
+</head>
+<body class="bg-background-light font-display text-slate-900 min-h-screen">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+    <div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between gap-6">
+        <a href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="flex items-center gap-2 shrink-0" style="text-decoration:none;">
+            <span class="material-symbols-outlined text-primary text-3xl">eco</span>
+            <h1 class="text-xl font-extrabold tracking-tight text-primary">AgroConecta</h1>
+        </a>
+        <div class="flex-1 max-w-xl">
+            <div class="relative">
+                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                <input class="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Buscar productos, comercios..." type="text" disabled/>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+            <button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative" disabled>
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative" disabled>
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">3</span>
+            </button>
+            <div class="h-8 w-px bg-slate-200 mx-1"></div>
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-lg">person</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Progress Steps -->
+<div class="bg-white border-b border-slate-200 py-6">
+    <div class="max-w-[1280px] mx-auto px-6">
+        <div class="flex items-center justify-between max-w-3xl mx-auto relative">
+            <div class="absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -translate-y-1/2 -z-0"></div>
+            <!-- Paso 1: Carrito - Completado -->
+            <div class="relative z-10 flex flex-col items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
+                    <span class="material-symbols-outlined text-xl">check</span>
+                </div>
+                <span class="text-xs font-semibold text-primary">Carrito</span>
+            </div>
+            <!-- Paso 2: Entrega - Completado -->
+            <div class="relative z-10 flex flex-col items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
+                    <span class="material-symbols-outlined text-xl">check</span>
+                </div>
+                <span class="text-xs font-semibold text-primary">Entrega</span>
+            </div>
+            <!-- Paso 3: Pago - Activo -->
+            <div class="relative z-10 flex flex-col items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white ring-2 ring-primary">
+                    <span class="text-sm font-bold">3</span>
+                </div>
+                <span class="text-xs font-bold text-primary">Pago</span>
+            </div>
+            <!-- Paso 4: Confirmación - Pendiente -->
+            <div class="relative z-10 flex flex-col items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center">
+                    <span class="text-sm font-bold">4</span>
+                </div>
+                <span class="text-xs font-medium text-slate-500">Confirmación</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content: Processing Animation -->
+<main class="max-w-[1280px] mx-auto px-6 py-16">
+    <div class="max-w-lg mx-auto text-center">
+        <!-- Animated Circle -->
+        <div class="relative w-32 h-32 mx-auto mb-8">
+            <!-- Pulse rings -->
+            <div class="absolute inset-0 rounded-full bg-primary/20 pulse-ring"></div>
+            <div class="absolute inset-0 rounded-full bg-primary/10 pulse-ring" style="animation-delay: 0.5s;"></div>
+            
+            <!-- Spinning border -->
+            <div class="absolute inset-0 rounded-full border-4 border-slate-200"></div>
+            <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-primary animate-spin-slow"></div>
+            
+            <!-- Center icon -->
+            <div class="absolute inset-4 rounded-full bg-white shadow-lg flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-4xl">payments</span>
+            </div>
+        </div>
+        
+        <!-- Text content with staggered animation -->
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 fade-in-delayed delay-1">Procesando tu pago...</h2>
+        <p class="text-slate-500 mb-8 fade-in-delayed delay-2">Por favor espera mientras verificamos tu transacción</p>
+        
+        <!-- Progress steps -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 text-left fade-in-delayed delay-3">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3" id="step1">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-sm">check</span>
+                    </div>
+                    <span class="text-sm text-slate-700">Verificando datos de pago</span>
+                </div>
+                <div class="flex items-center gap-3" id="step2">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center step-icon">
+                        <span class="material-symbols-outlined text-primary text-sm animate-spin">sync</span>
+                    </div>
+                    <span class="text-sm text-slate-700">Procesando transacción</span>
+                </div>
+                <div class="flex items-center gap-3" id="step3">
+                    <div class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center step-icon">
+                        <span class="material-symbols-outlined text-slate-400 text-sm">more_horiz</span>
+                    </div>
+                    <span class="text-sm text-slate-400">Confirmando con el banco</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Security badge -->
+        <div class="mt-8 flex items-center justify-center gap-2 text-slate-400 text-xs">
+            <span class="material-symbols-outlined text-sm">verified_user</span>
+            <span>Transacción segura y encriptada</span>
+        </div>
+    </div>
+</main>
+
+<script>
+    // Simulate payment processing and redirect
+    let currentStep = 1;
+    
+    function updateStep(stepNum, completed) {
+        const step = document.getElementById('step' + stepNum);
+        const icon = step.querySelector('.step-icon');
+        const text = step.querySelector('span:last-child');
+        
+        if (completed) {
+            icon.innerHTML = '<span class="material-symbols-outlined text-primary text-sm">check</span>';
+            icon.classList.remove('bg-slate-100');
+            icon.classList.add('bg-primary/10');
+            text.classList.remove('text-slate-400');
+            text.classList.add('text-slate-700');
+        }
+    }
+    
+    // Step 2 completes after 1.5s
+    setTimeout(() => {
+        const step2Icon = document.querySelector('#step2 .step-icon');
+        step2Icon.innerHTML = '<span class="material-symbols-outlined text-primary text-sm">check</span>';
+        
+        // Activate step 3
+        const step3Icon = document.querySelector('#step3 .step-icon');
+        step3Icon.innerHTML = '<span class="material-symbols-outlined text-primary text-sm animate-spin">sync</span>';
+        step3Icon.classList.remove('bg-slate-100');
+        step3Icon.classList.add('bg-primary/10');
+        document.querySelector('#step3 span:last-child').classList.remove('text-slate-400');
+        document.querySelector('#step3 span:last-child').classList.add('text-slate-700');
+    }, 1500);
+    
+    // Step 3 completes and redirect after 3s
+    setTimeout(() => {
+        const step3Icon = document.querySelector('#step3 .step-icon');
+        step3Icon.innerHTML = '<span class="material-symbols-outlined text-primary text-sm">check</span>';
+    }, 2800);
+    
+    // Redirect to confirmation after 3.5s
+    setTimeout(() => {
+        window.location.href = '../Modulo 5 Pagos y Reembolsos/5.1 Confirmacion de Pago.html';
+    }, 3500);
+</script>
+</body>
+</html>

@@ -13,138 +13,150 @@
                 extend: {
                     colors: {
                         "primary": "#2E7D32",
+                        "secondary": "#00695C",
                         "background-light": "#FAFAFA",
                         "background-dark": "#141e15",
-                        "agro-teal": "#00695C",
-                        "agro-green": "#2E7D32",
-                        "agro-success": "#388E3C",
-                        "agro-pending": "#F9A825",
-                        "agro-process": "#1976D2",
-                        "agro-danger": "#D32F2F",
-                        "border-slate": "#E2E8F0"
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
                 },
             },
         }
     </script>
-<style type="text/tailwindcss">
-        @layer base {
-            body { font-family: 'Inter', sans-serif; }
-        }
-        .sidebar-active { background-color: #00695C; color: white; }
-    </style>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .sidebar-active { background-color: #00695C; color: white; }
+</style>
 </head>
-<body class="bg-[#FAFAFA] text-slate-900 min-h-screen font-display">
-<header class="sticky top-0 bg-white border-b border-[#E2E8F0] z-50">
-<div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 bg-agro-green rounded-lg flex items-center justify-center text-white">
-<span class="material-symbols-outlined text-xl">eco</span>
-</div>
-<span class="text-xl font-extrabold text-agro-green tracking-tight">AgroConecta</span>
-</div>
-<div class="flex items-center gap-4">
-<div class="relative mr-2">
-<span class="material-symbols-outlined text-slate-400 cursor-pointer">notifications</span>
-<span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
-</div>
-<div class="w-9 h-9 rounded-full border border-slate-200 overflow-hidden cursor-pointer">
-<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWYprI7h7gv7-L-1LV39-MLi6mxcIguuk7sZFDLEzAxIRPFh0uCWti3Z_Fo_vA7ZveOExnEIk7UjblzlscGZD_1SUEZ8cSBExvmgql9_CHFFieqN1PR8JNy71C2iZf6Zci6Ldb6HSQlK8waKMexLGZP3P0tL_HXmVCTjj9-oaeIkLZt_RjQe0bEzd-EJvNoxtp4E5zosItTSy97IJYt9xprLK6DDootE_ABZQaiyRajMgEsa27bd4RDHRZB6ym-TnPY4iHr-1ZZQc"/>
-</div>
-</div>
-</div>
-</header>
-<div class="flex max-w-[1280px] mx-auto">
-<aside class="w-[240px] sticky top-16 h-[calc(100vh-64px)] bg-white border-r border-[#E2E8F0] shrink-0">
-<div class="flex flex-col h-full">
-<nav class="flex-1 px-4 py-6 space-y-1">
-<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html">
-<span class="material-symbols-outlined">dashboard</span>
-<span class="text-sm font-medium">Dashboard</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 2 Gestion de Comercio/2.2 RegistroEdicion de Comercio.html">
-<span class="material-symbols-outlined">storefront</span>
-<span class="text-sm font-medium">Mi Comercio</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 2 Gestion de Comercio/2.3  Lista de Productos del Vendedor.html">
-<span class="material-symbols-outlined">inventory_2</span>
-<span class="text-sm font-medium">Mis Productos</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 sidebar-active rounded-lg transition-colors" href="#">
-<span class="material-symbols-outlined">shopping_cart</span>
-<span class="text-sm font-medium">Pedidos</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">
-<span class="material-symbols-outlined">local_shipping</span>
-<span class="text-sm font-medium">Entregas</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 7 Gestion Documental/7.1 Centro de Documentos.html">
-<span class="material-symbols-outlined">description</span>
-<span class="text-sm font-medium">Documentos</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 8 Reportes e indicadores/8.1 Reportes de Ventas.html">
-<span class="material-symbols-outlined">bar_chart</span>
-<span class="text-sm font-medium">Reportes</span>
-</a>
-</nav>
-<div class="p-4 border-t border-slate-100">
-<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
-<span class="material-symbols-outlined">settings</span>
-<span class="text-sm font-medium">Configuración</span>
-</a>
-</div>
-</div>
+<body class="bg-background-light font-display text-slate-900">
+<div class="flex min-h-screen">
+<aside class="w-[240px] fixed inset-y-0 left-0 bg-white border-r border-slate-200 flex flex-col z-50">
+    <div class="p-6">
+        <div class="flex flex-col items-center gap-3 mb-8">
+            <div class="size-16 rounded-full bg-secondary/10 flex items-center justify-center">
+                <span class="material-symbols-outlined text-secondary text-3xl">eco</span>
+            </div>
+            <div class="text-center">
+                <h2 class="text-slate-900 font-bold text-sm">Finca El Provenir</h2>
+                <span class="inline-block mt-1 px-2 py-0.5 bg-secondary text-white text-[10px] font-bold uppercase tracking-wider rounded">Vendedor</span>
+            </div>
+        </div>
+        <nav class="flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html">
+                <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                <span class="text-sm font-medium">Dashboard</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 2 Gestion de Comercio/2.2 RegistroEdicion de Comercio.html">
+                <span class="material-symbols-outlined text-[20px]">storefront</span>
+                <span class="text-sm font-medium">Mi Comercio</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 2 Gestion de Comercio/2.3  Lista de Productos del Vendedor.html">
+                <span class="material-symbols-outlined text-[20px]">inventory_2</span>
+                <span class="text-sm font-medium">Mis Productos</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-active" href="../Modulo 4 Pedidos y Carrito/4.4 Bandeja de Pedidos (Vendedor).html">
+                <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                <span class="text-sm font-medium">Pedidos</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">
+                <span class="material-symbols-outlined text-[20px]">local_shipping</span>
+                <span class="text-sm font-medium">Entregas</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 7 Gestion Documental/7.1 Centro de Documentos.html">
+                <span class="material-symbols-outlined text-[20px]">description</span>
+                <span class="text-sm font-medium">Documentos</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="../Modulo 8 Reportes e indicadores/8.1 Reportes de Ventas.html">
+                <span class="material-symbols-outlined text-[20px]">bar_chart</span>
+                <span class="text-sm font-medium">Reportes</span>
+            </a>
+        </nav>
+    </div>
+    <div class="mt-auto p-4 border-t border-slate-100">
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="#">
+            <span class="material-symbols-outlined text-[20px]">settings</span>
+            <span class="text-sm font-medium">Configuración</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors mt-1" href="../Modulo 1 Autenticacion y Usuarios/1.1 login.html">
+            <span class="material-symbols-outlined text-[20px]">logout</span>
+            <span class="text-sm font-medium">Cerrar sesión</span>
+        </a>
+    </div>
 </aside>
-<main class="flex-1 min-w-0 p-8 space-y-8">
+<main class="flex-1 ml-[240px]">
+    <header class="sticky top-0 bg-white border-b border-slate-200 z-40 px-8 h-16 flex items-center justify-between">
+        <div>
+            <nav class="flex items-center text-xs text-slate-400 font-medium uppercase tracking-wider gap-1">
+                <a class="hover:text-primary" href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html">Inicio</a>
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                <span class="text-primary">Pedidos</span>
+            </nav>
+            <h2 class="text-primary text-xl font-bold leading-none">Bandeja de Pedidos</h2>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors relative">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+            </button>
+            <div class="h-9 w-9 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center overflow-hidden">
+                <span class="material-symbols-outlined text-secondary">person</span>
+            </div>
+        </div>
+    </header>
+    <div class="p-8 max-w-[1280px] mx-auto space-y-8">
 <div class="flex items-center gap-4">
-<h1 class="text-2xl font-bold text-agro-green">Bandeja de Pedidos</h1>
-<span class="bg-agro-teal text-white text-xs font-bold px-2.5 py-1 rounded-full">12 nuevos</span>
+<h1 class="text-2xl font-bold text-primary">Bandeja de Pedidos</h1>
+<span class="bg-secondary text-white text-xs font-bold px-2.5 py-1 rounded-full">12 nuevos</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
 <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex items-center justify-between">
 <div>
 <p class="text-sm text-slate-500 font-medium">Pendientes</p>
-<h3 class="text-3xl font-bold text-agro-pending">05</h3>
+<h3 class="text-3xl font-bold text-[#F9A825]">05</h3>
 </div>
-<div class="w-12 h-12 bg-[#FFF9C4] rounded-full flex items-center justify-center text-agro-pending">
+<div class="w-12 h-12 bg-[#FFF9C4] rounded-full flex items-center justify-center text-[#F9A825]">
 <span class="material-symbols-outlined">pending_actions</span>
 </div>
 </div>
 <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex items-center justify-between">
 <div>
 <p class="text-sm text-slate-500 font-medium">Procesados</p>
-<h3 class="text-3xl font-bold text-agro-process">18</h3>
+<h3 class="text-3xl font-bold text-[#1976D2]">18</h3>
 </div>
-<div class="w-12 h-12 bg-[#E3F2FD] rounded-full flex items-center justify-center text-agro-process">
+<div class="w-12 h-12 bg-[#E3F2FD] rounded-full flex items-center justify-center text-[#1976D2]">
 <span class="material-symbols-outlined">sync</span>
 </div>
 </div>
 <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex items-center justify-between">
 <div>
 <p class="text-sm text-slate-500 font-medium">Pagados</p>
-<h3 class="text-3xl font-bold text-agro-success">42</h3>
+<h3 class="text-3xl font-bold text-[#388E3C]">42</h3>
 </div>
-<div class="w-12 h-12 bg-[#E8F5E9] rounded-full flex items-center justify-center text-agro-success">
+<div class="w-12 h-12 bg-[#E8F5E9] rounded-full flex items-center justify-center text-[#388E3C]">
 <span class="material-symbols-outlined">payments</span>
 </div>
 </div>
 <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex items-center justify-between">
 <div>
 <p class="text-sm text-slate-500 font-medium">Cancelados</p>
-<h3 class="text-3xl font-bold text-agro-danger">03</h3>
+<h3 class="text-3xl font-bold text-[#D32F2F]">03</h3>
 </div>
-<div class="w-12 h-12 bg-[#FFEBEE] rounded-full flex items-center justify-center text-agro-danger">
+<div class="w-12 h-12 bg-[#FFEBEE] rounded-full flex items-center justify-center text-[#D32F2F]">
 <span class="material-symbols-outlined">cancel</span>
 </div>
 </div>
 </div>
 <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex flex-wrap items-center justify-between gap-4">
 <div class="flex items-center gap-2 overflow-x-auto">
-<button class="px-4 py-2 bg-agro-teal text-white rounded-full text-xs font-bold whitespace-nowrap">Todos</button>
+<button class="px-4 py-2 bg-secondary text-white rounded-full text-xs font-bold whitespace-nowrap">Todos</button>
 <button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full text-xs font-bold whitespace-nowrap">Pendiente</button>
 <button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full text-xs font-bold whitespace-nowrap">Procesado</button>
 <button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full text-xs font-bold whitespace-nowrap">Pagado</button>
@@ -153,11 +165,11 @@
 <div class="flex items-center gap-4 flex-1 justify-end min-w-[300px]">
 <div class="relative w-full max-w-xs">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">calendar_today</span>
-<input class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:ring-agro-green focus:border-agro-green" placeholder="10 Jun - 24 Jun" type="text"/>
+<input class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:ring-primary focus:border-primary" placeholder="10 Jun - 24 Jun" type="text"/>
 </div>
 <div class="relative w-full max-w-sm">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
-<input class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:ring-agro-green focus:border-agro-green" placeholder="Buscar por # pedido o comprador..." type="text"/>
+<input class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:ring-primary focus:border-primary" placeholder="Buscar por # pedido o comprador..." type="text"/>
 </div>
 </div>
 </div>
@@ -188,15 +200,15 @@
 <td class="px-6 py-4 font-bold text-slate-900">$1,250.00</td>
 <td class="px-6 py-4 text-sm text-slate-600">3 artículos</td>
 <td class="px-6 py-4">
-<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#FFF9C4] text-agro-pending">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#FFF9C4] text-[#F9A825]">
                                         Pendiente
                                     </span>
 </td>
 <td class="px-6 py-4">
 <div class="flex items-center gap-4">
 <button class="bg-[#2E7D32] hover:opacity-90 text-white text-xs font-bold px-4 py-2 rounded transition-colors shadow-sm" onclick="alert('Pedido procesado (demo)')">Procesar</button>
-<button class="text-agro-danger hover:underline text-xs font-bold" onclick="alert('Pedido cancelado (demo)')">Cancelar</button>
-<a class="text-agro-teal text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
+<button class="text-[#D32F2F] hover:underline text-xs font-bold" onclick="alert('Pedido cancelado (demo)')">Cancelar</button>
+<a class="text-secondary text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
 </div>
 </td>
 </tr>
@@ -212,13 +224,13 @@
 <td class="px-6 py-4 font-bold text-slate-900">$840.50</td>
 <td class="px-6 py-4 text-sm text-slate-600">5 artículos</td>
 <td class="px-6 py-4">
-<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#E3F2FD] text-agro-process">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#E3F2FD] text-[#1976D2]">
                                         Procesado
                                     </span>
 </td>
 <td class="px-6 py-4">
 <div class="flex items-center gap-4">
-<a class="text-agro-teal text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
+<a class="text-secondary text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
 </div>
 </td>
 </tr>
@@ -234,13 +246,13 @@
 <td class="px-6 py-4 font-bold text-slate-900">$2,100.00</td>
 <td class="px-6 py-4 text-sm text-slate-600">12 artículos</td>
 <td class="px-6 py-4">
-<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#E8F5E9] text-agro-success">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#E8F5E9] text-[#388E3C]">
                                         Pagado
                                     </span>
 </td>
 <td class="px-6 py-4">
 <div class="flex items-center gap-4">
-<a class="text-agro-teal text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
+<a class="text-secondary text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
 </div>
 </td>
 </tr>
@@ -256,13 +268,13 @@
 <td class="px-6 py-4 font-bold text-slate-900">$320.00</td>
 <td class="px-6 py-4 text-sm text-slate-600">1 artículo</td>
 <td class="px-6 py-4">
-<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#FFEBEE] text-agro-danger">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#FFEBEE] text-[#D32F2F]">
                                         Cancelado
                                     </span>
 </td>
 <td class="px-6 py-4">
 <div class="flex items-center gap-4">
-<a class="text-agro-teal text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
+<a class="text-secondary text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
 </div>
 </td>
 </tr>
@@ -275,12 +287,13 @@
 <button class="px-3 py-1 border border-slate-200 rounded text-slate-400 hover:bg-slate-50 cursor-not-allowed">
 <span class="material-symbols-outlined text-lg">chevron_left</span>
 </button>
-<button class="px-3 py-1 bg-agro-teal text-white rounded font-bold text-sm">1</button>
+<button class="px-3 py-1 bg-secondary text-white rounded font-bold text-sm">1</button>
 <button class="px-3 py-1 border border-slate-200 rounded text-slate-600 hover:bg-slate-50 text-sm">2</button>
 <button class="px-3 py-1 border border-slate-200 rounded text-slate-600 hover:bg-slate-50 text-sm">3</button>
 <button class="px-3 py-1 border border-slate-200 rounded text-slate-600 hover:bg-slate-50">
 <span class="material-symbols-outlined text-lg">chevron_right</span>
 </button>
+</div>
 </div>
 </div>
 </div>

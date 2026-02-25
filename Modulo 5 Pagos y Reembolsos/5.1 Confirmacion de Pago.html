@@ -26,25 +26,78 @@
             },
         }
     </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<body class="bg-background-light font-display text-slate-900 min-h-screen">
 <!-- Top Navigation Bar -->
-<nav class="sticky top-0 z-50 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
-<div class="max-w-[1280px] mx-auto px-4 h-16 flex items-center justify-between">
-<a href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="flex items-center gap-2" style="text-decoration:none;">
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between gap-6">
+<!-- Logo -->
+<a href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="flex items-center gap-2 shrink-0" style="text-decoration:none;">
 <span class="material-symbols-outlined text-primary text-3xl">eco</span>
-<span class="text-xl font-bold tracking-tight text-primary">AgroConecta</span>
+<h1 class="text-xl font-extrabold tracking-tight text-primary">AgroConecta</h1>
 </a>
-<div class="flex items-center gap-4">
-<button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors">
-<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<!-- Search Bar -->
+<div class="flex-1 max-w-xl">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Buscar productos, comercios..." type="text"/>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
 </button>
-<div class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
-<img alt="Avatar del usuario" class="h-full w-full object-cover" data-alt="Close-up portrait of a smiling person in professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDom_ffaKufIynzNeoBtLC7qZHpxpqOBGz8yTkbPL3rLW8NvHs7bXxkxV47x16f13FXAfEJBEbcJCAmDl5i3Rlht7t0MJ6lh4aY53RWeIRHYV3Mx_eepU2SgOFSP4ZSJW5Hf7Rm9cL0BylvzAclpiZLdT3JjVUfOul_qfmBBvzCh6hir5YpTp4qjCJIDQQFHVp-gLnsQlDFDznvrzUfgd_198YRW6D1Lw_LzezDGyw9QClQFpwcsuL9eqbfQ5TowF-_eHykGDRb_qE"/>
+<button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html'">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">3</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-1"></div>
+<div class="relative" id="profileDropdown">
+<div class="flex items-center gap-2 cursor-pointer" onclick="document.getElementById('profileMenu').classList.toggle('hidden')">
+<div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg">person</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+<div id="profileMenu" class="hidden absolute right-0 top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
+<div class="px-4 py-3 border-b border-slate-100">
+<p class="text-sm font-semibold text-slate-900">María García</p>
+<p class="text-xs text-slate-500">Comprador</p>
+</div>
+<a href="../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+Mis Pedidos
+</a>
+<a href="../Modulo 1 Autenticacion y Usuarios/1.6 Mi Perfil.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">person</span>
+Mi Perfil
+</a>
+<div class="border-t border-slate-100 my-1"></div>
+<p class="px-4 py-1 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Cambiar rol</p>
+<a href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg text-secondary">storefront</span>
+Modo Vendedor
+</a>
+<a href="../Modulo 9 Panel Administrador/9.1 Dashboard del Administrador.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg text-orange-600">admin_panel_settings</span>
+Modo Administrador
+</a>
+<div class="border-t border-slate-100 my-1"></div>
+<a href="../Modulo 1 Autenticacion y Usuarios/1.1 login.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors">
+<span class="material-symbols-outlined text-lg">logout</span>
+Cerrar sesión
+</a>
 </div>
 </div>
 </div>
-</nav>
+</div>
+</header>
 <!-- Main Content -->
 <main class="min-h-[calc(100vh-64px)] flex items-center justify-center p-4 md:p-8">
 <div class="w-full max-w-[600px] bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-8 flex flex-col items-center">
@@ -72,28 +125,38 @@
 <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Resumen de productos</h3>
 <div class="flex items-center gap-4">
 <div class="h-12 w-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex-shrink-0 overflow-hidden">
-<img alt="Caja de tomates" class="h-full w-full object-cover" data-alt="Fresh red organic tomatoes in a wooden crate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu-8pmitsJ_wYRhzwat3ymkArRMlhI5rzZiVyZJ7EKiuJTze-EI0UENoEV7zg4pu5w2tCF4qxMAOC1Fn1xZEbuBDY2QjZoMXo2sPoI3FxhcsmGHlOqbG-T8WRYR-qLjPHtA9EprVCt_BGQq1IIRvErYsRsdfTHjT_jBlXogYJJSqJiVxZiEU-PlUZiQxiI61q8xqEUEEhEHTenGHfvBTCP6STYGHt9dtD-irIhNPOUU_S6sYWrSVTlP4gQAWFMdFBSEwcte3CxEmQ"/>
+<img alt="Tomates cherry" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMGNhTSg4rL6gECznAMb14Qcj9DyIuTIMVuTsoOqMNlDBYCL4Hi1tAbR5DKX6FuYumWOT7ws1IbniZZmryoEDuNUCqH7actEbanS5yGS1Ukv08t6QiR8BMqDDhvlpSDk-pZ77n6HCJOktc8M9C0PEgjGUHPSsg8Priu12VqGlQm7vjiv9Hg-IpwGAqUOfbFDD9nhax50QXlmA08hMXq2LMC3CtVKeK2AVpajHdEHcVOcgljc7Nha96NQB07bSwVY5_r3NIaVzvwGQ"/>
 </div>
 <div class="flex-grow">
 <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Tomate Cherry Orgánico</p>
-<p class="text-xs text-slate-500">2 kg x $450.00</p>
+<p class="text-xs text-slate-500">2 × $2.50</p>
 </div>
-<div class="text-sm font-bold text-slate-800 dark:text-slate-200">$900.00</div>
+<div class="text-sm font-bold text-slate-800 dark:text-slate-200">$5.00</div>
 </div>
 <div class="flex items-center gap-4">
 <div class="h-12 w-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex-shrink-0 overflow-hidden">
-<img alt="Papas frescas" class="h-full w-full object-cover" data-alt="Fresh potatoes piled together on a rustic surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIujtfKk_2hPlunRw3lRKXN0qTCWDaK8isqyp_GpawiWO1GwnLLnJx4ElwRqV6eswLOAheDzPJlfCy_AzA-P72hqxyA1Oo_Fjuaml-T1DnD_R872vhUvmzcDNaDFCIdF2gaeKnLjU3QGsE8tcS6lIDKuAkhu-N_koEDsrQKUglZnV8urVey_MMVioQG8oUoBMFJ7LPOKJ7Mq9K6gezm0CxiiZRTnINuhYrZLAITHpjD7tyoM0NnQKsezlZFYYdENrtO0fCf00mqSo"/>
+<img alt="Aguacates" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvI4J1tExG5yDrhsCDM_jvBwXY_tVrrNADaZUqm6Hp5KkIxbHPZCsvjHSn1C7CaeS6nO3E43G8dKgCnPrzRTAfo3zxj0hgIifOLlwJmBPw4-Pk7t2EpvMu12gyNr__d8ZVQUuhIqf_63AO2291dhLCP1glTReoRf8p5exvW6LUfEnCu7VoGeeRqb-j9GnHoNf92xW-fQw3avAYaUpu8w-0BZOmJbVYlmPzZfCv6owp2uaZsCt-JYAYy0ArZfTnk0rGxq3BIgp9YOA"/>
 </div>
 <div class="flex-grow">
-<p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Papa Blanca Especial</p>
-<p class="text-xs text-slate-500">5 kg x $120.00</p>
+<p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Aguacate Hass Maduro</p>
+<p class="text-xs text-slate-500">3 × $1.25</p>
 </div>
-<div class="text-sm font-bold text-slate-800 dark:text-slate-200">$600.00</div>
+<div class="text-sm font-bold text-slate-800 dark:text-slate-200">$3.75</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex-shrink-0 overflow-hidden">
+<img alt="Leche fresca" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF-kEAD6NqQGiNJM37ksi2wOEy2NmPkH7ObglM0G6RXD0LKqyDp9hxgTmYG5GsYPmu2vzsdr1uxnromZexCWGOAunGBiohGJNIh5WOFcH-4EdYqUlWIjaW4HIfl1geS0zxk2qfCY-1zO24IQ1SkAvAKLebwz5-BFSTBTR3LDngjanrBcQmvp257ZkyqQngxYU-3swvS3qRciz-VPTY3c9fgS1DLJyzCpkJMo9ifWYXlKZ_I-lcyUpiKvAoC1KtlNT1SMItiEocBF8"/>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Leche Entera de Campo</p>
+<p class="text-xs text-slate-500">2 × $1.50</p>
+</div>
+<div class="text-sm font-bold text-slate-800 dark:text-slate-200">$3.00</div>
 </div>
 <!-- Total Divider -->
 <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
 <span class="text-lg font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wide">Total</span>
-<span class="text-2xl font-black text-primary">$1,500.00</span>
+<span class="text-2xl font-black text-primary">$11.75</span>
 </div>
 </div>
 <!-- Action Buttons -->
@@ -117,6 +180,6 @@
 </main>
 <!-- Footer for context -->
 <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center">
-<p class="text-slate-400 text-xs">© 2024 AgroConecta - El puente directo entre el campo y tu mesa.</p>
+<p class="text-slate-400 text-xs">© 2026 AgroConecta - El puente directo entre el campo y tu mesa.</p>
 </footer>
 </body></html>
