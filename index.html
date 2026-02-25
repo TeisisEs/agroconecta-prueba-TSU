@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>AgroConecta – Navegador de Demo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "vendor": "#00695C",
+                        "admin": "#E65100",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-display bg-[#FAFAFA] text-slate-900 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl">eco</span>
+                <h1 class="text-xl font-extrabold tracking-tight">AgroConecta</h1>
+                <span class="text-[10px] font-bold bg-primary/10 text-primary px-2 py-0.5 rounded-full uppercase tracking-wider ml-2">Demo Navigator</span>
+            </div>
+            <div class="text-sm text-slate-500">TSU-44 – Prototipo Funcional</div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-10 space-y-10">
+        <!-- Quick Access -->
+        <section>
+            <h2 class="text-2xl font-extrabold text-primary mb-4">Acceso Rápido por Rol</h2>
+            <p class="text-slate-500 mb-6">Haz clic en un rol para iniciar el recorrido principal de cada flujo.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" onclick="sessionStorage.setItem('agroconecta_rol','comprador'); sessionStorage.setItem('agroconecta_usuario','María García');" class="group bg-white rounded-xl border-2 border-transparent hover:border-primary shadow-sm hover:shadow-md transition-all p-8 flex flex-col items-center text-center">
+                    <div class="size-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-4xl">shopping_bag</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Comprador</h3>
+                    <p class="text-sm text-slate-500">Catálogo → Carrito → Pago → Pedidos → Seguimiento</p>
+                </a>
+                <a href="Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html" onclick="sessionStorage.setItem('agroconecta_rol','vendedor'); sessionStorage.setItem('agroconecta_usuario','Juan Pérez');" class="group bg-white rounded-xl border-2 border-transparent hover:border-vendor shadow-sm hover:shadow-md transition-all p-8 flex flex-col items-center text-center">
+                    <div class="size-16 rounded-full bg-vendor/10 text-vendor flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-4xl">storefront</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Vendedor</h3>
+                    <p class="text-sm text-slate-500">Dashboard → Comercio → Productos → Pedidos → Entregas</p>
+                </a>
+                <a href="Modulo 9 Panel Administrador/9.1 Dashboard del Administrador.html" onclick="sessionStorage.setItem('agroconecta_rol','admin'); sessionStorage.setItem('agroconecta_usuario','Carlos Mendoza');" class="group bg-white rounded-xl border-2 border-transparent hover:border-admin shadow-sm hover:shadow-md transition-all p-8 flex flex-col items-center text-center">
+                    <div class="size-16 rounded-full bg-admin/10 text-admin flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-4xl">admin_panel_settings</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Administrador</h3>
+                    <p class="text-sm text-slate-500">Dashboard → Usuarios → Reportes Globales</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 1 -->
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-slate-400">lock</span>
+                <h2 class="text-lg font-bold">Módulo 1 – Autenticación y Usuarios</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <a href="Modulo 1 Autenticacion y Usuarios/1.1 login.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">1.1</span>
+                    <span class="text-sm font-medium">Login</span>
+                </a>
+                <a href="Modulo 1 Autenticacion y Usuarios/1.2 Registro Selección de Rol.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">1.2</span>
+                    <span class="text-sm font-medium">Registro – Selección de Rol</span>
+                </a>
+                <a href="Modulo 1 Autenticacion y Usuarios/1.3 Formulario de Registro (Comprador).html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">1.3</span>
+                    <span class="text-sm font-medium">Registro Comprador</span>
+                </a>
+                <a href="Modulo 1 Autenticacion y Usuarios/1.4 Formulario de Registro (Vendedor).html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">1.4</span>
+                    <span class="text-sm font-medium">Registro Vendedor</span>
+                </a>
+                <a href="Modulo 1 Autenticacion y Usuarios/1.5 Verificación de Correo.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">1.5</span>
+                    <span class="text-sm font-medium">Verificación de Correo</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 2 -->
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-vendor">storefront</span>
+                <h2 class="text-lg font-bold">Módulo 2 – Gestión de Comercio <span class="text-xs font-bold text-vendor bg-vendor/10 px-2 py-0.5 rounded-full ml-2">VENDEDOR</span></h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <a href="Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-vendor hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-vendor bg-vendor/10 rounded px-2 py-1">2.1</span>
+                    <span class="text-sm font-medium">Dashboard del Vendedor</span>
+                </a>
+                <a href="Modulo 2 Gestion de Comercio/2.2 RegistroEdicion de Comercio.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-vendor hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-vendor bg-vendor/10 rounded px-2 py-1">2.2</span>
+                    <span class="text-sm font-medium">Registro/Edición de Comercio</span>
+                </a>
+                <a href="Modulo 2 Gestion de Comercio/2.3  Lista de Productos del Vendedor.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-vendor hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-vendor bg-vendor/10 rounded px-2 py-1">2.3</span>
+                    <span class="text-sm font-medium">Lista de Productos</span>
+                </a>
+                <a href="Modulo 2 Gestion de Comercio/2.4 Formulario AltaEdición de Producto.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-vendor hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-vendor bg-vendor/10 rounded px-2 py-1">2.4</span>
+                    <span class="text-sm font-medium">Alta/Edición de Producto</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 3 -->
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-primary">search</span>
+                <h2 class="text-lg font-bold">Módulo 3 – Catálogo y Búsqueda <span class="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full ml-2">COMPRADOR</span></h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <a href="Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">3.1</span>
+                    <span class="text-sm font-medium">Home / Catálogo General</span>
+                </a>
+                <a href="Modulo 3 Catalogo y Busqueda/3.2 Detalle de Producto.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">3.2</span>
+                    <span class="text-sm font-medium">Detalle de Producto</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 4 -->
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                <h2 class="text-lg font-bold">Módulo 4 – Pedidos y Carrito</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <a href="Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">4.1</span>
+                    <span class="text-sm font-medium">Carrito de Compras</span>
+                    <span class="text-[10px] text-primary bg-primary/10 px-1.5 py-0.5 rounded ml-auto">Comprador</span>
+                </a>
+                <a href="Modulo 4 Pedidos y Carrito/4.2 Checkout  Pago.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">4.2</span>
+                    <span class="text-sm font-medium">Checkout / Pago</span>
+                    <span class="text-[10px] text-primary bg-primary/10 px-1.5 py-0.5 rounded ml-auto">Comprador</span>
+                </a>
+                <a href="Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">4.3</span>
+                    <span class="text-sm font-medium">Historial de Pedidos</span>
+                    <span class="text-[10px] text-primary bg-primary/10 px-1.5 py-0.5 rounded ml-auto">Comprador</span>
+                </a>
+                <a href="Modulo 4 Pedidos y Carrito/4.4 Bandeja de Pedidos (Vendedor).html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-vendor hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-vendor bg-vendor/10 rounded px-2 py-1">4.4</span>
+                    <span class="text-sm font-medium">Bandeja de Pedidos</span>
+                    <span class="text-[10px] text-vendor bg-vendor/10 px-1.5 py-0.5 rounded ml-auto">Vendedor</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 5 -->
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-primary">payments</span>
+                <h2 class="text-lg font-bold">Módulo 5 – Pagos y Reembolsos</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <a href="Modulo 5 Pagos y Reembolsos/5.1 Confirmacion de Pago.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">5.1</span>
+                    <span class="text-sm font-medium">Confirmación de Pago</span>
+                </a>
+                <a href="Modulo 5 Pagos y Reembolsos/5.2 Gestion de Reembolsos.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">5.2</span>
+                    <span class="text-sm font-medium">Gestión de Reembolsos</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 6 -->
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-primary">local_shipping</span>
+                <h2 class="text-lg font-bold">Módulo 6 – Envíos y Entregas</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <a href="Modulo 6 Envios y Entregas/6.1 Seguimiento de Entrega (Comprador).html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-primary hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-primary bg-primary/10 rounded px-2 py-1">6.1</span>
+                    <span class="text-sm font-medium">Seguimiento de Entrega</span>
+                    <span class="text-[10px] text-primary bg-primary/10 px-1.5 py-0.5 rounded ml-auto">Comprador</span>
+                </a>
+                <a href="Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-vendor hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-vendor bg-vendor/10 rounded px-2 py-1">6.2</span>
+                    <span class="text-sm font-medium">Asignación de Entrega</span>
+                    <span class="text-[10px] text-vendor bg-vendor/10 px-1.5 py-0.5 rounded ml-auto">Vendedor</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 7 -->
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-slate-400">description</span>
+                <h2 class="text-lg font-bold">Módulo 7 – Gestión Documental</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <a href="Modulo 7 Gestion Documental/7.1 Centro de Documentos.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-vendor hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-vendor bg-vendor/10 rounded px-2 py-1">7.1</span>
+                    <span class="text-sm font-medium">Centro de Documentos</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 8 -->
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-vendor">bar_chart</span>
+                <h2 class="text-lg font-bold">Módulo 8 – Reportes e Indicadores <span class="text-xs font-bold text-vendor bg-vendor/10 px-2 py-0.5 rounded-full ml-2">VENDEDOR</span></h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <a href="Modulo 8 Reportes e indicadores/8.1 Reportes de Ventas.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-vendor hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-vendor bg-vendor/10 rounded px-2 py-1">8.1</span>
+                    <span class="text-sm font-medium">Reportes de Ventas</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 9 -->
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-admin">admin_panel_settings</span>
+                <h2 class="text-lg font-bold">Módulo 9 – Panel Administrador <span class="text-xs font-bold text-admin bg-admin/10 px-2 py-0.5 rounded-full ml-2">ADMIN</span></h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <a href="Modulo 9 Panel Administrador/9.1 Dashboard del Administrador.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-admin hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-admin bg-admin/10 rounded px-2 py-1">9.1</span>
+                    <span class="text-sm font-medium">Dashboard del Administrador</span>
+                </a>
+                <a href="Modulo 9 Panel Administrador/9.2 Gestion de Usuarios y Roles.html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-admin hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-admin bg-admin/10 rounded px-2 py-1">9.2</span>
+                    <span class="text-sm font-medium">Gestión de Usuarios y Roles</span>
+                </a>
+                <a href="Modulo 9 Panel Administrador/9.3 Reportes Globales (Admin).html" class="bg-white rounded-lg border border-slate-200 px-4 py-3 hover:border-admin hover:shadow-sm transition-all flex items-center gap-3">
+                    <span class="text-xs font-black text-admin bg-admin/10 rounded px-2 py-1">9.3</span>
+                    <span class="text-sm font-medium">Reportes Globales</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Flow Diagram -->
+        <section class="bg-white rounded-xl border border-slate-200 p-8 shadow-sm">
+            <h2 class="text-lg font-bold mb-6">Flujos de Navegación</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-sm font-bold text-primary mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">shopping_bag</span> Comprador</h3>
+                    <div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600">
+                        <span class="bg-primary/10 text-primary px-2 py-1 rounded">1.1 Login</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-primary/10 text-primary px-2 py-1 rounded">3.1 Catálogo</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-primary/10 text-primary px-2 py-1 rounded">3.2 Detalle</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-primary/10 text-primary px-2 py-1 rounded">4.1 Carrito</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-primary/10 text-primary px-2 py-1 rounded">4.2 Checkout</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-primary/10 text-primary px-2 py-1 rounded">5.1 Pago</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-primary/10 text-primary px-2 py-1 rounded">4.3 Historial</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-primary/10 text-primary px-2 py-1 rounded">6.1 Seguimiento</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-vendor mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">storefront</span> Vendedor</h3>
+                    <div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600">
+                        <span class="bg-vendor/10 text-vendor px-2 py-1 rounded">1.1 Login</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-vendor/10 text-vendor px-2 py-1 rounded">2.1 Dashboard</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-vendor/10 text-vendor px-2 py-1 rounded">2.2 Comercio</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-vendor/10 text-vendor px-2 py-1 rounded">2.3 Productos</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-vendor/10 text-vendor px-2 py-1 rounded">2.4 Alta Producto</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-vendor/10 text-vendor px-2 py-1 rounded">4.4 Pedidos</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-vendor/10 text-vendor px-2 py-1 rounded">6.2 Entregas</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-vendor/10 text-vendor px-2 py-1 rounded">7.1 Documentos</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-vendor/10 text-vendor px-2 py-1 rounded">8.1 Reportes</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-admin mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">admin_panel_settings</span> Administrador</h3>
+                    <div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600">
+                        <span class="bg-admin/10 text-admin px-2 py-1 rounded">1.1 Login</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-admin/10 text-admin px-2 py-1 rounded">9.1 Dashboard</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-admin/10 text-admin px-2 py-1 rounded">9.2 Usuarios</span>
+                        <span class="text-slate-300">→</span>
+                        <span class="bg-admin/10 text-admin px-2 py-1 rounded">9.3 Reportes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-400">
+        <p>© 2024 AgroConecta – Demo de prototipo funcional (TSU-44). Solo HTML + Tailwind CSS + Vanilla JS.</p>
+    </footer>
+</body>
+</html>

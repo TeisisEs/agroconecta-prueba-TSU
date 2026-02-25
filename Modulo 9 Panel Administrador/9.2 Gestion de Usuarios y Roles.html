@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#e65100",
+                "background-light": "#fafafa",
+                "background-dark": "#23160f",
+                "user-buyer": "#1565c0",
+                "user-seller": "#00695c",
+                "status-active": "#388e3c",
+                "status-inactive": "#757575",
+                "status-suspended": "#d32f2f"
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<title>Gestión de Usuarios | AgroConecta Admin</title>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .sidebar-scroll::-webkit-scrollbar { width: 4px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="fixed inset-y-0 left-0 w-[240px] bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 z-50 flex flex-col">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<div>
+<h2 class="font-bold text-lg leading-tight">AgroConecta</h2>
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase">Panel Control</span>
+</div>
+</div>
+</div>
+<div class="p-4 flex items-center gap-3 border-b border-slate-50 dark:border-slate-800">
+<div class="size-10 rounded-full bg-slate-200 bg-cover bg-center" data-alt="Administrator profile picture avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOS1KZX-WtAzCseCONQ8Qs0sbURUJcj0V3H83DonIncNTR4CPip8fw4epazNkoELeEV-OMDpJss8i0tH9E7IKu2jW3JF4vOdBvJdTRyRJupjBZEgKz-8PFtvOuXd4jMVyleBeZ3K640bzulfykAu-ZBph7gUZkAu_5B3T_1psxBn4bSRJ6xm4V16-cbie6Ie7S3ceIMoIXzNc139FRFxP0-LwUPG6R_-H-VVRYC7l0L-9Lzo1cG69IMamaz6-7gIBxlw0hQMBw_qY')"></div>
+<div class="flex flex-col overflow-hidden">
+<span class="font-bold text-sm truncate">Admin Principal</span>
+<span class="text-[10px] font-bold text-primary px-1.5 py-0.5 rounded bg-primary/10 self-start uppercase">Administrador</span>
+</div>
+</div>
+<nav class="flex-1 px-3 py-4 space-y-1 sidebar-scroll overflow-y-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="9.1 Dashboard del Administrador.html">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-white shadow-md shadow-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px] fill-1">group</span>
+<span class="text-sm font-medium">Usuarios</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">storefront</span>
+<span class="text-sm font-medium">Comercios</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="text-sm font-medium">Pedidos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+<span class="text-sm font-medium">Pagos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="9.3 Reportes Globales (Admin).html">
+<span class="material-symbols-outlined text-[22px]">bar_chart</span>
+<span class="text-sm font-medium">Reportes</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">settings</span>
+<span class="text-sm font-medium">Configuración</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<button onclick="window.location.href='../Modulo 1 Autenticacion y Usuarios/1.1 login.html';" class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-slate-600 hover:bg-red-50 hover:text-red-600 dark:text-slate-400 transition-all font-bold text-sm">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+                    Cerrar Sesión
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-[240px]">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto h-16 flex items-center justify-between px-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400 lg:hidden">menu</span>
+<div class="h-8 w-px bg-slate-200 mx-2 hidden lg:block"></div>
+<nav class="hidden lg:flex items-center gap-2 text-xs font-medium text-slate-500 uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="9.1 Dashboard del Administrador.html">Admin</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-slate-900 dark:text-white">Usuarios</span>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="size-10 flex items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-8 rounded-full bg-slate-100 bg-cover bg-center ring-2 ring-primary/20 ring-offset-2" data-alt="Small header avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6PeLA219g0bek2_q8qVaTKF0CrR1wukM9w0n_cUCEkFz19PYLs9RLvHCaTYkWGX8wjgKVP9L0N8NUssduHAT1m02R86ZcUVmB1gdIBAkISQlRjdffufcMXwew6hH9YDNkW9CLN1Go83FfSnm5rvyh8RUiT7aeGwdbKRqXBcRIuwOyXtYz3H8yD8gDqFbKa6oQyWjqQ5sEUd2rqa7iR3eDa1pPbXifPhiQXks3n-jD4-cKM855dW5h86JTieXtllgW1aME7aFmI9w')"></div>
+</div>
+</div>
+</header>
+<!-- Dashboard Body -->
+<div class="max-w-[1280px] mx-auto p-8">
+<div class="mb-8">
+<h1 class="text-3xl font-black text-primary tracking-tight">Gestión de Usuarios</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Monitorea y administra todas las cuentas activas de la plataforma AgroConecta.</p>
+</div>
+<!-- Actions Bar -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-4 mb-6 flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-1 min-w-[300px] items-center gap-3">
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Buscar usuario..." type="text"/>
+</div>
+<div class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800 p-1 rounded-lg">
+<button class="px-3 py-1.5 text-xs font-bold rounded-md bg-white dark:bg-slate-700 shadow-sm text-primary">Todos</button>
+<button class="px-3 py-1.5 text-xs font-bold rounded-md text-slate-500 hover:bg-white/50">Comprador</button>
+<button class="px-3 py-1.5 text-xs font-bold rounded-md text-slate-500 hover:bg-white/50">Vendedor</button>
+<button class="px-3 py-1.5 text-xs font-bold rounded-md text-slate-500 hover:bg-white/50">Admin</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative">
+<select class="pl-4 pr-10 py-2 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm appearance-none font-medium cursor-pointer">
+<option>Estado: Todos</option>
+<option>Activo</option>
+<option>Inactivo</option>
+<option>Suspendido</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+<button class="px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition-all rounded-lg text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+                            Exportar
+                        </button>
+</div>
+</div>
+<!-- Users Table Table -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Avatar + Nombre</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Correo</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Rol</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Registro</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Estado</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<!-- Table Row 1 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-100 bg-cover bg-center" data-alt="User avatar Carlos Ruiz" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_joIEPhQwRZQF5HHa42oKB4wXpQYQta1jzpqnsM5RmDcx0bmr3lmvWuDoVKaRVnVjp4l4djq-duLLw_olXKHgYsj5AP57CRwm-ti5TTwk2ALcakE2oA1Z2vgaTClXOn42DqzljHSRRCN1D9fiIUAAHL967u5L6-lHsqA4QFUH61cyr4l3qqEfL_119Kr3MQHl-vwG6LijlA5Fq2kbJG8Ympp5ohIcote4_6eXAj64PJB8sl1x7fg2rPx04NSPX9a3sMqfgGt4pNA')"></div>
+<span class="font-bold text-slate-900 dark:text-white">Carlos Ruiz</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">c.ruiz@ejemplo.com</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 text-[11px] font-bold rounded-full bg-user-buyer/10 text-user-buyer uppercase">Comprador</span>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">12 Oct 2023</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-status-active">
+<span class="size-2 rounded-full bg-current"></span>
+<span class="text-xs font-bold uppercase">Activo</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="size-8 flex items-center justify-center rounded-lg text-teal-600 hover:bg-teal-50">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="px-2 py-1 flex items-center gap-1 rounded border border-slate-200 text-[10px] font-bold text-slate-500 hover:bg-slate-50">
+                                            ROL <span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+</button>
+<div class="ml-2 h-5 w-10 rounded-full bg-status-active/20 relative cursor-pointer">
+<div class="absolute right-0.5 top-0.5 size-4 rounded-full bg-status-active shadow-sm"></div>
+</div>
+</div>
+</td>
+</tr>
+<!-- Table Row 2 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-100 bg-cover bg-center" data-alt="User avatar Maria Lopez" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCViPreNjNdbAXg7t8K0wg4tAnoyupFQ7TVlteXr2-AJNqQMJYUNMBvy6THdJzsiTAy-uYuE7HZ3JNt_BUxG0p2tcbhqDFPWgl0KeJ_-OebsRCj6Jg2Hfb2PjuTvrp245mPrqN-fRre5yKYYuXLpTOepEcIZ61gRHSZZQ0B1LSFw9cYkCQOMIeq1dCQZLGLFa-NGA3OipJuhPMmQNEZuE27VD40WeytZbidb0sFangZFExK11Lf0wmypVDwXM_7hoCLU5TJq-Iqfs')"></div>
+<span class="font-bold text-slate-900 dark:text-white">Maria López</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">m.lopez@huerta.com</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 text-[11px] font-bold rounded-full bg-user-seller/10 text-user-seller uppercase">Vendedor</span>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">05 Sep 2023</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-status-active">
+<span class="size-2 rounded-full bg-current"></span>
+<span class="text-xs font-bold uppercase">Activo</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="size-8 flex items-center justify-center rounded-lg text-teal-600 hover:bg-teal-50">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="px-2 py-1 flex items-center gap-1 rounded border border-slate-200 text-[10px] font-bold text-slate-500 hover:bg-slate-50">
+                                            ROL <span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+</button>
+<div class="ml-2 h-5 w-10 rounded-full bg-status-active/20 relative cursor-pointer">
+<div class="absolute right-0.5 top-0.5 size-4 rounded-full bg-status-active shadow-sm"></div>
+</div>
+</div>
+</td>
+</tr>
+<!-- Table Row 3 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-100 bg-cover bg-center" data-alt="User avatar Jorge Mendez" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMbMhMTAr5lbtLLh7nLWbUmF8hQkYgn68wxAi90myI2xPnBegUDhW6cL5MZGCZ0Lh_RJc0k5Pif7Dz3aziI5m313WQ9pSVtwu_OGaF9dpHAboaTxWM3XqS397R4j18JlbwByOKXpQjMgiV5RPh75V_YJ7MXeF_WYLljBbL018lJP05MJHbSc_oQ574t0JWnEUUM7bFowLlpuIPhEIOMF92eQmpS1HP8Hrufg-PCVsGsjRwsYi7mdK5cbL96iPgB-QzRSG9P3Is_Zk')"></div>
+<span class="font-bold text-slate-900 dark:text-white">Jorge Méndez</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">j.mendez@agroadmin.com</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 text-[11px] font-bold rounded-full bg-primary/10 text-primary uppercase">Admin</span>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">18 Ago 2023</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-status-inactive">
+<span class="size-2 rounded-full bg-current"></span>
+<span class="text-xs font-bold uppercase">Inactivo</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="size-8 flex items-center justify-center rounded-lg text-teal-600 hover:bg-teal-50">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="px-2 py-1 flex items-center gap-1 rounded border border-slate-200 text-[10px] font-bold text-slate-500 hover:bg-slate-50">
+                                            ROL <span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+</button>
+<div class="ml-2 h-5 w-10 rounded-full bg-slate-200 relative cursor-pointer">
+<div class="absolute left-0.5 top-0.5 size-4 rounded-full bg-white shadow-sm"></div>
+</div>
+</div>
+</td>
+</tr>
+<!-- Table Row 4 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors border-b-0">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-100 bg-cover bg-center" data-alt="User avatar Roberto Saenz" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2byZ20bPeI1DFWfWitY2I0Lmvr_lOrBNnXRrTERO0aoYL6rgY061F39pCbIK9LNVUi1BIXSeYsGbPIWrlsyFZwYCjrt-LesXMuMvzNhGuCLIxoB_4gE0thAfhUe7fMOeq7YDsZuRh2DAiPLDr74Yrg-yFHImC8zReI_4bQ_5XQYjrL0rrC_5Vzkvfzh4UNmVOV7ruFTG43rL0DD9fSWUYDT2zDVu-bg9THto-jU2_AU0Mq7qBb1EGy5q_ZYXxWgyzJtn3HiQXFjo')"></div>
+<span class="font-bold text-slate-900 dark:text-white">Roberto Saenz</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">r.saenz@spam.com</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 text-[11px] font-bold rounded-full bg-user-buyer/10 text-user-buyer uppercase">Comprador</span>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">22 Nov 2023</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-status-suspended">
+<span class="size-2 rounded-full bg-current"></span>
+<span class="text-xs font-bold uppercase">Suspendido</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="size-8 flex items-center justify-center rounded-lg text-teal-600 hover:bg-teal-50">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="px-2 py-1 flex items-center gap-1 rounded border border-slate-200 text-[10px] font-bold text-slate-500 hover:bg-slate-50">
+                                            ROL <span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+</button>
+<div class="ml-2 h-5 w-10 rounded-full bg-status-suspended/20 relative cursor-pointer">
+<div class="absolute right-0.5 top-0.5 size-4 rounded-full bg-status-suspended shadow-sm"></div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/30 flex items-center justify-between border-t border-slate-200 dark:border-slate-800">
+<span class="text-xs font-medium text-slate-500">Mostrando 4 de 128 usuarios</span>
+<div class="flex gap-2">
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 bg-white hover:bg-slate-50 text-slate-500">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded border border-primary bg-primary text-white font-bold text-xs">1</button>
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 bg-white hover:bg-slate-50 text-slate-500 font-bold text-xs">2</button>
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 bg-white hover:bg-slate-50 text-slate-500 font-bold text-xs">3</button>
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 bg-white hover:bg-slate-50 text-slate-500">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- User Detail Modal (UI representation Overlay) -->
+<div class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm hidden">
+<div class="bg-white dark:bg-slate-900 w-full max-w-md rounded-xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<h3 class="font-black text-xl text-slate-900 dark:text-white">Detalle de Usuario</h3>
+<button class="size-8 flex items-center justify-center rounded-lg hover:bg-slate-100 text-slate-400">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-6 space-y-6">
+<!-- User Summary -->
+<div class="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
+<div class="size-16 rounded-full bg-slate-200 bg-cover bg-center border-2 border-white dark:border-slate-700" data-alt="Detailed user avatar picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqMXCL15o5556VofW-TnFeZKr8B_XDbe6Rcfs9HZPRF39_1KWI4NMlApNrV1AOlTY-MyFwKkRByu_arDAaZNpQZztrn_RRsYcENMprtTpGJ69jClbV0HpcKrzlv2kuRGg_stBj53arAmvPPD8NIk2fkGcIGAmzjt5Eoqskoz7rcAbi9cGUH5DdT0cWl6zcU-Xqm5LGkPoWSRMA3MclgZ_3PhCVkXwYwzYyUNZLNW443ijRFJNM91RKfHO-HKsbxaXNRwNvzpkIxSo')"></div>
+<div>
+<h4 class="font-bold text-lg text-slate-900 dark:text-white">Maria López</h4>
+<p class="text-sm text-slate-500">Registrada el 05/09/2023</p>
+</div>
+</div>
+<!-- Editable Fields -->
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Rol del Usuario</label>
+<div class="relative">
+<select class="w-full pl-4 pr-10 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 text-sm font-medium appearance-none cursor-pointer">
+<option>Comprador</option>
+<option selected="">Vendedor</option>
+<option>Administrador</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex items-center justify-between py-2">
+<div>
+<span class="block text-xs font-bold uppercase tracking-widest text-slate-400">Estado de cuenta</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Permitir acceso a la plataforma</span>
+</div>
+<div class="h-6 w-11 rounded-full bg-status-active relative cursor-pointer shadow-inner">
+<div class="absolute right-0.5 top-0.5 size-5 rounded-full bg-white shadow-md"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 flex gap-3 justify-end">
+<button class="px-5 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 transition-colors uppercase tracking-wider">Cancelar</button>
+<button class="px-6 py-2 bg-primary text-white rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:brightness-110 transition-all uppercase tracking-wider">Guardar</button>
+</div>
+</div>
+</div>
+</body></html>

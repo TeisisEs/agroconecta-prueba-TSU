@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E65100",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#23160f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>AgroConecta - Panel de Administración</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-[240px] fixed h-full bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col z-20">
+<div class="p-6 flex items-center gap-3 border-b border-slate-100 dark:border-slate-800">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">eco</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold truncate">Admin Agro</span>
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full tracking-wider">ADMINISTRADOR</span>
+</div>
+</div>
+<nav class="flex-1 px-4 py-6 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-primary text-white font-medium" href="#">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="9.2 Gestion de Usuarios y Roles.html">
+<span class="material-symbols-outlined text-[22px]">group</span>
+<span class="text-sm font-medium">Usuarios</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">storefront</span>
+<span class="text-sm font-medium">Comercios</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="text-sm font-medium">Pedidos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+<span class="text-sm font-medium">Pagos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="9.3 Reportes Globales (Admin).html">
+<span class="material-symbols-outlined text-[22px]">bar_chart</span>
+<span class="text-sm font-medium">Reportes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">settings</span>
+<span class="text-sm font-medium">Configuración</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<button onclick="window.location.href='../Modulo 1 Autenticacion y Usuarios/1.1 login.html';" class="flex items-center gap-3 w-full px-4 py-2 text-slate-500 hover:text-red-600 transition-colors">
+<span class="material-symbols-outlined text-[22px]">logout</span>
+<span class="text-sm font-medium">Cerrar Sesión</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="flex-1 ml-[240px]">
+<!-- Top Navbar -->
+<header class="sticky top-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-10 px-8 py-4">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary md:hidden">menu</span>
+<h2 class="text-lg font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                            Agro<span class="text-primary">Conecta</span>
+</h2>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex items-center gap-3 pl-6 border-l border-slate-100 dark:border-slate-800">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold leading-none">Carlos Mendoza</p>
+<p class="text-[10px] text-slate-400">carlos.m@agroconecta.com</p>
+</div>
+<div class="size-9 rounded-full bg-slate-200 bg-cover bg-center" data-alt="Avatar of the administrator" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCviOBkif3m25EIC5LWP6t-8Qv4kdiAmZMhyjlr39cXlsPIbNZ6gw-0rJlJOXruphA1ZlrW0MIxjMr0oQzXu9LASUD93MPnhxxuaWqu0H0NNfMqd7NOTkGu5dn9MaecrHmwQ6S7Q21AfgSPgyU34LCRmnyZ8IR8y0CsXKLvkQN6afp9o11DYghq3w3rnKfqfF51wtOeTuxLT0-qbI2rX2uHyCmu-STHZPJPBH0dDbZHU3B94HYUSqM4yxFu4dEESjfIRI-FV9Ppghc')"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<main class="max-w-[1280px] mx-auto p-8">
+<!-- Header Section -->
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold text-primary mb-1">Panel de Administración</h1>
+<p class="text-slate-500 font-medium">Miércoles, 18 de Octubre 2023</p>
+</div>
+<!-- KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Total usuarios</p>
+<p class="text-2xl font-extrabold">1,240</p>
+<div class="flex items-center gap-1 text-green-500 text-xs mt-2 font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Comercios activos</p>
+<p class="text-2xl font-extrabold">85</p>
+<div class="flex items-center gap-1 text-green-500 text-xs mt-2 font-bold">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span>Operativos</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Pedidos hoy</p>
+<p class="text-2xl font-extrabold">42</p>
+<div class="flex items-center gap-1 text-primary text-xs mt-2 font-bold">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>8 pendientes</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Ventas (mes)</p>
+<p class="text-2xl font-extrabold">$12,500</p>
+<div class="flex items-center gap-1 text-green-500 text-xs mt-2 font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+5.4%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Reembolsos</p>
+<p class="text-2xl font-extrabold">3</p>
+<div class="flex items-center gap-1 text-amber-500 text-xs mt-2 font-bold">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>Requiere atención</span>
+</div>
+</div>
+</div>
+<!-- Row 2: 50/50 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<!-- Recent Activity -->
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
+<div class="p-6 border-b border-slate-50 dark:border-slate-800 flex justify-between items-center">
+<h3 class="font-bold text-slate-800 dark:text-white">Actividad reciente</h3>
+<button class="text-xs font-bold text-primary hover:underline">Ver todo</button>
+</div>
+<div class="divide-y divide-slate-50 dark:divide-slate-800">
+<div class="p-4 flex items-start gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="size-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold">Nuevo registro de vendedor</p>
+<p class="text-xs text-slate-500">"Huerto Los Arcos" se ha registrado en la plataforma.</p>
+</div>
+<span class="text-[10px] text-slate-400 font-medium">Hace 12 min</span>
+</div>
+<div class="p-4 flex items-start gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="size-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold">Pago procesado</p>
+<p class="text-xs text-slate-500">Transacción #ORD-4592 completada satisfactoriamente.</p>
+</div>
+<span class="text-[10px] text-slate-400 font-medium">Hace 45 min</span>
+</div>
+<div class="p-4 flex items-start gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="size-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">assessment</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold">Reporte mensual generado</p>
+<p class="text-xs text-slate-500">El resumen de ventas de Septiembre está listo.</p>
+</div>
+<span class="text-[10px] text-slate-400 font-medium">Hace 2 horas</span>
+</div>
+</div>
+</div>
+<!-- System Health -->
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
+<div class="p-6 border-b border-slate-50 dark:border-slate-800">
+<h3 class="font-bold text-slate-800 dark:text-white">Estado del sistema</h3>
+</div>
+<div class="p-6 space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">database</span>
+<span class="text-sm font-medium">Base de Datos</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-green-600 uppercase">Saludable</span>
+<div class="size-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">api</span>
+<span class="text-sm font-medium">Pasarela de Pagos (API)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-green-600 uppercase">Saludable</span>
+<div class="size-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">notifications_active</span>
+<span class="text-sm font-medium">Servicio Notificaciones</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-amber-500 uppercase">Latencia Alta</span>
+<div class="size-2 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.6)]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">local_shipping</span>
+<span class="text-sm font-medium">API de Envíos</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-green-600 uppercase">Saludable</span>
+<div class="size-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 3: Full Width Table -->
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
+<div class="p-6 border-b border-slate-50 dark:border-slate-800 flex justify-between items-center">
+<h3 class="font-bold text-slate-800 dark:text-white">Comercios nuevos (esta semana)</h3>
+<div class="flex gap-2">
+<input class="px-3 py-1.5 text-sm rounded border-slate-200 focus:border-primary focus:ring-primary outline-none" placeholder="Buscar comercio..." type="text"/>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-400 text-[11px] uppercase tracking-widest font-bold">
+<tr>
+<th class="px-6 py-4">Comercio</th>
+<th class="px-6 py-4">Vendedor</th>
+<th class="px-6 py-4">Fecha registro</th>
+<th class="px-6 py-4">Estado</th>
+<th class="px-6 py-4 text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">GF</div>
+<span class="text-sm font-bold">Granja Floral</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Elena Martínez</td>
+<td class="px-6 py-4 text-sm text-slate-500">16 Oct, 2023</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-100 text-amber-700 uppercase">Pendiente</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white rounded text-xs font-bold transition-colors">Aprobar</button>
+<button class="px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white rounded text-xs font-bold transition-colors">Rechazar</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">TO</div>
+<span class="text-sm font-bold">Tierras Orgánicas</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Roberto Gómez</td>
+<td class="px-6 py-4 text-sm text-slate-500">15 Oct, 2023</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-100 text-amber-700 uppercase">Pendiente</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white rounded text-xs font-bold transition-colors">Aprobar</button>
+<button class="px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white rounded text-xs font-bold transition-colors">Rechazar</button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">SV</div>
+<span class="text-sm font-bold">Sabor del Valle</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Lucía Fernández</td>
+<td class="px-6 py-4 text-sm text-slate-500">15 Oct, 2023</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-100 text-amber-700 uppercase">Pendiente</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white rounded text-xs font-bold transition-colors">Aprobar</button>
+<button class="px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white rounded text-xs font-bold transition-colors">Rechazar</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

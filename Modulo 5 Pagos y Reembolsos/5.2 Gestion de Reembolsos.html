@@ -1,0 +1,175 @@
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "secondary": "#00695C",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Solicitar Reembolso AgroConecta</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">AgroConecta</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-700 cursor-pointer">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-semibold leading-none">Carlos Ruiz</p>
+<p class="text-xs text-slate-500 mt-1">Comprador</p>
+</div>
+<div class="size-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="Avatar de usuario" class="w-full h-full object-cover" data-alt="User profile avatar photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgKVwZDRyzVxBb05aEpUxIfQKAiI5_X3FMu8Gllq20VeVTeovRp06ZhDEKWdEiDZ-_1fRk3kfn4kQAKMSfx4n34cdz_w-_zGX-Fb8Pm7i_HdI0_2ffpXElu8VM6omB8JxtD8LR1EjCeJLrf-zzVb6Qdg5znPbIMSVY_eXtvCJhu9bV0CKJjv7nKRafGnTd7U-uPUYzPgMygeLgX1UKtUfm5xDmPdS79afPoxncf4V01GtA_D1wwLcZrv9-4unZPe0zz9X5qI6kMsM"/>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[800px] mx-auto px-4 py-8">
+<nav class="flex items-center gap-2 text-sm text-slate-500 mb-6">
+<a class="hover:text-primary transition-colors" href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html">Inicio</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html">Mis Pedidos</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html">Pedido #1023</a>
+<span class="material-symbols-outlined text-xs text-slate-300">chevron_right</span>
+<span class="text-primary font-medium">Reembolso</span>
+</nav>
+<h2 class="text-3xl font-extrabold text-primary mb-8">Solicitar Reembolso</h2>
+<section class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 mb-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex gap-4 items-center">
+<div class="size-16 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400 text-3xl">shopping_basket</span>
+</div>
+<div>
+<h3 class="text-lg font-bold">Pedido #1023</h3>
+<p class="text-sm text-slate-500">Fecha: 12 Oct 2023</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<div class="text-slate-600 dark:text-slate-400 text-sm mb-1">
+<span class="font-medium">Tomates Cherry x2</span> — $7.00
+                    </div>
+<div class="text-xl font-bold text-slate-900 dark:text-white">Total: $7.00</div>
+</div>
+</div>
+</section>
+<form class="space-y-8">
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">report_problem</span>
+                        Motivo del reembolso
+                    </h3>
+</div>
+<div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<label class="relative flex items-center p-4 cursor-pointer rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="reason" type="radio"/>
+<span class="ml-3 font-medium">Producto en mal estado</span>
+</label>
+<label class="relative flex items-center p-4 cursor-pointer rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="reason" type="radio"/>
+<span class="ml-3 font-medium">Producto no recibido</span>
+</label>
+<label class="relative flex items-center p-4 cursor-pointer rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="reason" type="radio"/>
+<span class="ml-3 font-medium">Producto incorrecto</span>
+</label>
+<label class="relative flex items-center p-4 cursor-pointer rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="reason" type="radio"/>
+<span class="ml-3 font-medium">Otro motivo</span>
+</label>
+</div>
+<div class="px-6 pb-6">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Descripción detallada *</label>
+<textarea class="w-full h-32 rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:border-primary focus:ring-primary transition-all resize-none" placeholder="Por favor, explica detalladamente el problema con tu pedido..." required=""></textarea>
+</div>
+<div class="p-6 pt-0">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Adjuntar evidencia</label>
+<div class="border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-xl p-8 text-center hover:border-primary/50 transition-colors cursor-pointer bg-slate-50/50 dark:bg-slate-800/50 group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary text-4xl mb-2 transition-colors">add_a_photo</span>
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Haga clic o arrastre fotos aquí</p>
+<p class="text-xs text-slate-400 mt-1">Máximo 5 fotos (JPG, PNG)</p>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full text-xs font-medium">
+<span class="material-symbols-outlined text-sm">image</span>
+                            evidencia_01.jpg
+                            <button class="material-symbols-outlined text-sm hover:text-red-500" type="button">close</button>
+</div>
+<div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full text-xs font-medium">
+<span class="material-symbols-outlined text-sm">image</span>
+                            evidencia_02.jpg
+                            <button class="material-symbols-outlined text-sm hover:text-red-500" type="button">close</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-4 pb-12">
+<button class="px-6 py-2.5 text-slate-600 dark:text-slate-400 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" type="button" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html';">
+                    Cancelar
+                </button>
+<button class="px-8 py-2.5 bg-primary text-white font-bold rounded-lg shadow-md shadow-primary/20 hover:bg-primary/90 transition-all" type="submit" onclick="event.preventDefault(); alert('Solicitud de reembolso enviada (demo)'); window.location.href='../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html';">
+                    Enviar solicitud
+                </button>
+</div>
+</form>
+<section class="mt-4 border-t border-slate-200 dark:border-slate-800 pt-10 pb-16">
+<h4 class="text-center text-sm font-bold text-slate-500 uppercase tracking-widest mb-8">Estado de la solicitud</h4>
+<div class="relative flex justify-between items-start max-w-lg mx-auto">
+<div class="absolute top-5 left-0 w-full h-0.5 bg-slate-200 dark:bg-slate-800 -z-10"></div>
+<div class="flex flex-col items-center text-center">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white ring-8 ring-background-light dark:ring-background-dark mb-3">
+<span class="material-symbols-outlined text-xl">check</span>
+</div>
+<p class="text-xs font-bold text-primary">Solicitado</p>
+<p class="text-[10px] text-slate-400">Hoy</p>
+</div>
+<div class="flex flex-col items-center text-center opacity-50">
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500 ring-8 ring-background-light dark:ring-background-dark mb-3">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</div>
+<p class="text-xs font-bold">En revisión</p>
+<p class="text-[10px] text-slate-400">-</p>
+</div>
+<div class="flex flex-col items-center text-center opacity-50">
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500 ring-8 ring-background-light dark:ring-background-dark mb-3">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+<p class="text-xs font-bold">Resuelto</p>
+<p class="text-[10px] text-slate-400">-</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8">
+<div class="max-w-[1280px] mx-auto px-4 text-center">
+<p class="text-sm text-slate-500">© 2023 AgroConecta Marketplace. Todos los derechos reservados.</p>
+</div>
+</footer>
+</body></html>

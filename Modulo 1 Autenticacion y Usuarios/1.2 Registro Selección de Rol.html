@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConecta - Selección de Rol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                        "agro-blue": "#1565C0",
+                        "agro-teal": "#00695C",
+                        "agro-text-main": "#212121",
+                        "agro-text-sub": "#757575",
+                        "agro-link": "#2E7D32"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .card-hover-blue:hover {
+            border-color: #1565C0;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .card-hover-teal:hover {
+            border-color: #00695C;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h2 class="text-agro-text-main dark:text-slate-100 text-xl font-bold tracking-tight">AgroConecta</h2>
+</div>
+<a href="1.1 login.html" class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold transition-colors hover:bg-primary/90">
+<span>Iniciar sesión</span>
+</a>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-4 py-12 max-w-[1280px] mx-auto w-full">
+<!-- Hero Section -->
+<div class="text-center mb-12">
+<h1 class="text-agro-text-main dark:text-slate-100 text-3xl md:text-4xl font-bold leading-tight mb-4">
+                    ¿Cómo deseas unirte a AgroConecta?
+                </h1>
+<p class="text-agro-text-sub dark:text-slate-400 text-lg">
+                    Selecciona el tipo de cuenta que mejor se adapta a ti.
+                </p>
+</div>
+<!-- Role Selection Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[1000px]">
+<!-- Card 1: Comprador -->
+<div class="bg-white dark:bg-slate-900 border-2 border-transparent rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.1)] p-8 flex flex-col transition-all duration-300 card-hover-blue group">
+<div class="flex flex-col items-center text-center mb-6">
+<div class="w-16 h-16 rounded-full bg-agro-blue/10 flex items-center justify-center mb-4 text-agro-blue">
+<span class="material-symbols-outlined text-4xl">shopping_basket</span>
+</div>
+<h2 class="text-2xl font-bold text-agro-blue mb-3">Soy Comprador</h2>
+<p class="text-agro-text-sub dark:text-slate-400 text-base leading-relaxed">
+                            Explora productos agrícolas frescos de comercios locales, realiza pedidos y recibe en tu zona.
+                        </p>
+</div>
+<div class="flex-1 space-y-4 mb-8">
+<div class="flex items-start gap-3 text-agro-text-main dark:text-slate-200">
+<span class="text-agro-blue font-bold">✓</span>
+<span class="text-sm">Buscar productos por categoría</span>
+</div>
+<div class="flex items-start gap-3 text-agro-text-main dark:text-slate-200">
+<span class="text-agro-blue font-bold">✓</span>
+<span class="text-sm">Seguimiento de pedidos</span>
+</div>
+<div class="flex items-start gap-3 text-agro-text-main dark:text-slate-200">
+<span class="text-agro-blue font-bold">✓</span>
+<span class="text-sm">Comprobantes y facturas digitales</span>
+</div>
+</div>
+<button class="w-full bg-agro-blue text-white py-3 rounded-lg font-bold text-sm transition-opacity hover:opacity-90" onclick="window.location.href='1.3 Formulario de Registro (Comprador).html'">
+                        Registrarme como Comprador
+                    </button>
+</div>
+<!-- Card 2: Vendedor -->
+<div class="bg-white dark:bg-slate-900 border-2 border-transparent rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.1)] p-8 flex flex-col transition-all duration-300 card-hover-teal group">
+<div class="flex flex-col items-center text-center mb-6">
+<div class="w-16 h-16 rounded-full bg-agro-teal/10 flex items-center justify-center mb-4 text-agro-teal">
+<span class="material-symbols-outlined text-4xl">storefront</span>
+</div>
+<h2 class="text-2xl font-bold text-agro-teal mb-3">Soy Vendedor</h2>
+<p class="text-agro-text-sub dark:text-slate-400 text-base leading-relaxed">
+                            Registra tu comercio agrícola, publica tus productos y llega a compradores de toda tu zona.
+                        </p>
+</div>
+<div class="flex-1 space-y-4 mb-8">
+<div class="flex items-start gap-3 text-agro-text-main dark:text-slate-200">
+<span class="text-agro-teal font-bold">✓</span>
+<span class="text-sm">Gestiona tu catálogo de productos</span>
+</div>
+<div class="flex items-start gap-3 text-agro-text-main dark:text-slate-200">
+<span class="text-agro-teal font-bold">✓</span>
+<span class="text-sm">Recibe y procesa pedidos</span>
+</div>
+<div class="flex items-start gap-3 text-agro-text-main dark:text-slate-200">
+<span class="text-agro-teal font-bold">✓</span>
+<span class="text-sm">Genera reportes de ventas</span>
+</div>
+</div>
+<button class="w-full bg-agro-teal text-white py-3 rounded-lg font-bold text-sm transition-opacity hover:opacity-90" onclick="window.location.href='1.4 Formulario de Registro (Vendedor).html'">
+                        Registrarme como Vendedor
+                    </button>
+</div>
+</div>
+<!-- Bottom Link -->
+<div class="mt-12 text-center">
+<p class="text-agro-text-sub dark:text-slate-400">
+                    ¿Ya tienes cuenta? <a class="text-agro-link font-bold hover:underline" href="1.1 login.html">Inicia sesión aquí</a>
+</p>
+</div>
+</main>
+<!-- Optional Footer with background decoration -->
+<footer class="py-10 text-center text-agro-text-sub/50 text-xs">
+<p>© 2024 AgroConecta. Conectando el campo con tu hogar.</p>
+</footer>
+</div>
+</body></html>

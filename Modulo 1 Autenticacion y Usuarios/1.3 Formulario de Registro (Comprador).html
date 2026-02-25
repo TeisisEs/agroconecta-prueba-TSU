@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registro de Comprador - AgroConecta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "primary-light": "#A5D6A7",
+                        "accent-blue": "#1565C0",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .step-active { color: #2E7D32; font-weight: 700; }
+        .step-inactive { color: #64748b; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display">
+<div class="max-w-[600px] mx-auto px-4 py-8">
+<!-- Logo & Header -->
+<header class="flex flex-col items-center mb-8">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">eco</span>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-slate-100">AgroConecta</h1>
+</div>
+<!-- Progress Stepper -->
+<div class="w-full flex justify-between items-start relative mb-10">
+<div class="absolute top-5 left-0 w-full h-0.5 bg-slate-200 dark:bg-slate-700 -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-2 bg-background-light dark:bg-background-dark px-2">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold ring-4 ring-white dark:ring-background-dark">
+                        1
+                    </div>
+<span class="text-xs sm:text-sm step-active">Datos personales</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-2 bg-background-light dark:bg-background-dark px-2">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500 font-bold ring-4 ring-white dark:ring-background-dark">
+                        2
+                    </div>
+<span class="text-xs sm:text-sm step-inactive">Ubicación</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-2 bg-background-light dark:bg-background-dark px-2">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500 font-bold ring-4 ring-white dark:ring-background-dark">
+                        3
+                    </div>
+<span class="text-xs sm:text-sm step-inactive">Verificación</span>
+</div>
+</div>
+</header>
+<!-- Registration Form -->
+<main class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 sm:p-8">
+<form action="#" class="space-y-8" method="POST" onsubmit="event.preventDefault(); window.location.href='1.5 Verificación de Correo.html'; return false;">
+<!-- Section 1: Personal Data -->
+<section>
+<h2 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person</span>
+                        Paso 1: Datos Personales
+                    </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="nombre">Nombre(s) <span class="text-red-500">*</span></label>
+<input class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="nombre" name="nombre" placeholder="Ej. Juan Carlos" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="apellido">Apellido(s) <span class="text-red-500">*</span></label>
+<input class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="apellido" name="apellido" placeholder="Ej. Pérez" required="" type="text"/>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="email">Correo electrónico <span class="text-red-500">*</span></label>
+<input class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="email" name="email" placeholder="ejemplo@correo.com" required="" type="email"/>
+</div>
+<div class="mt-4 flex flex-col gap-1.5 relative">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="password">Contraseña <span class="text-red-500">*</span></label>
+<div class="relative">
+<input class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="password" name="password" required="" type="password" value="password123"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+<!-- Strength Bar -->
+<div class="mt-2">
+<div class="flex justify-between items-center mb-1">
+<span class="text-[10px] uppercase font-bold text-slate-500">Seguridad: <span class="text-yellow-600">Media</span></span>
+</div>
+<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-yellow-400 w-2/3"></div>
+</div>
+</div>
+<ul class="mt-2 space-y-1">
+<li class="text-xs text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Mínimo 8 caracteres
+                            </li>
+<li class="text-xs text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Una mayúscula
+                            </li>
+<li class="text-xs text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Un número
+                            </li>
+</ul>
+</div>
+<div class="mt-4 flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="confirm-password">Confirmar contraseña <span class="text-red-500">*</span></label>
+<input class="w-full px-3 py-2 border border-red-500 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none text-slate-900 dark:text-slate-100" id="confirm-password" name="confirm-password" required="" type="password" value="password124"/>
+<p class="text-xs text-red-600 mt-1 font-medium">Las contraseñas no coinciden</p>
+</div>
+</section>
+<hr class="border-slate-200 dark:border-slate-800"/>
+<!-- Section 2: Location -->
+<section>
+<h2 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                        Paso 2: Ubicación
+                    </h2>
+<div class="space-y-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="departamento">Departamento</label>
+<select class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="departamento" name="departamento">
+<option disabled="" selected="" value="">Selecciona un departamento</option>
+<option value="san-salvador">San Salvador</option>
+<option value="la-libertad">La Libertad</option>
+<option value="santa-ana">Santa Ana</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="municipio">Municipio</label>
+<select class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="municipio" name="municipio">
+<option disabled="" selected="" value="">Selecciona un municipio</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="distrito">Distrito/Zona</label>
+<select class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 rounded bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100" id="distrito" name="distrito">
+<option disabled="" selected="" value="">Selecciona un distrito</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Navigation Buttons -->
+<div class="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 pt-4">
+<button class="w-full sm:w-auto px-6 py-2.5 text-sm font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors flex items-center justify-center gap-2" type="button" onclick="window.location.href='1.2 Registro Selección de Rol.html'">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                        Volver
+                    </button>
+<button class="w-full sm:w-auto px-8 py-2.5 bg-accent-blue hover:bg-blue-800 text-white font-bold rounded-lg shadow-md transition-all flex items-center justify-center gap-2" type="submit">
+                        Siguiente
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</main>
+<footer class="mt-8 text-center">
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                ¿Ya tienes una cuenta? <a class="text-primary font-bold hover:underline" href="1.1 login.html">Inicia sesión aquí</a>
+</p>
+<div class="mt-4 flex justify-center gap-4 grayscale opacity-60">
+<!-- Abstract branding patterns -->
+<div class="h-8 w-8 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs">verified_user</span>
+</div>
+<div class="h-8 w-8 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs">local_shipping</span>
+</div>
+<div class="h-8 w-8 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs">eco</span>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

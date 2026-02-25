@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConecta - Detalle de Producto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "secondary": "#00695C",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-4 h-16 flex items-center justify-between gap-8">
+<!-- Logo -->
+<div class="flex items-center gap-2 shrink-0 cursor-pointer" onclick="window.location.href='3.1 Home  Catálogo General.html'">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">AgroConecta</h1>
+</div>
+<!-- Search Bar -->
+<div class="flex-1 max-w-2xl relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm" placeholder="Buscar productos orgánicos, herramientas..." type="text"/>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4 shrink-0">
+<button class="relative p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html'">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-700 mx-1"></div>
+<div class="flex items-center gap-2 cursor-pointer group">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border border-primary/20">
+<img class="w-full h-full object-cover" data-alt="User profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlVHxW1ZG45WXyRva9KscNC2MG0JYLzHCllBY-dqj2KRR_M2b7n8vKI6WdtQv-dBXKyLppxzeabk5SPZXjlnIkCFMA5lDmr84RrX_z_tGgOWpBeoaObRs7HXx6UfLAvL2Y80CKc7bg2IaL1CrTh839-QIx9-B6s0I7dl3fD2Ua--FVfGCNd3zSR3ZVZqknUiDysLKtfKqa7rsxSDKNK_gLOgt-hvwwjQo2GHxdCvy75HdFME6NZwvL4Xm5G_Pex0GLthTb2BysFf8"/>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">expand_more</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-4 py-6">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400 mb-8">
+<a class="hover:text-primary" href="3.1 Home  Catálogo General.html">Inicio</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary" href="3.1 Home  Catálogo General.html">Verduras</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-slate-900 dark:text-white">Tomates cherry orgánicos</span>
+</nav>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Left: Image Gallery (55%) -->
+<div class="w-full lg:w-[55%] space-y-4">
+<div class="aspect-square w-full rounded-xl overflow-hidden bg-white border border-slate-200 dark:border-slate-800">
+<img class="w-full h-full object-cover" data-alt="Main product view of fresh red organic cherry tomatoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbIgkHWlvdtjFhSHAxL-9A0Wi0eoZEQuB7fHXEb2vaBQq-RxDbIKaNdD9TZW-nSMinJ4MCddqaoHwBmS7iLrUKByKIksKpMnUGP8A-nrR-mporIgI-uR7EW2fiBiApQbgwtHcD-WFmj2baLJwZU7EThmpV9YfPkcqfuJ5NwT-zZIpk0ceE5Mj-hmOBtPUjmDpX2tB_looFtmOKbJld78RfHjMp2G2UsU7rq4GRK6OByZrK3oMt5w8UttoUfqY2NaNSvpA36r10qnw"/>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2">
+<div class="w-20 h-20 rounded-lg border-2 border-primary overflow-hidden shrink-0 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Thumbnail view 1 cherry tomatoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDU8PJfSVeV96onyAdNPy0nsiRV_CquXedje_oG6zu9V8tYmdVVH4c-IzK6-bVeEmDFEl4_mgGwMdGBuOxxWCZUoq5nqPmSJmHA7Xkv7pgHMf_5QKjC_VsY0YHb73GhBcLqsbdh9Nzb04q-kkKyC1M_DN0vygRcArPZXSfpFH5V8BJzijfOUa9LH4YgDd3TvWGjJGj3UMYi5wubwdCQz6Raxh01413_QjgR8rNKrjQtuSNsX3UlKUhGWkm9sZSEI7gSfn9OtSDp8U"/>
+</div>
+<div class="w-20 h-20 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden shrink-0 cursor-pointer hover:border-primary/50">
+<img class="w-full h-full object-cover" data-alt="Thumbnail view 2 cherry tomatoes close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF2xbYCQDm8UQ4SfvaJHHWkhxAWSQxePF5e7GWOOnu637ZgFexF9AG3xPZd3TdJ8ryP2nu44IM4d6jWeVVN8EAaChumX1LU4_8M1KdsZQ9otrAEPDMMc_xkXZgTGkx7oK8MlDYgZUfdJlo1hB1qivFSkvNWvRpGJgd7tx-363JrJztWBIjYrsQ5bM0odOkK8k-GpzadoVV1dV1F7ZsSz0OxPwG7oEQ1olLvoGjCQYKZJULXoYcQLxEw7GUCPl5Mls8TaL6qcHzh_k"/>
+</div>
+<div class="w-20 h-20 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden shrink-0 cursor-pointer hover:border-primary/50">
+<img class="w-full h-full object-cover" data-alt="Thumbnail view 3 cherry tomatoes bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbp2i_7rnjn70FUfZzW50q64QSXEgv1plbU8kEVrnm17aPPA-0G-_MRtISP-co16KdQNaPRckGDkaeyKj4KkEPZOg5QGmnhaRCFgoe4lXgV5g1YH5wxK2VWCubuOqf5ocsZCrrBoWEJ5CsojbupT4PLn9KyDuyOMiCCJe68hSC622AtIYcoQk3dwNoxWkQ3E0i7d2QIrFk_7iRdDoPg5jFZS5ntcLh8vzLMV-EG9tW3_epWiXdJ3CQMPN4fWJ9GDjz20ntxaagPuE"/>
+</div>
+<div class="w-20 h-20 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden shrink-0 cursor-pointer hover:border-primary/50">
+<img class="w-full h-full object-cover" data-alt="Thumbnail view 4 harvest context" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ut_EFwvglFay9_CfeBoDi86XBo_2kHINOirosuc5KJJprUw20gfRft8R7j6CVhtipqmgPexKpzIq2CaHa8dPUzz81BBHOMc7KwyEmUaYSUhEdeM6Yvg90t4qqu9G94Z1AhCcbBU0uZZnNN4KAdnTTF2vb_9b0EsthVTZWHoI1GYNQlRNqo2h5yGUaFpOSI3W9jkExycfZRLBpV0I489uIc_F49JQTQb5aKgiqT5B8tZ8RjDitwJTPwL9hhTjYly0_GifJ7ZnkJg"/>
+</div>
+</div>
+</div>
+<!-- Right: Product Info Card (45%) -->
+<div class="w-full lg:w-[45%]">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm space-y-6">
+<div>
+<a class="flex items-center gap-1.5 text-primary font-semibold text-sm hover:underline mb-2" href="#">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+                            Finca El Porvenir
+                        </a>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Tomates Cherry Orgánicos</h1>
+<div class="flex items-center gap-2">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px]">star_half</span>
+</div>
+<span class="text-xs text-slate-500">(124 reseñas)</span>
+</div>
+</div>
+<hr class="border-slate-100 dark:border-slate-800"/>
+<div class="space-y-4">
+<div class="flex items-baseline gap-3">
+<span class="text-4xl font-bold text-primary">$3.50</span>
+<span class="text-lg text-slate-500 font-medium">/ kg</span>
+<span class="text-lg text-slate-400 line-through ml-2">$4.20</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+<span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
+                            En stock: 48 kg
+                        </div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Cantidad:</label>
+<div class="flex items-center border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="w-12 text-center font-bold">2</span>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border-l border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg transition-all shadow-md active:scale-[0.98]" onclick="alert('Producto agregado al carrito (demo)'); window.location.href='../Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html';">
+                                Agregar al carrito
+                            </button>
+<button class="w-full border-2 border-primary text-primary hover:bg-primary/5 font-bold py-3 rounded-lg transition-all active:scale-[0.98]" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.2 Checkout  Pago.html';">
+                                Comprar ahora
+                            </button>
+</div>
+</div>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-start gap-3">
+<span class="material-symbols-outlined text-slate-400">local_shipping</span>
+<div class="text-xs space-y-1">
+<p class="font-bold text-slate-700 dark:text-slate-200">Envío disponible</p>
+<p class="text-slate-500">Llega entre mañana y el miércoles. Envío gratis en compras mayores a $25.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Details & Related Products Section -->
+<section class="mt-12">
+<!-- Tab Bar -->
+<div class="flex items-center gap-8 border-b border-slate-200 dark:border-slate-800 mb-6 overflow-x-auto no-scrollbar">
+<button class="pb-4 px-1 text-sm font-bold text-primary border-b-2 border-primary whitespace-nowrap">Descripción</button>
+<button class="pb-4 px-1 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 whitespace-nowrap">Información del Comercio</button>
+<button class="pb-4 px-1 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 whitespace-nowrap">Reseñas</button>
+</div>
+<div class="mb-12 text-slate-600 dark:text-slate-400 leading-relaxed max-w-4xl">
+<p>Nuestros tomates cherry orgánicos son cultivados siguiendo prácticas de agricultura sostenible en la Finca El Porvenir. Recolectados en su punto óptimo de maduración para garantizar una explosión de sabor dulce en cada bocado.</p>
+<ul class="list-disc ml-5 mt-4 space-y-2">
+<li>Libres de pesticidas sintéticos y fertilizantes químicos.</li>
+<li>Ricos en vitaminas A, C y licopeno.</li>
+<li>Ideales para ensaladas, pastas o como snack saludable.</li>
+</ul>
+</div>
+<!-- Also Interested Section -->
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">También te puede interesar</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Related Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow group">
+<div class="aspect-square w-full overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Small organic cucumbers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEYDvjesAzfiKpw73tAQ9ztGyLR5Rp1ocQkEx9CXwQEp-kT8vUMHk6DvVLRWnVe_Ul60NmZFiKb9o_PtYlDTJCKIwmJ0hKHLvlfdJ3hOS6d4AtK93cykTT7WfbPYeDHWrf5W0rxHDYUAmhC69zfZixRFNtuJBzihu0ysRD6DxKVApBKLs7UB9ERx5hXRi1Mrysats9oDa20RpGeily0D-0Dd3Nfz8VBc9aTdz0kFp8NVwECxYnxevYVgwLyagvSmV5oNH6_BzAoRw"/>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-slate-900 dark:text-white truncate">Pepinos Orgánicos</h4>
+<p class="text-primary font-bold mt-1 text-sm">$2.20 / kg</p>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow group">
+<div class="aspect-square w-full overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Fresh organic carrots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnDqF4nDXCKgKxbH1esspBQGyt_6a4bFfDy-5eAW8joH6iQzE-DVth0IB25NNz2BuBX7ovHY4dijXdaRP7P6uzdQkIxSThYvTwuTJH2o9JE8-LjjTrIKKJxiyq8kVpWZJq4H7QbxYteepoDgsrof-Na9ncuI4wrAds9KEhjFS6t0mvhUJJj-kn6zbAS1n21RD2qoC2_q5Q_02Gzq6_0v1F_BEuNRMixe9LYHuZo6YJBgaoxdvN8FsazTcNktnltigG1panLulWCGU"/>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-slate-900 dark:text-white truncate">Zanahorias de Campo</h4>
+<p class="text-primary font-bold mt-1 text-sm">$1.80 / kg</p>
+</div>
+</div>
+<!-- Related Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow group">
+<div class="aspect-square w-full overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Organic red peppers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7FHWdE1bg1aq5ZiUHZHhDtt9Teelc2eQK9FlLQTmL6W09UO9ESAN5K9jPb81keBVJ7b2W5ugVdrrwxl096qJgsVfydhZKy_ybm59opEK-p2k8gW6NG-eu8T4OYge0clCOUaQXMWSLtsqp3Bfih1iijTEi0dvqHeBre0i-1WCL2qzGmDVygsf1YzhIyjimVOxJ6vl_AiI4ParsqOxxmUpZ92809auZufo5xF3GF19803SuP3CfR_JP1xu-DR4-SZOiY4fIEJ7OFV8"/>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-slate-900 dark:text-white truncate">Pimientos Rojos</h4>
+<p class="text-primary font-bold mt-1 text-sm">$4.10 / kg</p>
+</div>
+</div>
+<!-- Related Card 4 -->
+<div class="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow group">
+<div class="aspect-square w-full overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Organic baby spinach" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA8UITFnQ7gKjrkuJqMu5n79i4s0RmtZX4G0wuQpHxFlAjKmqKfCPeVMEE-EKGv-3m7nhGly_RTud57Pe0tZJLiaworHKC0h2aUJ7llGwHGqIx5jORVEQbbtMSEJiiWcxL3ZmDk8En9AdDYMJO1qfQjMAEHGAjM1kH0BqMAQI3CKqp4fyYmDS98tTPvPmTE4Ao8rtvZc4z1wI0Rgvm9xSqs7ItMFX8K3er_We6yJ7blfhQqdAOiNhNOBjR75kCyfAENIkNQIeNR54"/>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-slate-900 dark:text-white truncate">Espinaca Baby</h4>
+<p class="text-primary font-bold mt-1 text-sm">$2.90 / un</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-10">
+<div class="max-w-[1280px] mx-auto px-4 text-center">
+<div class="flex items-center justify-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">eco</span>
+<span class="font-bold text-slate-900 dark:text-white">AgroConecta</span>
+</div>
+<p class="text-slate-500 text-sm">© 2024 AgroConecta Marketplace. Conectando agricultores con el mundo.</p>
+</div>
+</footer>
+</body></html>

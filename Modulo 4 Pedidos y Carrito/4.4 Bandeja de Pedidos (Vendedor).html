@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bandeja de Pedidos AgroConecta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                        "agro-teal": "#00695C",
+                        "agro-green": "#2E7D32",
+                        "agro-success": "#388E3C",
+                        "agro-pending": "#F9A825",
+                        "agro-process": "#1976D2",
+                        "agro-danger": "#D32F2F",
+                        "border-slate": "#E2E8F0"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { font-family: 'Inter', sans-serif; }
+        }
+        .sidebar-active { background-color: #00695C; color: white; }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] text-slate-900 min-h-screen font-display">
+<header class="sticky top-0 bg-white border-b border-[#E2E8F0] z-50">
+<div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-agro-green rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">eco</span>
+</div>
+<span class="text-xl font-extrabold text-agro-green tracking-tight">AgroConecta</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative mr-2">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+</div>
+<div class="w-9 h-9 rounded-full border border-slate-200 overflow-hidden cursor-pointer">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWYprI7h7gv7-L-1LV39-MLi6mxcIguuk7sZFDLEzAxIRPFh0uCWti3Z_Fo_vA7ZveOExnEIk7UjblzlscGZD_1SUEZ8cSBExvmgql9_CHFFieqN1PR8JNy71C2iZf6Zci6Ldb6HSQlK8waKMexLGZP3P0tL_HXmVCTjj9-oaeIkLZt_RjQe0bEzd-EJvNoxtp4E5zosItTSy97IJYt9xprLK6DDootE_ABZQaiyRajMgEsa27bd4RDHRZB6ym-TnPY4iHr-1ZZQc"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex max-w-[1280px] mx-auto">
+<aside class="w-[240px] sticky top-16 h-[calc(100vh-64px)] bg-white border-r border-[#E2E8F0] shrink-0">
+<div class="flex flex-col h-full">
+<nav class="flex-1 px-4 py-6 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 2 Gestion de Comercio/2.2 RegistroEdicion de Comercio.html">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-sm font-medium">Mi Comercio</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 2 Gestion de Comercio/2.3  Lista de Productos del Vendedor.html">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-sm font-medium">Mis Productos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 sidebar-active rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-sm font-medium">Pedidos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="text-sm font-medium">Entregas</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 7 Gestion Documental/7.1 Centro de Documentos.html">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm font-medium">Documentos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="../Modulo 8 Reportes e indicadores/8.1 Reportes de Ventas.html">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-sm font-medium">Reportes</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Configuración</span>
+</a>
+</div>
+</div>
+</aside>
+<main class="flex-1 min-w-0 p-8 space-y-8">
+<div class="flex items-center gap-4">
+<h1 class="text-2xl font-bold text-agro-green">Bandeja de Pedidos</h1>
+<span class="bg-agro-teal text-white text-xs font-bold px-2.5 py-1 rounded-full">12 nuevos</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex items-center justify-between">
+<div>
+<p class="text-sm text-slate-500 font-medium">Pendientes</p>
+<h3 class="text-3xl font-bold text-agro-pending">05</h3>
+</div>
+<div class="w-12 h-12 bg-[#FFF9C4] rounded-full flex items-center justify-center text-agro-pending">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex items-center justify-between">
+<div>
+<p class="text-sm text-slate-500 font-medium">Procesados</p>
+<h3 class="text-3xl font-bold text-agro-process">18</h3>
+</div>
+<div class="w-12 h-12 bg-[#E3F2FD] rounded-full flex items-center justify-center text-agro-process">
+<span class="material-symbols-outlined">sync</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex items-center justify-between">
+<div>
+<p class="text-sm text-slate-500 font-medium">Pagados</p>
+<h3 class="text-3xl font-bold text-agro-success">42</h3>
+</div>
+<div class="w-12 h-12 bg-[#E8F5E9] rounded-full flex items-center justify-center text-agro-success">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex items-center justify-between">
+<div>
+<p class="text-sm text-slate-500 font-medium">Cancelados</p>
+<h3 class="text-3xl font-bold text-agro-danger">03</h3>
+</div>
+<div class="w-12 h-12 bg-[#FFEBEE] rounded-full flex items-center justify-center text-agro-danger">
+<span class="material-symbols-outlined">cancel</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2 overflow-x-auto">
+<button class="px-4 py-2 bg-agro-teal text-white rounded-full text-xs font-bold whitespace-nowrap">Todos</button>
+<button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full text-xs font-bold whitespace-nowrap">Pendiente</button>
+<button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full text-xs font-bold whitespace-nowrap">Procesado</button>
+<button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full text-xs font-bold whitespace-nowrap">Pagado</button>
+<button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full text-xs font-bold whitespace-nowrap">Cancelado</button>
+</div>
+<div class="flex items-center gap-4 flex-1 justify-end min-w-[300px]">
+<div class="relative w-full max-w-xs">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">calendar_today</span>
+<input class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:ring-agro-green focus:border-agro-green" placeholder="10 Jun - 24 Jun" type="text"/>
+</div>
+<div class="relative w-full max-w-sm">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:ring-agro-green focus:border-agro-green" placeholder="Buscar por # pedido o comprador..." type="text"/>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm border border-slate-100 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 border-b border-slate-100">
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider"># Pedido</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Comprador</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Fecha</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Total</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Productos</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Estado</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4 font-bold text-slate-900">ORD-5542</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-xs text-slate-500 font-bold">MR</div>
+<span class="text-sm font-medium text-slate-700">Miguel Rodriguez</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">22 Jun 2024</td>
+<td class="px-6 py-4 font-bold text-slate-900">$1,250.00</td>
+<td class="px-6 py-4 text-sm text-slate-600">3 artículos</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#FFF9C4] text-agro-pending">
+                                        Pendiente
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="bg-[#2E7D32] hover:opacity-90 text-white text-xs font-bold px-4 py-2 rounded transition-colors shadow-sm" onclick="alert('Pedido procesado (demo)')">Procesar</button>
+<button class="text-agro-danger hover:underline text-xs font-bold" onclick="alert('Pedido cancelado (demo)')">Cancelar</button>
+<a class="text-agro-teal text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4 font-bold text-slate-900">ORD-5541</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-xs text-slate-500 font-bold">LC</div>
+<span class="text-sm font-medium text-slate-700">Lucía Castro</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">21 Jun 2024</td>
+<td class="px-6 py-4 font-bold text-slate-900">$840.50</td>
+<td class="px-6 py-4 text-sm text-slate-600">5 artículos</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#E3F2FD] text-agro-process">
+                                        Procesado
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<a class="text-agro-teal text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4 font-bold text-slate-900">ORD-5540</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-xs text-slate-500 font-bold">JP</div>
+<span class="text-sm font-medium text-slate-700">Jose Perez</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">21 Jun 2024</td>
+<td class="px-6 py-4 font-bold text-slate-900">$2,100.00</td>
+<td class="px-6 py-4 text-sm text-slate-600">12 artículos</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#E8F5E9] text-agro-success">
+                                        Pagado
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<a class="text-agro-teal text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4 font-bold text-slate-900">ORD-5539</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-xs text-slate-500 font-bold">AM</div>
+<span class="text-sm font-medium text-slate-700">Ana Morales</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">20 Jun 2024</td>
+<td class="px-6 py-4 font-bold text-slate-900">$320.00</td>
+<td class="px-6 py-4 text-sm text-slate-600">1 artículo</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#FFEBEE] text-agro-danger">
+                                        Cancelado
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<a class="text-agro-teal text-xs font-bold hover:underline" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">Ver detalle</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 border-t border-slate-100 flex items-center justify-between bg-white">
+<p class="text-sm text-slate-500">Mostrando <span class="font-medium text-slate-900">1</span> a <span class="font-medium text-slate-900">10</span> de <span class="font-medium text-slate-900">68</span> pedidos</p>
+<div class="flex gap-2">
+<button class="px-3 py-1 border border-slate-200 rounded text-slate-400 hover:bg-slate-50 cursor-not-allowed">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="px-3 py-1 bg-agro-teal text-white rounded font-bold text-sm">1</button>
+<button class="px-3 py-1 border border-slate-200 rounded text-slate-600 hover:bg-slate-50 text-sm">2</button>
+<button class="px-3 py-1 border border-slate-200 rounded text-slate-600 hover:bg-slate-50 text-sm">3</button>
+<button class="px-3 py-1 border border-slate-200 rounded text-slate-600 hover:bg-slate-50">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

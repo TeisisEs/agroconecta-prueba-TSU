@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nuevo Producto - AgroConecta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "secondary": "#00695C",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex">
+<!-- Fixed Sidebar -->
+<aside class="w-[240px] fixed h-screen bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col z-50">
+<div class="p-6">
+<div class="flex flex-col items-center gap-3 mb-8">
+<div class="size-16 rounded-full bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl">eco</span>
+</div>
+<div class="text-center">
+<h2 class="text-slate-900 dark:text-slate-100 font-bold text-sm">Finca El Provenir</h2>
+<span class="inline-block mt-1 px-2 py-0.5 bg-secondary text-white text-[10px] font-bold uppercase tracking-wider rounded">Vendedor</span>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="2.1 Dashboard del Vendedor.html">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Inicio / Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="2.2 RegistroEdicion de Comercio.html">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span class="text-sm font-medium">Mi Comercio</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-secondary text-white" href="2.3  Lista de Productos del Vendedor.html">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="text-sm font-medium">Mis Productos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="../Modulo 4 Pedidos y Carrito/4.4 Bandeja de Pedidos (Vendedor).html">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span class="text-sm font-medium">Pedidos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="../Modulo 6 Envios y Entregas/6.2 Asignacion de Entrega(Vendedor).html">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+<span class="text-sm font-medium">Entregas</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="../Modulo 7 Gestion Documental/7.1 Centro de Documentos.html">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="text-sm font-medium">Documentos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="../Modulo 8 Reportes e indicadores/8.1 Reportes de Ventas.html">
+<span class="material-symbols-outlined text-[20px]">bar_chart</span>
+<span class="text-sm font-medium">Reportes</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium">Configuración</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-4 border-t border-slate-100 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors" href="../Modulo 1 Autenticacion y Usuarios/1.1 login.html">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="text-sm font-medium">Cerrar sesión</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[240px] flex-1 flex flex-col min-h-screen relative bg-[#FAFAFA] dark:bg-background-dark/50">
+<!-- Header Section -->
+<header class="p-8 pb-4">
+<nav class="flex text-sm text-slate-500 dark:text-slate-400 mb-4 items-center gap-2">
+<a class="hover:text-primary" href="2.1 Dashboard del Vendedor.html">Inicio</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="2.3  Lista de Productos del Vendedor.html">Mis Productos</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-medium">Nuevo Producto</span>
+</nav>
+<h1 class="text-3xl font-extrabold text-[#2E7D32] dark:text-[#4caf50]">Nuevo Producto</h1>
+</header>
+<!-- Form Grid -->
+<div class="px-8 pb-32">
+<div class="grid grid-cols-10 gap-8">
+<!-- Left Column (60%) -->
+<div class="col-span-10 lg:col-span-6 space-y-6">
+<!-- Basic Info Card -->
+<section class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">info</span>
+<h2 class="text-lg font-bold text-slate-800 dark:text-slate-100">Información básica</h2>
+</div>
+<div class="space-y-5">
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">Nombre del producto *</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-2.5" placeholder="Ej: Tomate Chonto Orgánico" type="text"/>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1.5">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Descripción</label>
+<span class="text-xs text-slate-400">0 / 300 caracteres</span>
+</div>
+<textarea class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-2.5 resize-none" placeholder="Describe los beneficios y características de tu producto..." rows="4"></textarea>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">Categoría</label>
+<select class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-2.5 appearance-none">
+<option>Seleccionar categoría</option>
+<option>Vegetales</option>
+<option>Frutas</option>
+<option>Lácteos</option>
+<option>Cereales</option>
+<option>Cárnicos</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">Unidad de medida</label>
+<select class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-2.5 appearance-none">
+<option>Kg</option>
+<option>Libra</option>
+<option>Unidad</option>
+<option>Litro</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Price & Stock Card -->
+<section class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">payments</span>
+<h2 class="text-lg font-bold text-slate-800 dark:text-slate-100">Precio y Stock</h2>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">Precio de venta</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 font-medium">$</span>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-primary focus:border-primary pl-8 pr-4 py-2.5" placeholder="0.00" type="number"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">Precio original (opcional)</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">$</span>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-primary focus:border-primary pl-8 pr-4 py-2.5" placeholder="0.00" type="number"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">Stock disponible</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-2.5" placeholder="Cant. disponible" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">Stock mínimo (alerta)</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-2.5" placeholder="Límite de alerta" type="number"/>
+<p class="mt-1.5 text-xs text-slate-400">Te avisaremos cuando el stock baje de este valor.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column (40%) -->
+<div class="col-span-10 lg:col-span-4 space-y-6">
+<!-- Images Card -->
+<section class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">image</span>
+<h2 class="text-lg font-bold text-slate-800 dark:text-slate-100">Imágenes del producto</h2>
+</div>
+<div class="space-y-4">
+<!-- Main Upload Area -->
+<div class="aspect-square w-full border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-xl flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer p-6 text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-3">cloud_upload</span>
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200">Haz clic o arrastra una imagen</p>
+<p class="text-xs text-slate-500 mt-1">PNG, JPG o JPEG (Máx. 5MB)</p>
+</div>
+<!-- Thumbnails -->
+<div class="grid grid-cols-4 gap-3">
+<div class="size-[80px] bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-xl">add_photo_alternate</span>
+</div>
+<div class="size-[80px] bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-xl">add_photo_alternate</span>
+</div>
+<div class="size-[80px] bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-xl">add_photo_alternate</span>
+</div>
+<div class="size-[80px] bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-xl">add_photo_alternate</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Availability Card -->
+<section class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">toggle_on</span>
+<h2 class="text-lg font-bold text-slate-800 dark:text-slate-100">Disponibilidad</h2>
+</div>
+<div class="space-y-6">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200">Producto activo</p>
+<p class="text-xs text-slate-500">Visible para los compradores en el marketplace.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200">Disponible para entrega</p>
+<p class="text-xs text-slate-500">Habilita opciones de logística y envío inmediato.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Action Bar -->
+<div class="fixed bottom-0 right-0 left-[240px] bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 p-4 px-8 flex justify-between items-center z-40">
+<button class="px-6 py-2.5 text-sm font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors" onclick="window.location.href='2.3  Lista de Productos del Vendedor.html'">
+                Cancelar
+            </button>
+<div class="flex gap-4">
+<button class="px-6 py-2.5 text-sm font-bold text-primary border-2 border-primary rounded-lg hover:bg-primary/5 transition-colors" onclick="window.location.href='../Modulo 3 Catalogo y Busqueda/3.2 Detalle de Producto.html'">
+                    Vista previa
+                </button>
+<button class="px-8 py-2.5 text-sm font-bold text-white bg-primary rounded-lg hover:bg-primary/90 shadow-md shadow-primary/20 transition-all active:scale-[0.98]" onclick="alert('Producto guardado (demo)'); window.location.href='2.3  Lista de Productos del Vendedor.html';">
+                    Guardar producto
+                </button>
+</div>
+</div>
+</main>
+</body></html>

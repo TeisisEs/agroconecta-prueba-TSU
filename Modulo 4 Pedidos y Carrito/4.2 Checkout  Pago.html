@@ -1,0 +1,219 @@
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConecta - Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "secondary": "#00695C",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
+<a href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="flex items-center gap-2" style="text-decoration:none;">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl fill-1">eco</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">AgroConecta</h1>
+</a>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border border-primary/20">
+<img alt="Avatar de usuario" data-alt="User profile avatar circle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmmL2Qx6HKYe20X8NMkKN-wAQT-33yKDDX9_hVVam-n5LOGd5KSdDXV2M1avydV66AmRpk23cBYyijDJ9dp4midkF3ZAzBrMrVHQ5PmZjqKyt13hDDlC7YWqrm5tYqGdRVYOtZwNCFn99LK2czKlLXXsXMPMcUDr0TsdQ08cBXVgUoeD7EA759vMlkQb6XvgxPBFIe4BmxEaPfU-ZSwZpgIoi51FeMawhJRxIcaHwfFazKOrOLmt5h14WOiqygKQ8zIOUU2ApfJx0"/>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+</div>
+</header>
+<div class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 py-6">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="flex items-center justify-between max-w-3xl mx-auto relative">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 dark:bg-slate-700 -translate-y-1/2 -z-0"></div>
+<div class="relative z-10 flex flex-col items-center gap-2" style="cursor:pointer;" onclick="window.location.href='4.1 Carrito de Compras.html';">
+<div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">check</span>
+</div>
+<span class="text-xs font-semibold text-primary">Carrito</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center border-4 border-white dark:border-slate-900 ring-2 ring-primary">
+<span class="text-sm font-bold">2</span>
+</div>
+<span class="text-xs font-bold text-primary">Entrega</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 flex items-center justify-center">
+<span class="text-sm font-bold">3</span>
+</div>
+<span class="text-xs font-medium text-slate-500">Pago</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 flex items-center justify-center">
+<span class="text-sm font-bold">4</span>
+</div>
+<span class="text-xs font-medium text-slate-500">Confirmación</span>
+</div>
+</div>
+</div>
+</div>
+<main class="max-w-[1280px] mx-auto px-6 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-8">
+<div class="lg:col-span-6 space-y-6">
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                        Dirección de entrega
+                    </h2>
+<div class="border-2 border-primary/30 bg-primary/5 rounded-lg p-5 mb-6 relative overflow-hidden">
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center shadow-sm text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">map</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 dark:text-white">Av. Principal 123, Colonia Agrícola</h3>
+<button class="text-primary hover:underline font-semibold text-sm">Cambiar</button>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1 leading-relaxed">
+                                    Sector 4, Municipio El Campo, CP 45000<br/>
+                                    Referencia: Portón verde frente a la cooperativa.
+                                </p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 px-4 rounded-lg border-2 border-dashed border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 font-semibold flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">add</span>
+                        Agregar nueva dirección
+                    </button>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">payments</span>
+                        Método de pago
+                    </h2>
+<div class="space-y-4">
+<div class="border-2 border-primary rounded-lg p-4">
+<label class="flex items-start gap-4 cursor-pointer">
+<input checked="" class="mt-1 text-primary focus:ring-primary h-4 w-4" name="payment" type="radio"/>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-4">
+<span class="font-bold">Tarjeta de crédito/débito</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-slate-400">credit_card</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2">
+<label class="block text-xs font-bold text-slate-500 uppercase mb-1">Número de tarjeta</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-primary focus:ring-primary" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-1">Vencimiento</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-primary focus:ring-primary" placeholder="MM/YY" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase mb-1">CVV</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-primary focus:ring-primary" placeholder="123" type="password"/>
+</div>
+</div>
+</div>
+</label>
+</div>
+<div class="border border-slate-200 dark:border-slate-800 rounded-lg p-4 hover:border-primary/50 transition-colors">
+<label class="flex items-center gap-4 cursor-pointer">
+<input class="text-primary focus:ring-primary h-4 w-4" name="payment" type="radio"/>
+<div class="flex-1 flex justify-between items-center">
+<span class="font-semibold">Transferencia bancaria</span>
+<span class="material-symbols-outlined text-slate-400">account_balance</span>
+</div>
+</label>
+</div>
+<div class="border border-slate-200 dark:border-slate-800 rounded-lg p-4 hover:border-primary/50 transition-colors">
+<label class="flex items-center gap-4 cursor-pointer">
+<input class="text-primary focus:ring-primary h-4 w-4" name="payment" type="radio"/>
+<div class="flex-1 flex justify-between items-center">
+<span class="font-semibold">Pago contra entrega</span>
+<span class="material-symbols-outlined text-slate-400">handshake</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+<h2 class="text-lg font-bold mb-4">Nota al vendedor (Opcional)</h2>
+<textarea class="w-full rounded-lg border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-primary focus:ring-primary" placeholder="Escribe aquí cualquier instrucción especial para tu pedido o entrega..." rows="3"></textarea>
+</div>
+</div>
+<div class="lg:col-span-4">
+<div class="sticky top-24 bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+<h2 class="text-xl font-bold mb-6">Resumen del pedido</h2>
+<div class="space-y-4 mb-6">
+<div class="flex justify-between text-slate-600 dark:text-slate-400">
+<span>Subtotal (4 productos)</span>
+<span>$12,450.00</span>
+</div>
+<div class="flex justify-between text-slate-600 dark:text-slate-400">
+<span>Gastos de envío</span>
+<span class="text-primary font-medium">Gratis</span>
+</div>
+<div class="flex justify-between text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-4">
+<span>Impuestos aplicables</span>
+<span>$1,992.00</span>
+</div>
+<div class="flex justify-between items-end pt-2">
+<span class="text-lg font-bold">Total</span>
+<span class="text-2xl font-bold text-primary">$14,442.00</span>
+</div>
+</div>
+<div class="bg-primary/5 rounded-lg p-4 mb-6">
+<label class="flex gap-3 cursor-pointer">
+<input class="mt-1 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300">
+                                Acepto los <a class="text-primary font-semibold hover:underline" href="#">Términos y Condiciones</a> y la Política de Privacidad de AgroConecta.
+                            </span>
+</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all mb-4 flex items-center justify-center gap-2" onclick="window.location.href='../Modulo 5 Pagos y Reembolsos/5.1 Confirmacion de Pago.html';">
+                        Confirmar pedido
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-2 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>Pago seguro y encriptado</span>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+<p class="text-xs text-slate-400 text-center uppercase font-bold tracking-widest mb-4">Productos en este pedido</p>
+<div class="flex gap-3 overflow-x-auto pb-2">
+<div class="w-16 h-16 rounded bg-slate-100 flex-shrink-0" data-alt="Bolsa de fertilizante orgánico" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPlCODmCjE0brIQF6-0FW8WpsuithsK5hjsw8XyZIcatvSNUHguiIcUiflSofm7Nu_SWoyodAcVhBT7AwiO4zWVgW7MiDekmG3Rt1Ps7bU6oD4cnLdimL03dQwDIIxMk_tLqWrOgX4-1AwTzNWc8hT0A6sk90fy11hHuWQbjXKWcyehOD-chOPehe7CWTWQzsa5v5qmK76XcgFeaeAJMKCVopEBoNhk02XTc4cpkZcCF_OaMhs78OJZB91IJa8uZuBRmQwtfAhVyw'); background-size: cover;"></div>
+<div class="w-16 h-16 rounded bg-slate-100 flex-shrink-0" data-alt="Semillas de hortalizas" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAe9avr9XJHwHv6ToC2G1FEUkMaY-cKsLClnLbjAxnbIxi0LMRGysk93XWF8AjzofoM9USZO6AE9iSDaGsBAMvF-ZacBuKT0Vks58f0pbViTJZgxJKSEoQzKfxZnNBWHzNc6sDswHqPPt0jn39Pa-nx-0ib3gdME7DMO5FeBIueNzYvY9GrHFkK-a_Dcykz0bhwTrXIguVetNHkfB6u9S5sKhxhwM_y76JSURwHHPB-tMPxxZKks-S2lgRvwnYa_4bFVdqX7sUTalw'); background-size: cover;"></div>
+<div class="w-16 h-16 rounded bg-slate-100 flex-shrink-0" data-alt="Herramientas de jardinería" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNqM_Nes1Kbz3t5JoLiM8InLyotG1d-xSa2-HPrcuCPF22gsLtN_M-Ns8FO22nzE6jf6VJkG5GWUNC65QfHOE2e7UwHmGYD0QDwUtrVuT3-AW7NAiWu1qcj_sKnORRNM02cef1aYXFiPDL2L5j1b-UcqAoHGSg0Ry_U1aeC9zFwLJQ5afrkrtNSW5-K3Cc12jpbFcQQbY7_HS17NmO-F2dpijPvCuv5MtmFBbTicq-CMAdeTcxpjK7vpul6RzEz1letsy7pWW30ko'); background-size: cover;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="max-w-[1280px] mx-auto px-6 py-12 text-center text-slate-400 text-sm">
+<p>© 2024 AgroConecta S.A. - El marketplace del campo. Todos los derechos reservados.</p>
+</footer>
+</body></html>

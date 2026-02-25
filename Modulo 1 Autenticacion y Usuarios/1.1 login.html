@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Iniciar Sesión - AgroConecta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e7d32",
+                        "primary-dark": "#1b5e20",
+                        "error": "#d32f2f",
+                        "secondary": "#00695C",
+                        "link-blue": "#1565c0",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "chip": "24px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-0 md:p-4">
+<main class="w-full max-w-[1200px] min-h-[700px] bg-white dark:bg-slate-900 shadow-2xl flex flex-col md:flex-row overflow-hidden rounded-none md:rounded-xl">
+<!-- COLUMNA IZQUIERDA (40%) -->
+<section class="hidden md:flex md:w-[40%] bg-primary-dark p-12 flex-col justify-between text-white relative overflow-hidden">
+<!-- Decorative Pattern Overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+<div class="relative z-10">
+<!-- Logo -->
+<div class="flex items-center gap-3 mb-12">
+<span class="material-symbols-outlined text-4xl text-white">eco</span>
+<h2 class="text-2xl font-black tracking-tight">AgroConecta</h2>
+</div>
+<!-- Content -->
+<div class="space-y-6">
+<h1 class="text-4xl font-extrabold leading-tight">Conectando productores locales con tu comunidad</h1>
+<div class="flex flex-col gap-3 pt-4">
+<div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-chip w-fit">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="text-sm font-medium">Productos frescos</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-chip w-fit">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="text-sm font-medium">Comercios locales</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-chip w-fit">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="text-sm font-medium">Entregas seguras</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Illustration Area -->
+<div class="relative z-10 mt-auto pt-12">
+<div class="aspect-square w-full rounded-xl bg-primary/20 flex items-center justify-center border border-white/10">
+<img alt="Campo agrícola soleado" class="w-full h-full object-cover rounded-lg opacity-80 mix-blend-overlay" data-alt="Ilustración plana de un campo agrícola soleado" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG_EvW77qoZQ3N3OisJJcHIdX1OeHtMGX14MDIcn_9Mma9wEsBs70TBh9rBOGWAG3jNJOBx6RoM_y1e67VPhtClENLP5DYrA4uaxS7yZLRYq_G_uusmL8AGOXTaTuvfhmba-g6s2MbSyXiSxI3D3elCV5buLIfS_dbW4x3U0ARAPmHPa8Gim-mH1cUK5haI6kzlI8HBlNXrmMvcfmyzVIEtLXwVLiIEZXw_QK6l2kKDCUqYDpFjHbTwvgR4Td6K2-F72qT8atpmtJF"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-8xl text-white/40">eco</span>
+</div>
+</div>
+</div>
+</section>
+<!-- COLUMNA DERECHA (60%) -->
+<section class="flex-1 flex flex-col justify-center px-8 py-12 md:px-20 bg-white dark:bg-slate-900">
+<!-- Mobile Logo -->
+<div class="flex md:hidden items-center gap-2 mb-8 justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white leading-none">AgroConecta</span>
+</div>
+<div class="max-w-[420px] mx-auto w-full">
+<header class="mb-8">
+<h1 class="text-3xl font-bold text-primary mb-2">Iniciar Sesión</h1>
+<p class="text-slate-500 dark:text-slate-400">Accede a tu cuenta AgroConecta</p>
+</header>
+<form class="space-y-6" onsubmit="handleLogin(event)">
+<!-- Email Field with Error -->
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-200" for="email">
+                            Correo electrónico
+                        </label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded border border-error bg-error/5 text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="email" placeholder="tucorreo@ejemplo.com" type="email" value="usuario@ejemplo.com"/>
+</div>
+<p class="text-error text-xs font-medium flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-xs">error</span>
+                            El correo o la contraseña son incorrectos. Intenta de nuevo.
+                        </p>
+</div>
+<!-- Password Field with Error -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-200" for="password">
+                                Contraseña
+                            </label>
+<a class="text-xs font-semibold text-link-blue hover:underline" href="#">
+                                Olvidé mi contraseña
+                            </a>
+</div>
+<div class="relative">
+<input class="w-full px-4 py-3 pr-12 rounded border border-error bg-error/5 text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" id="password" placeholder="••••••••" type="password" value="password123"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded-lg shadow-md transition-colors flex items-center justify-center gap-2" type="submit">
+                        Iniciar Sesión
+                    </button>
+<!-- Divider -->
+<div class="relative flex items-center py-4">
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+<span class="flex-shrink mx-4 text-xs font-medium text-slate-400 uppercase tracking-wider">o continúa con</span>
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+</div>
+<!-- Social Login (Mockup) -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" type="button">
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
+<path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+<path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+<path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+<path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+</svg>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-300">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" type="button">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50" class="w-6 h-6"><path d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"></path></svg>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-300">Facebook</span>
+</button>
+</div>
+</form>
+<!-- DEMO: Acceso rápido por rol -->
+<div class="mt-6 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
+    <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3 text-center">Acceso rápido Demo</p>
+    <div class="grid grid-cols-3 gap-3">
+        <button onclick="loginAs('comprador')" class="flex flex-col items-center gap-2 p-3 rounded-lg border-2 border-transparent hover:border-primary bg-white dark:bg-slate-900 shadow-sm transition-all" type="button">
+            <span class="material-symbols-outlined text-primary text-2xl">shopping_bag</span>
+            <span class="text-xs font-bold text-slate-700">Comprador</span>
+        </button>
+        <button onclick="loginAs('vendedor')" class="flex flex-col items-center gap-2 p-3 rounded-lg border-2 border-transparent hover:border-[#00695C] bg-white dark:bg-slate-900 shadow-sm transition-all" type="button">
+            <span class="material-symbols-outlined text-[#00695C] text-2xl">storefront</span>
+            <span class="text-xs font-bold text-slate-700">Vendedor</span>
+        </button>
+        <button onclick="loginAs('admin')" class="flex flex-col items-center gap-2 p-3 rounded-lg border-2 border-transparent hover:border-[#E65100] bg-white dark:bg-slate-900 shadow-sm transition-all" type="button">
+            <span class="material-symbols-outlined text-[#E65100] text-2xl">admin_panel_settings</span>
+            <span class="text-xs font-bold text-slate-700">Admin</span>
+        </button>
+    </div>
+</div>
+<footer class="mt-10 text-center space-y-4">
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                        ¿No tienes cuenta? 
+                        <a class="text-primary font-bold hover:underline" href="1.2 Registro Selección de Rol.html">Regístrate aquí</a>
+</p>
+<p class="text-[10px] text-slate-400 leading-relaxed max-w-[280px] mx-auto">
+                        La sesión cerrará automáticamente por inactividad. Asegúrate de guardar tus cambios regularmente.
+                    </p>
+</footer>
+</div>
+</section>
+</main>
+<script>
+function loginAs(role) {
+    sessionStorage.setItem('agroconecta_rol', role);
+    sessionStorage.setItem('agroconecta_usuario', role === 'admin' ? 'Carlos Mendoza' : role === 'vendedor' ? 'Juan Pérez' : 'María García');
+    var dest = {
+        comprador: '../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html',
+        vendedor: '../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html',
+        admin: '../Modulo 9 Panel Administrador/9.1 Dashboard del Administrador.html'
+    };
+    window.location.href = dest[role];
+}
+function handleLogin(e) {
+    e.preventDefault();
+    loginAs('comprador');
+}
+</script>
+</body></html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gestión de Entregas AgroConecta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "secondary": "#00695C",
+                        "agro-green": "#2E7D32",
+                        "agro-teal": "#00695C",
+                        "border-base": "#E2E8F0",
+                        "main-bg": "#FAFAFA",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display text-slate-900;
+            }
+        }
+    </style>
+</head>
+<body class="bg-main-bg">
+<header class="sticky top-0 z-[60] w-full bg-white border-b border-[#E2E8F0]">
+<div class="max-w-[1280px] mx-auto h-16 px-4 md:px-8 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-agro-green text-3xl fill-1">eco</span>
+<span class="text-xl font-extrabold text-slate-900 tracking-tight">AgroConecta</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-end mr-2">
+<span class="text-sm font-bold text-slate-900">Juan Pérez</span>
+<span class="text-[11px] text-slate-500 uppercase font-semibold">Vendedor</span>
+</div>
+<button class="flex items-center gap-2 group">
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-slate-100 group-hover:border-agro-teal transition-colors">
+<img alt="User avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGpKTsiYEQ98blpcTuYzEKBG7KE2FlUpuG4nZMLYbnIFEX1UwIAdSypvHj6gdpLejDVN5IG__vJUe0fWpFpFgalTOjgkjmaLYZ3m16GEiQdvlw2jceKM6YgTLXEwFcgSg9Br4MQWJL-KfFm6akyEP0lFq3BiQisfzM1ZpnuZ4LovS4vHQS0_cDXzsKeQWrg4YXnc1_HrAa4WszfewnYrDnoWqv6CG-JHqbPoISXy7vcnlnkb1JOAtOvEjSufImZ0JRH0iE-JGUDvM"/>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-slate-600 transition-colors">expand_more</span>
+</button>
+</div>
+</div>
+</header>
+<div class="flex min-h-[calc(100-4rem)]">
+<aside class="fixed top-16 left-0 bottom-0 w-[240px] bg-white border-r border-[#E2E8F0] z-50">
+<div class="flex flex-col h-full p-4">
+<nav class="flex-1 flex flex-col gap-1 mt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-all" href="../Modulo 2 Gestion de Comercio/2.1 Dashboard del Vendedor.html">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-all" href="../Modulo 2 Gestion de Comercio/2.2 RegistroEdicion de Comercio.html">
+<span class="material-symbols-outlined text-xl">storefront</span>
+<span class="text-sm font-semibold">Mi Comercio</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-all" href="../Modulo 2 Gestion de Comercio/2.3  Lista de Productos del Vendedor.html">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+<span class="text-sm font-semibold">Mis Productos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-all" href="../Modulo 4 Pedidos y Carrito/4.4 Bandeja de Pedidos (Vendedor).html">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+<span class="text-sm font-semibold">Pedidos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-[8px] bg-[#00695C] text-white shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+<span class="text-sm font-semibold">Entregas</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-all" href="../Modulo 7 Gestion Documental/7.1 Centro de Documentos.html">
+<span class="material-symbols-outlined text-xl">description</span>
+<span class="text-sm font-semibold">Documentos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-all" href="../Modulo 8 Reportes e indicadores/8.1 Reportes de Ventas.html">
+<span class="material-symbols-outlined text-xl">bar_chart</span>
+<span class="text-sm font-semibold">Reportes</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-slate-100">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="text-sm font-semibold">Configuración</span>
+</a>
+</div>
+</div>
+</aside>
+<main class="ml-[240px] flex-1 flex flex-col min-w-0">
+<div class="max-w-[1280px] w-full mx-auto p-8">
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold text-[#2E7D32]">Gestión de Entregas</h1>
+<p class="text-slate-500 mt-1">Supervisa y actualiza el estado logístico de tus pedidos.</p>
+</div>
+<div class="bg-white rounded-xl shadow-sm border border-[#E2E8F0] p-4 mb-8 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<button class="flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm font-medium text-slate-700">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+                                10 Oct - 17 Oct
+                                <span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+</div>
+<div class="h-8 w-px bg-slate-200"></div>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 rounded-full text-sm font-bold bg-[#00695C] text-white">Pendientes</button>
+<button class="px-4 py-1.5 rounded-full text-sm font-semibold text-slate-600 hover:bg-slate-50 transition-colors border border-transparent">En camino</button>
+<button class="px-4 py-1.5 rounded-full text-sm font-semibold text-slate-600 hover:bg-slate-50 transition-colors border border-transparent">Entregados</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs text-slate-500 font-medium font-bold">8 entregas encontradas</span>
+<button class="p-2 text-slate-400 hover:text-agro-teal transition-colors rounded-full hover:bg-slate-50">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-white rounded-[8px] shadow-sm border border-[#E2E8F0] p-6 flex items-center justify-between transition-all hover:shadow-md">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xl font-bold text-slate-900">Orden #1024</span>
+<span class="text-[10px] font-extrabold px-2 py-0.5 bg-amber-50 text-amber-700 rounded-full border border-amber-100">PRIORIDAD</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-[15px] text-slate-700">
+<span class="material-symbols-outlined text-lg text-slate-400">person</span>
+<span class="font-bold">Carlos Rodríguez Mendoza</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600">
+<span class="material-symbols-outlined text-lg text-slate-400">home</span>
+<span>Av. Industrial 452, Ciudad de México, CP 01000</span>
+</div>
+<p class="text-xs text-slate-400 font-medium bg-slate-50 self-start px-2 py-1 rounded">2x Fertilizante Nitrógeno 50kg, 1x Semillas de Maíz Híbrido</p>
+</div>
+</div>
+<div class="flex flex-col items-center px-10 border-x border-slate-100 h-28 justify-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-extrabold bg-amber-100 text-amber-800 mb-3 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-2"></span>
+                                Pendiente
+                            </span>
+<span class="text-sm font-bold text-slate-900">Fecha estimada</span>
+<span class="text-lg font-extrabold text-[#00695C]">15 Oct</span>
+</div>
+<div class="flex flex-col gap-2.5 pl-10 min-w-[240px]">
+<button class="w-full bg-[#00695C] hover:bg-[#004d43] text-white text-sm font-bold py-2.5 rounded-lg transition-colors shadow-sm" onclick="alert('Estado actualizado (demo)')">
+                                Marcar como En Camino
+                            </button>
+<button class="w-full border-2 border-[#00695C] text-[#00695C] hover:bg-teal-50 text-sm font-bold py-2 rounded-lg transition-colors">
+                                Asignar método
+                            </button>
+<a class="text-[#00695C] text-xs font-bold text-center hover:underline mt-1 flex items-center justify-center gap-1" href="#">
+                                Ver detalle <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="bg-white rounded-[8px] shadow-sm border border-[#E2E8F0] p-6 flex items-center justify-between transition-all hover:shadow-md border-l-4 border-l-blue-500">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xl font-bold text-slate-900">Orden #1021</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-[15px] text-slate-700">
+<span class="material-symbols-outlined text-lg text-slate-400">person</span>
+<span class="font-bold">María Fernanda Gómez</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600">
+<span class="material-symbols-outlined text-lg text-slate-400">home</span>
+<span>Rancho Los Olivos S/N, Querétaro, QRO 76000</span>
+</div>
+<p class="text-xs text-slate-400 font-medium bg-slate-50 self-start px-2 py-1 rounded">5x Pala de punta reforzada, 10x Guantes de Carnaza</p>
+</div>
+</div>
+<div class="flex flex-col items-center px-10 border-x border-slate-100 h-28 justify-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-extrabold bg-blue-100 text-blue-800 mb-3 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
+                                En camino
+                            </span>
+<span class="text-sm font-bold text-slate-900">Fecha estimada</span>
+<span class="text-lg font-extrabold text-[#00695C]">14 Oct</span>
+</div>
+<div class="flex flex-col gap-2.5 pl-10 min-w-[240px]">
+<button class="w-full bg-[#2E7D32] hover:bg-[#1b5e20] text-white text-sm font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm" onclick="alert('Entrega confirmada (demo)')">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+                                Marcar como Entregado
+                            </button>
+<a class="text-[#00695C] text-xs font-bold text-center hover:underline mt-1 flex items-center justify-center gap-1" href="#">
+                                Ver detalle <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="bg-white rounded-[8px] shadow-sm border border-[#E2E8F0] p-6 flex items-center justify-between transition-all hover:shadow-md">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xl font-bold text-slate-900">Orden #1019</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-[15px] text-slate-700">
+<span class="material-symbols-outlined text-lg text-slate-400">person</span>
+<span class="font-bold">Héctor Salazar</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600">
+<span class="material-symbols-outlined text-lg text-slate-400">home</span>
+<span>Bodega Central No. 12, Celaya, GTO 38010</span>
+</div>
+<p class="text-xs text-slate-400 font-medium bg-slate-50 self-start px-2 py-1 rounded">1x Sistema de riego por goteo profesional (Kit Completo)</p>
+</div>
+</div>
+<div class="flex flex-col items-center px-10 border-x border-slate-100 h-28 justify-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-extrabold bg-amber-100 text-amber-800 mb-3 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-2"></span>
+                                Pendiente
+                            </span>
+<span class="text-sm font-bold text-slate-900">Fecha estimada</span>
+<span class="text-lg font-extrabold text-[#00695C]">16 Oct</span>
+</div>
+<div class="flex flex-col gap-2.5 pl-10 min-w-[240px]">
+<button class="w-full bg-[#00695C] hover:bg-[#004d43] text-white text-sm font-bold py-2.5 rounded-lg transition-colors shadow-sm" onclick="alert('Estado actualizado (demo)')">
+                                Marcar como En Camino
+                            </button>
+<button class="w-full border-2 border-[#00695C] text-[#00695C] hover:bg-teal-50 text-sm font-bold py-2 rounded-lg transition-colors">
+                                Asignar método
+                            </button>
+<a class="text-[#00695C] text-xs font-bold text-center hover:underline mt-1 flex items-center justify-center gap-1" href="#">
+                                Ver detalle <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="hidden flex flex-col items-center justify-center py-24 bg-white rounded-xl border-2 border-dashed border-slate-200">
+<div class="w-32 h-32 bg-slate-50 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-6xl text-slate-300">local_shipping</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-800 mb-2">No hay entregas pendientes</h3>
+<p class="text-slate-500 text-center max-w-sm mb-8">¡Buen trabajo! Has gestionado todas las órdenes asignadas para el día de hoy.</p>
+<button class="flex items-center gap-2 px-8 py-3 bg-transparent border-2 border-slate-200 text-slate-600 font-bold rounded-lg hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">refresh</span>
+                        Actualizar lista
+                    </button>
+</div>
+<div class="mt-12 mb-8 flex justify-center">
+<button class="px-10 py-3 bg-white border border-[#E2E8F0] rounded-lg text-sm font-bold text-slate-600 hover:bg-slate-50 transition-all shadow-sm">
+                        Cargar más entregas
+                    </button>
+</div>
+</div>
+<footer class="p-8 text-center text-[10px] text-slate-400 uppercase tracking-[0.2em] border-t border-slate-100 mt-auto">
+                © 2023 AgroConecta Marketplace • Sistema de Logística Inteligente
+            </footer>
+</main>
+</div>
+
+</body></html>

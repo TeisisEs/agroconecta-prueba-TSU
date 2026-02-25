@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seguimiento de Pedido AgroConecta Standardized</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-green: #2E7D32;
+            --info-blue: #1976D2;
+            --border-color: #E2E8F0;
+            --bg-page: #FAFAFA;
+            --card-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --sidebar-active: #00695C;
+        }
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: var(--bg-page);
+        }
+        .custom-card {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "status-blue": "#1976D2",
+                        "border-gray": "#E2E8F0",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="text-slate-900 min-h-screen">
+<header class="sticky top-0 z-50 w-full bg-white border-b border-[#E2E8F0] px-4 md:px-10 py-3">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between">
+<a href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="flex items-center gap-2" style="text-decoration:none;">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h2 class="text-slate-900 text-xl font-bold tracking-tight">AgroConecta</h2>
+</a>
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-semibold leading-none">Juan Pérez</p>
+<p class="text-xs text-slate-500 mt-1">Comprador Silver</p>
+</div>
+<div class="size-10 rounded-full border border-slate-200 overflow-hidden">
+<img alt="Avatar del usuario" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeQ831AI3xsT3BP2kFl0Uyso4dgbogigb4dTL8LxiGgI_H2hLBqopgGvRhSIo5y9vl-1ZYJdSUKPdwb8kL4SZ1RQBFYvvaD7r6q61LXav3U44AD9Wy1BeLNaVsztaN78qfQJ48Z8k4XXZm_AiYrWpoiHOC-yF-puSujlu6HTMPWkJeyOk5aCjPrN-Rv_caWa2z81PFpwDfEEZ77a4RlHsX9aaaSS4MvuFZjB66Uw7-QRa_mOW6IC_kKshqGL734fyfgGvfs70LBII"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-4 py-8">
+<nav class="flex items-center gap-2 text-sm font-medium mb-4">
+<a class="text-primary hover:underline" href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html">Inicio</a>
+<span class="text-slate-400 material-symbols-outlined text-xs">chevron_right</span>
+<a class="text-primary hover:underline" href="../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html">Mis Pedidos</a>
+<span class="text-slate-400 material-symbols-outlined text-xs">chevron_right</span>
+<a class="text-primary hover:underline" href="../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html">Pedido #1024</a>
+<span class="text-slate-400 material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-500">Seguimiento</span>
+</nav>
+<h1 class="text-[28px] font-bold text-primary leading-tight tracking-tight mb-8">
+        Seguimiento de Pedido #1024
+    </h1>
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="w-full lg:w-[55%]">
+<div class="custom-card overflow-hidden">
+<div class="aspect-video bg-slate-100 relative flex items-center justify-center">
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#2E7D32 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
+<div class="relative z-10 flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-6xl drop-shadow-md" style="font-variation-settings: 'FILL' 1">location_on</span>
+<div class="mt-4 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-lg border border-slate-200">
+<p class="text-xs font-bold text-slate-800 uppercase tracking-wider">Repartidor en movimiento</p>
+</div>
+</div>
+<img alt="Mapa de seguimiento" class="absolute inset-0 w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD47EsV8pU0JHDPAIQoK8jPQ3oH16y0TDR3rl1cxZCpi5kZmbKhuQHtNR_DJwk5MSoYiuTNlVmKWia1M5x-jkjYCMwJIkETgEwK-rKRRy-Ap6dZfrCbs9LT9D4sCEQ7iIUsAqpb0OPeiKfuINgETyN4Pr8VkbKPkvDFBgkdD2M4fwJaF36P6Hh6PqZgRrnICqFJ4fwdpNUaMxIxlzx_TS0htlcBhbkPhIepbw2XWQz1CkRMsNBMxEu9eZl_hN5ICMIlrUsKkpP95c"/>
+</div>
+<div class="p-4 flex justify-between items-center bg-slate-50">
+<div class="flex items-center gap-2 text-slate-600">
+<span class="material-symbols-outlined text-sm">my_location</span>
+<span class="text-sm">Vía Nacional A1, Km 45</span>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-1 hover:underline" href="#">
+                        Ver en mapa completo
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-[45%] flex flex-col gap-6">
+<div class="custom-card p-6">
+<div class="mb-6">
+<span class="bg-[#1976D2] text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                        EN CAMINO
+                    </span>
+<h2 class="mt-4 text-2xl font-bold text-slate-900">
+                        Entrega estimada: <span class="text-primary">Hoy, 14:00 - 16:00</span>
+</h2>
+</div>
+<div class="space-y-0">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm font-bold">check</span>
+</div>
+<div class="w-0.5 h-10 bg-primary"></div>
+</div>
+<div class="pb-6">
+<p class="text-slate-900 font-bold leading-none">Pedido recibido</p>
+<p class="text-xs text-slate-500 mt-1">Lunes, 12 Oct • 09:30</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm font-bold">check</span>
+</div>
+<div class="w-0.5 h-10 bg-primary"></div>
+</div>
+<div class="pb-6">
+<p class="text-slate-900 font-bold leading-none">Pedido procesado</p>
+<p class="text-xs text-slate-500 mt-1">Lunes, 12 Oct • 14:20</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-status-blue flex items-center justify-center ring-4 ring-status-blue/20">
+<div class="size-2 rounded-full bg-white"></div>
+</div>
+<div class="w-0.5 h-10 border-l-2 border-dashed border-slate-300"></div>
+</div>
+<div class="pb-6">
+<div class="flex items-center gap-2">
+<p class="text-status-blue font-black leading-none uppercase">En camino</p>
+<span class="px-1.5 py-0.5 rounded bg-status-blue/10 text-status-blue text-[10px] font-bold">AHORA</span>
+</div>
+<p class="text-xs text-slate-500 mt-1">El repartidor está a 15 min de tu ubicación</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-slate-200 flex items-center justify-center">
+<div class="size-2 rounded-full bg-slate-400"></div>
+</div>
+</div>
+<div>
+<p class="text-slate-400 font-bold leading-none">Entregado</p>
+<p class="text-xs text-slate-400 mt-1">Pendiente</p>
+</div>
+</div>
+</div>
+</div>
+<div class="custom-card p-6 flex flex-col gap-6">
+<div>
+<h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">Detalles de entrega</h3>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="size-10 rounded-lg bg-[#2E7D32]/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">home</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900">Dirección de entrega</p>
+<p class="text-sm text-slate-600">Calle Los Alamos 1234, Barrio Norte, CABA</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-10 rounded-lg bg-[#2E7D32]/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900">Vendedor</p>
+<p class="text-sm text-slate-600">Cooperativa Agrícola "El Trebol"</p>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-3 px-4 bg-[#2E7D32] text-white font-bold rounded-lg hover:bg-[#25632a] transition-colors flex items-center justify-center gap-2" onclick="alert('Chat con vendedor (demo)'); return false;">
+<span class="material-symbols-outlined text-lg">chat</span>
+                    Contactar al vendedor
+                </button>
+</div>
+</div>
+</div>
+<div class="mt-8 bg-[#2E7D32]/5 rounded-xl p-6 border border-[#2E7D32]/10 flex flex-wrap items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="size-16 bg-white border border-slate-200 p-2 overflow-hidden rounded-lg">
+<img alt="Producto del pedido" class="w-full h-full object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrF4A-DzLLjJVrIIRMm4PdjNtMyTGGNc-KAyLc00Yv64xOrNiQOmLPVqsytJpE5q01qHOdZIVVm6cz50L1o6OT5RtxlcLlF6IQfptowEXDmpy7qCbZZ-wo-5nP7kJWc7jKOxis0sbmoFiCn9-IAcsx5bfJ_YIJSSpsmf7MpFuCjiMdBhja0gp4tRIp7HoQVSj-rfGqS1KQFTzdaMsiYDJqHC8U4AMT9KCZDfPY0kjWu4O_fv_qURKTB_EbNMYxMLO5QxXHy5-5Nw4"/>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-500 uppercase tracking-wide">Producto</p>
+<p class="text-lg font-bold text-slate-900">Cajón de Tomates Orgánicos (20kg)</p>
+</div>
+</div>
+<div class="flex gap-8">
+<div class="text-right">
+<p class="text-xs font-bold text-slate-500 uppercase">Cantidad</p>
+<p class="text-lg font-bold text-slate-900">x2 Unidades</p>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-slate-500 uppercase">Total</p>
+<p class="text-lg font-bold text-primary">$45.500,00</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-12 border-t border-slate-200 py-8 text-center text-slate-500 text-sm">
+<p>© 2024 AgroConecta - El mercado directo del campo a tu mesa.</p>
+</footer>
+
+</body></html>

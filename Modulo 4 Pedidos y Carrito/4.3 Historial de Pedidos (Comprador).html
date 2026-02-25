@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mis Pedidos - AgroConecta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "secondary": "#00695C",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-4 md:px-8 h-16 flex items-center justify-between gap-4">
+<!-- Logo -->
+<a href="../Modulo 3 Catalogo y Busqueda/3.1 Home  Catálogo General.html" class="flex items-center gap-2 shrink-0" style="text-decoration:none;">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h2 class="text-xl font-extrabold tracking-tight text-primary">AgroConecta</h2>
+</a>
+<!-- Wide Search Bar -->
+<div class="hidden md:flex flex-1 max-w-2xl px-4">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2.5 pl-10 pr-4 focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Buscar productos, granjas o insumos..." type="text"/>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg relative" onclick="window.location.href='4.1 Carrito de Compras.html';">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800 mx-1"></div>
+<button class="flex items-center gap-2 p-1 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden" data-alt="User profile avatar photo">
+<img alt="Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNats-vkivAgFrbIZAUjZQp-9cTFcXbn69_oanYH6aqH9xnMQW-ujJNYoM9h46jqU-Af99RI1AiRNNAA2Nv7Zyd9F2ZGW822H-_s9IaDZUVDS4YGXP6pPUqVFgriGAHthN19RiT2zLAkRMJ2vH9bw_Q4Wlh5ecbF8lBypuITkOoky9fu_y34mk9iT2-gMDxQIO5Lwtoo0ACX-AaPYe4s7E9AWphggfYk_J30ejvQxXxrNRrw7fGasKPwd7yNT5zCKvYjFMgW65FGc"/>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-sm">expand_more</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-4 md:px-8 py-8">
+<!-- Page Title -->
+<div class="mb-8">
+<h1 class="text-3xl font-black text-primary leading-tight tracking-tight">Mis Pedidos</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Gestiona y revisa el historial de tus compras agrícolas</p>
+</div>
+<!-- Filter Bar Card -->
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-5 mb-8">
+<div class="flex flex-col gap-6">
+<!-- Status Chips -->
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full text-sm font-semibold transition-colors bg-primary text-white">Todos</button>
+<button class="px-4 py-2 rounded-full text-sm font-semibold transition-colors bg-amber-100 text-amber-700 hover:bg-amber-200">Pendiente</button>
+<button class="px-4 py-2 rounded-full text-sm font-semibold transition-colors bg-blue-100 text-blue-700 hover:bg-blue-200">Procesado</button>
+<button class="px-4 py-2 rounded-full text-sm font-semibold transition-colors bg-green-100 text-green-700 hover:bg-green-200">Pagado</button>
+<button class="px-4 py-2 rounded-full text-sm font-semibold transition-colors bg-red-100 text-red-700 hover:bg-red-200">Cancelado</button>
+</div>
+<div class="flex flex-col lg:flex-row gap-4">
+<!-- Date Range Inputs -->
+<div class="flex flex-1 gap-4">
+<div class="flex-1">
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Fecha Inicio</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">calendar_today</span>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-2.5 pl-10 text-sm focus:border-primary focus:ring-primary/20" placeholder="DD/MM/AAAA" type="text"/>
+</div>
+</div>
+<div class="flex-1">
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Fecha Fin</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">calendar_today</span>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-2.5 pl-10 text-sm focus:border-primary focus:ring-primary/20" placeholder="DD/MM/AAAA" type="text"/>
+</div>
+</div>
+</div>
+<!-- Order Search -->
+<div class="flex-1 lg:max-w-xs">
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Buscar por # pedido</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">tag</span>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-2.5 pl-10 text-sm focus:border-primary focus:ring-primary/20" placeholder="Ej: 1024" type="text"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Order List -->
+<div class="space-y-4">
+<!-- Order Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-5">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-slate-900 dark:text-white">#1024</span>
+<span class="text-slate-400 text-sm">12 de Oct, 2023</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider">Pagado</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 py-2">
+<div class="flex items-center gap-6">
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Product" class="inline-block h-10 w-10 rounded-lg ring-2 ring-white dark:ring-slate-900 object-cover" data-alt="Sack of organic potatoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH_DkjgA7gcWhAIeJNGH2aPQP3Ta_V_lHIaiErXL7BpKpOHsbsuhjSROs-wu-sK3I91dgk1YutfvFSSXRxt8mP6dt6_3duFIjDDTDGNpyO0ePgyoaOi4lxfS7iDYb4eI2QcrNEbzu-P3_rD51_3BFGms1dK9lY8-3LhCoE6Vbza_AFb9UKXlcZgSRrqPQYQeoY7diVY7mvmz4-IyqqO50NoYjtY4dGbLe4dHFnUMEMEr6syE4QBhFCd0snHg3aDSx4mvmsialOpbY"/>
+<img alt="Product" class="inline-block h-10 w-10 rounded-lg ring-2 ring-white dark:ring-slate-900 object-cover" data-alt="Fresh green organic vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFb6TFnPlc-Fomh8e-rWxZcbWSYL4QcYuBAedrHatxwr3b1hKGQrkvFOvG2iV79GToq7iMffmKq_qc0zZYeDWYy67j4D6QA5mdf1nEbdL4mFZhhyNMk1Ba1-G7by6m4GvnrqILnAWinxFA_SI35lXSJLw8rvhzmHPIOalyh3MARiO_bGdowtBqOunDj8RtI8Ut0nYkF2cLSll10RF4-eoFbCguP3iqvOu_-nVw0EGsqzNHFQ9G-OiTO5KaJ4Ceg0JxqBFmJ_dwbGQ"/>
+<img alt="Product" class="inline-block h-10 w-10 rounded-lg ring-2 ring-white dark:ring-slate-900 object-cover" data-alt="Tray of organic tomatoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjEE0Rklmu3oqBTx2MG_dbDgX5KBQbyQRqkW1gjtV25roto_kNMI5CvoFk1IKvkXnwc6KOPJAT2Ifg3QGT77oIkK6uMNlxIB_nsAcF6kWxXKy60kYbmGLNvT1_kiiXqG1TZW5GkZ8zyVTgutq5HfwIE2ElkZymxJcABeKAwDlY4QO09J0j6NjcEf55UVx81uuavUjHLDeQNbyiVRpSgRiqMjGOVN3LKE6XZPBSIEFHtikNaYxgoNrbpARvvabhD9zHDULAsEoolq0"/>
+<div class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-500 text-xs font-bold ring-2 ring-white dark:ring-slate-900">+1</div>
+</div>
+<div>
+<p class="text-sm text-slate-500 font-medium">Comercio</p>
+<p class="text-[#00695C] font-bold">Finca El Porvenir</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 uppercase font-bold tracking-widest">Total</span>
+<span class="text-xl font-black text-slate-900 dark:text-white leading-none">$15.50</span>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 transition-colors" onclick="window.location.href='../Modulo 5 Pagos y Reembolsos/5.2 Gestion de Reembolsos.html';">Solicitar reembolso</button>
+<button class="px-4 py-2 text-sm font-bold text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-all" onclick="window.location.href='../Modulo 6 Envios y Entregas/6.1 Seguimiento de Entrega (Comprador).html';">Ver detalle</button>
+</div>
+</div>
+</div>
+<!-- Order Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-5">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-slate-900 dark:text-white">#1019</span>
+<span class="text-slate-400 text-sm">05 de Oct, 2023</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">Procesado</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 py-2">
+<div class="flex items-center gap-6">
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Product" class="inline-block h-10 w-10 rounded-lg ring-2 ring-white dark:ring-slate-900 object-cover" data-alt="Bag of organic coffee beans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3wTEUdDcUJ2-BlUz6895y9K3rh8edH2Y_9F6gSHkCmw3YIXyTvGJpVYjiF6VF7HT8nERDqF5poGN3ueFSKlFU_oOKzXUTNQmmyzmaM9GqNv2D6Pdlh9U3Nx-qTPk-MxMNH-w5c1EXzxd7_fpy6Vm0P7NF7vXVvRoKgq-wdS3ArUL6F2DJO8U02si1gWcZSWVgq8F_opUgMRNlHzjhAyLuGxfH4c5lqyzQstBNwbrPvyWafankVxQCTfTG_Yv7u1eYRklHUGQCfpI"/>
+<img alt="Product" class="inline-block h-10 w-10 rounded-lg ring-2 ring-white dark:ring-slate-900 object-cover" data-alt="Selection of organic root vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC58hLmV1aTS7HibedmNj9-bD74coF7gZfSbIoe3QO-E6TO-mwgrYFI8NrogJcFTK1razKHYykTN87YsMFspk91YAeDpHw3UNBgRPa4BgLsS3XTYqD-BzHVKbexIKnktrLtPUJC3jnhZTPXmMZQurBY8OtrQb4xQCMbiUk6EgVe7pjhuzLJjU2NHSn80sO0ZSyMj3TCL844jOFiOIO-I7z0tgbo5mgYIh3JQHKhA6hyTxHTx9920KSx4DRlBmQN777szHW6-TyDpBs"/>
+</div>
+<div>
+<p class="text-sm text-slate-500 font-medium">Comercio</p>
+<p class="text-[#00695C] font-bold">Distribuidora Los Andes</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 uppercase font-bold tracking-widest">Total</span>
+<span class="text-xl font-black text-slate-900 dark:text-white leading-none">$42.00</span>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 text-sm font-bold text-slate-500 hover:text-slate-700 transition-colors" onclick="window.location.href='../Modulo 5 Pagos y Reembolsos/5.2 Gestion de Reembolsos.html';">Solicitar reembolso</button>
+<button class="px-4 py-2 text-sm font-bold text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-all" onclick="window.location.href='../Modulo 6 Envios y Entregas/6.1 Seguimiento de Entrega (Comprador).html';">Ver detalle</button>
+</div>
+</div>
+</div>
+<!-- Order Card 3 (Canceled) -->
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-5 opacity-75">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-slate-900 dark:text-white">#0988</span>
+<span class="text-slate-400 text-sm">22 de Sep, 2023</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider">Cancelado</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 py-2">
+<div class="flex items-center gap-6">
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Product" class="inline-block h-10 w-10 rounded-lg ring-2 ring-white dark:ring-slate-900 object-cover grayscale" data-alt="Bottles of organic honey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMK_wLA-nyTF2IhgYyqJ20THe7F_IklchXwen2OP4_E1MxNzzA32hsHtTficUTRSQXGf75O4WRPhCu0FO3sUpIui7a22wlufARpBMXtfBKan3mRqf8LIGz5fe6afGlu5riRBg7pxwQqOAabruRtKUFUfqSkw0L6NPm9ffcLbENjHpdz-Lk2ExzfRlIXqz1FXn70x5LC9HVf6DIsD3tN509khnF_Y1z8VFPy6XzwG2K-lAj2hX9SquqDDjgdHDPtIfobQXY6CMhKOc"/>
+</div>
+<div>
+<p class="text-sm text-slate-500 font-medium">Comercio</p>
+<p class="text-[#00695C] font-bold">Apicultura del Sol</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 uppercase font-bold tracking-widest">Total</span>
+<span class="text-xl font-black text-slate-900 dark:text-white leading-none">$12.50</span>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 text-sm font-bold text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-all" onclick="window.location.href='../Modulo 6 Envios y Entregas/6.1 Seguimiento de Entrega (Comprador).html';">Ver detalle</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex items-center justify-center gap-2">
+<button class="flex items-center gap-1 px-4 py-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+                Anterior
+            </button>
+<div class="flex items-center gap-1">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-sm">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 font-bold text-sm transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 font-bold text-sm transition-colors">3</button>
+</div>
+<button class="flex items-center gap-1 px-4 py-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors">
+                Siguiente
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer Space -->
+<footer class="mt-20 py-10 text-center text-slate-400 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-8">
+<p class="text-sm">© 2024 AgroConecta Marketplace. Todos los derechos reservados.</p>
+</div>
+</footer>
+</body></html>

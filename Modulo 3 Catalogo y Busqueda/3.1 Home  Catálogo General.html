@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgroConecta - Catálogo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "secondary": "#00695C",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between gap-8">
+<div class="flex items-center gap-2 shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl font-bold">eco</span>
+<h1 class="text-2xl font-black tracking-tight text-slate-900 dark:text-white">AgroConecta</h1>
+</div>
+<div class="flex-1 max-w-2xl">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full h-12 pl-12 pr-4 bg-slate-100 dark:bg-slate-800 border-none rounded-full focus:ring-2 focus:ring-primary/20 text-sm placeholder:text-slate-500" placeholder="Buscar productos, comercios..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<button class="relative p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-4 h-4 bg-red-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-slate-900">3</span>
+</button>
+<button class="relative p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.1 Carrito de Compras.html'">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">shopping_cart</span>
+<span class="absolute top-1.5 right-1.5 w-4 h-4 bg-red-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-slate-900">1</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary/10 border-2 border-primary/20 overflow-hidden cursor-pointer" onclick="window.location.href='../Modulo 4 Pedidos y Carrito/4.3 Historial de Pedidos (Comprador).html'">
+<img class="w-full h-full object-cover" data-alt="User profile avatar of a smiling person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbwuE51XTII-nFL7uW6yQDL10coJ2lzCwwmRfH3YpwteyAcYKxNxWc3Pz2B4FEiW2Tb8aLsa-R-sKDmxdOWIN2T0-cq-y9CRxjsSG2AMxz0taEZvhNC-GIfDTApy4M8SCmYqZh8ONlPWgSil-0vD4aKjAe_kotuenjwH1fbebNth44Hru28eKKwuNoCyyB7U5krD_CPIROe1pPYzAfzBNUQtR8kwXt1-u7-36nuUA5kbwqfrzFwzV9eZda3O7or8PUqkq5HtAbzBA"/>
+</div>
+</div>
+</div>
+</header>
+<nav class="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-6 py-4">
+<div class="flex items-center gap-3 overflow-x-auto hide-scrollbar">
+<button class="px-6 py-2 bg-primary text-white rounded-full text-sm font-semibold whitespace-nowrap">Todas</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-full text-sm font-medium whitespace-nowrap hover:border-primary transition-colors">🥕 Verduras</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-full text-sm font-medium whitespace-nowrap hover:border-primary transition-colors">🍎 Frutas</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-full text-sm font-medium whitespace-nowrap hover:border-primary transition-colors">🥛 Lácteos</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-full text-sm font-medium whitespace-nowrap hover:border-primary transition-colors">🥩 Carnes</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-full text-sm font-medium whitespace-nowrap hover:border-primary transition-colors">🍯 Miel y Jaleas</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-full text-sm font-medium whitespace-nowrap hover:border-primary transition-colors">🍞 Panadería</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-full text-sm font-medium whitespace-nowrap hover:border-primary transition-colors">🌿 Orgánicos</button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1280px] mx-auto px-6 py-8 flex flex-col gap-12">
+<section class="relative rounded-xl overflow-hidden h-[340px] flex items-center px-12 bg-gradient-to-r from-primary to-emerald-700">
+<div class="absolute inset-0 mix-blend-overlay opacity-30 bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;q=80&amp;w=1200')] bg-cover bg-center" data-alt="Lush green farm field landscape at sunrise"></div>
+<div class="relative z-10 max-w-lg space-y-6">
+<h2 class="text-5xl font-black text-white leading-tight">Productores locales, entrega en tu zona</h2>
+<p class="text-white/90 text-lg">Apoya al campo comprando productos frescos directamente de la fuente con trazabilidad garantizada.</p>
+<button class="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-slate-100 transition-colors shadow-lg shadow-black/10">Explorar ahora</button>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Categorías populares</h2>
+<a class="text-primary font-semibold hover:underline" href="#">Ver todas</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center gap-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600 text-3xl">nutrition</span>
+</div>
+<span class="font-bold text-slate-800 dark:text-slate-200">Verduras</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center gap-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-red-50 dark:bg-red-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-600 text-3xl">bakery_dining</span>
+</div>
+<span class="font-bold text-slate-800 dark:text-slate-200">Frutas</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center gap-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 text-3xl">water_drop</span>
+</div>
+<span class="font-bold text-slate-800 dark:text-slate-200">Lácteos</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center gap-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-800 text-3xl">kebab_dining</span>
+</div>
+<span class="font-bold text-slate-800 dark:text-slate-200">Carnes</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center gap-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-600 text-3xl">breakfast_dining</span>
+</div>
+<span class="font-bold text-slate-800 dark:text-slate-200">Panadería</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center gap-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-yellow-50 dark:bg-yellow-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-yellow-600 text-3xl">hive</span>
+</div>
+<span class="font-bold text-slate-800 dark:text-slate-200">Miel</span>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Productos destacados</h2>
+<a class="text-primary font-semibold hover:underline" href="#">Ver todos</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 group">
+<div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="window.location.href='3.2 Detalle de Producto.html'">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Fresh red tomatoes on the vine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg1nL23-txeAZzR2rEKtUHJ7UHYOmrDHexy-wjRKa5ypwIsk9OgzooWeg-edFHhxO9jVZoWMu3r6OslbQCBcSkAXHd1KnjKMTD3Aaqt2qmf-Lb2r3VMC2u0RifhmzcIZo1JUOL8A9RteaG3SGhx4VRxnxyUKYBd1nAQXAJSHMixCn0VNq9zli1kh1bNq9C7toMxafYPJynGX56g8-FZyZ61aXS1WLTMKJAO1GqgkZPSLkvbWa5IJV6AF5Dcx5paq39Gt0cszMVMnE"/>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-2 py-1 rounded-full flex items-center gap-1 text-[10px] font-bold text-slate-600 dark:text-slate-300 shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+<span>A 2.5 km</span>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Huerta Orgánica San Juan</p>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Tomates Cherry Premium (500g)</h3>
+<p class="text-xl font-black text-primary">$3.500</p>
+<button class="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2" onclick="alert('Producto agregado al carrito (demo)'); return false;">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                            Agregar al carrito
+                        </button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 group">
+<div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="window.location.href='3.2 Detalle de Producto.html'">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A crate of diverse fresh green vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHqL-T8T2IRiu2S6AbgjvnVaxDiX6VWefkPcxNBZFaI1BfdEXOdkSAoKONjLXupQOyes_xL1_55x30_jAlcP30rqpFOt0nZjuOOYpMNfrV1AYi3CvYCCjWIf2p50t4yGZx0MlEAV7r5UpsCzbF-WnUwNn-_Adsz_ye3-bFnOqBjhQoEE0xl2rBnzglsenTXXLpESYz12WxblRI4qq1gItdunGThZMxfHEAdVVL22LHFfFifMvmH6sRCDHLUfcqAOMctm2c6Ur4U68"/>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-2 py-1 rounded-full flex items-center gap-1 text-[10px] font-bold text-slate-600 dark:text-slate-300 shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+<span>A 4.1 km</span>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Granja El Amanecer</p>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Cajón de Verduras de Estación</h3>
+<p class="text-xl font-black text-primary">$12.900</p>
+<button class="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2" onclick="alert('Producto agregado al carrito (demo)'); return false;">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                            Agregar al carrito
+                        </button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 group">
+<div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="window.location.href='3.2 Detalle de Producto.html'">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Glass jar of golden organic honey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyGs3ysYgEOjdKh9JA192-IO0fncqzb8-qe5kZEcF1Tjr0-Ho8NJKM7XP9A0IUkrcn_thUYGJh4CBsMkTfdanIx4oPbFqy-sATBY9PnQ2FbXdN1Qi5kfO8dpA2i_vcFkZVb4AUemQtC4UhbVBLRKz0v2gHnq6cYhKcsQp17nJzEkPT9lncNKq4CZGi1AILws2EevwR-Hv6nXzHKcdq0sg7TqlbEXc0ihEzrcTHsfV1-7vQ_ji6LQGHe03t4y0DHLSUSxDnFNQyzO4"/>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-2 py-1 rounded-full flex items-center gap-1 text-[10px] font-bold text-slate-600 dark:text-slate-300 shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+<span>A 1.8 km</span>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Apicultura Los Cardos</p>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Miel de Abeja Pura 100% Orgánica</h3>
+<p class="text-xl font-black text-primary">$5.200</p>
+<button class="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2" onclick="alert('Producto agregado al carrito (demo)'); return false;">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                            Agregar al carrito
+                        </button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 group">
+<div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="window.location.href='3.2 Detalle de Producto.html'">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Selection of artisan cheeses on a wooden board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4qqDXVHdCcU0tEN4YQIeOTqsyRPQ8wW3OaDscEr25m3qlKo1CWTRe07upi0loDas1LUErfqxwpceVRQrrhGaua4KB8dCXkN_X_WBmt6yJ-h7I18C4fPbgrXG8DZy98x7PXIE4-yj2M8sySXJBCOgmaRjja9-923wqx1q8gvRazq1Pub468bnEZ5GtNOnVF78iqnUc-BeLVNIWjMMr_KmvdYmewRhI5NHJyZjjzWD-zLqVG_glEaXmYO-EUWPe4-Oo0xcUN7UWLtw"/>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-2 py-1 rounded-full flex items-center gap-1 text-[10px] font-bold text-slate-600 dark:text-slate-300 shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+<span>A 6.3 km</span>
+</div>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Lácteos de la Villa</p>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Pack Quesos Artesanales (4 varietales)</h3>
+<p class="text-xl font-black text-primary">$9.800</p>
+<button class="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2" onclick="alert('Producto agregado al carrito (demo)'); return false;">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+                            Agregar al carrito
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<section class="pb-16">
+<div class="flex justify-between items-end mb-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Comercios cercanos a ti</h2>
+<a class="text-primary font-semibold hover:underline" href="#">Ver todos</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 relative pb-6">
+<div class="h-32 w-full overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Farmer's market stall with colorful produce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL25fLKbcM8_TFZKDPrnxuUKE-D96HB6e49M6Vt2FQIliCSbjNk2mvGrokI-fKqPk10PtsjT5SEJ8P-0PwLytIXobz_HXLHH-EanthKx7b8CplzxYz7BtR8XOYzvSa1mXDfRbK96tyl6XSAIaetLLy90MdIjuAJKFslTfqy55rsizxlwOw4J9Yo5O1A7EiS6uqyvocZGy8oZ3yJUwFnjZBIb0stmAWJGgGlrPjj2KCCGKPqEzumn41llgalXkCO1DHHw5gxW_mpXU"/>
+</div>
+<div class="px-6 -mt-8 relative z-10 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-slate-900 border-4 border-white dark:border-slate-800 shadow-md overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="Commerce logo featuring a green leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6hwCPON2LLoQeugAekpx0gUFfnRdYMKDc2AeatbV3nYxqxm0Q2dgpsmBvgdHbIpRsHLdPiUYfLV9LbTN0u4rLuX54N61SlpT5oURgdCW68pJXtLGj71m9cNNwIQGShFWiP7t65fDMddwOWZg-A3m1u8WiyQNRFtU4UK8gLGfMyptUTKj-rIaOx3y7iRvEtlO4bjsTF8Tkod1i6nPjTP2J8nmoDEebRRq3gVbMwNqswy8ZqST8zeyg7CUcs8TW9pxOEekNLTwIciE"/>
+</div>
+<h3 class="font-black text-xl text-slate-900 dark:text-white mb-1">Mercado de la Tierra</h3>
+<div class="flex gap-2 mb-4">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Orgánico</span>
+<span class="bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Cercano</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 text-center mb-6 px-4">Especialistas en cultivos de estación sin pesticidas. Directo del productor.</p>
+<button class="w-full py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all duration-200">Ver comercio</button>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">1.2 km</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 relative pb-6">
+<div class="h-32 w-full overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Freshly baked loaves of bread in a basket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwJfBOwwE2otqZRbc9rKruG6ClsM79TJZUt7DJ8ZsUWBfR49yk2kRVyP3v1Ah_uR6po48Fg4SckY6nMEoQvk958PH0p_SsIkQjOoGAq7iMjf_YDV59fjD1mIweiGerQxuSsNrNzrNuAuAIYd6U7Yzs9FUcMySy3cskmZoUuS10xTUGcfwOdHqBhlhEGLOpIUCDZU1Pt5uaKlEUZMfGnNmu19M8xnKZ_w1K_oKbNhodmoqCAYCTG1CKWOn-Oyu8GJaBcQkJvOLP9m8"/>
+</div>
+<div class="px-6 -mt-8 relative z-10 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-slate-900 border-4 border-white dark:border-slate-800 shadow-md overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="Commerce logo with wheat icons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn-z4an7LvPRMWh-32kLWfejpLA-385_AdPF6bQ8WFH9do64nO0z7MLNjnXP4MyiXWetNqk8VMLpK2dYKb6GAZgs93EYa6XAaUry_oLZJHRclEEg0NB2GTZrIJGvJxCSdKJe_3Lxb0VQNN9NhGOyzWvvxVuQM9h5Sjitut_TyzSKkbX5XjVyX3bOE76Hw69N2W6vaVbRxm-5CZO3frL8qICPGGEaDWRBQp2yaXGB7zxLD6vXlSSi3Ty2Jfjg__5LYlbuQw9vhxxO4"/>
+</div>
+<h3 class="font-black text-xl text-slate-900 dark:text-white mb-1">Pan de Campo Real</h3>
+<div class="flex gap-2 mb-4">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Artesanal</span>
+<span class="bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Premium</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 text-center mb-6 px-4">Panadería de masa madre y harinas integrales molidas en piedra.</p>
+<button class="w-full py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all duration-200">Ver comercio</button>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">2.8 km</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 relative pb-6">
+<div class="h-32 w-full overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Herd of cows grazing in a green meadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3XAG9iaNtDMrEnxNNnXkJz0w-PZ_qlRzCaf0mqedGsgHj__IYdsjQsrH5gXIicyKUsMYy-p0ps10z7cSFsvTIZoxVZn0csiLujX5K5PiTzi_F3lTpNBRvOua-7W6uinO0AwndV9Lc7KLfiYq77NCdvBiPtDksrcgb5F4ZIEtHmFhUYR04wExrMaJwatEcvXfzRayhh-j5Sd4Hx1IcWXxIH_x41nr2u_06PytFKs7Ezjvaq0d-jDsEM1lFL7gnJifdH4c_M68daao"/>
+</div>
+<div class="px-6 -mt-8 relative z-10 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-slate-900 border-4 border-white dark:border-slate-800 shadow-md overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="Commerce logo showing a small farm house" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeESPidX7f9nzATBk8nd2n0K3dKnThLtmomx1ufZoVtRSmhgOpZqizX8VquAQvTmUWgmTSBE-gEiho0zZWJTQtK9-8gVV3SreseEkxoq1XD0jpRK_r6_mxeZ9EGTduQrCSlAnnOo9UAGTM37AVDR3OIzjN7nY8J4q2Ei2aIQF3xPJkKZk_fLpJCVsLF8YqqrFQLnLJtMLTq5Uc9QMdMVbZNOmaYl5G1F3ta60kwy5WFBnUiFP_H8pSeUh9PYmD6VnfSM3Gl8-fkfU"/>
+</div>
+<h3 class="font-black text-xl text-slate-900 dark:text-white mb-1">Lácteos El Trébol</h3>
+<div class="flex gap-2 mb-4">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Lácteos</span>
+<span class="bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Sustentable</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 text-center mb-6 px-4">Leche fresca diaria, quesos madurados y yogures sin conservantes.</p>
+<button class="w-full py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all duration-200">Ver comercio</button>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">5.1 km</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#1B5E20] text-white py-12">
+<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl font-bold">eco</span>
+<h2 class="text-xl font-black">AgroConecta</h2>
+</div>
+<p class="text-slate-400 text-sm">Conectando el campo con tu mesa. La plataforma líder en comercio justo para productores locales.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4">Explorar</h4>
+<ul class="text-slate-400 text-sm space-y-2">
+<li><a class="hover:text-primary" href="#">Categorías</a></li>
+<li><a class="hover:text-primary" href="#">Mapa de Productores</a></li>
+<li><a class="hover:text-primary" href="#">Ofertas de Temporada</a></li>
+<li><a class="hover:text-primary" href="#">Suscripciones</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Comunidad</h4>
+<ul class="text-slate-400 text-sm space-y-2">
+<li><a class="hover:text-primary" href="#">Vender en AgroConecta</a></li>
+<li><a class="hover:text-primary" href="#">Historias de Campo</a></li>
+<li><a class="hover:text-primary" href="#">Programa de Referidos</a></li>
+<li><a class="hover:text-primary" href="#">Ayuda y Soporte</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Newsletter</h4>
+<p class="text-slate-400 text-sm mb-4">Recibe las mejores ofertas y novedades directamente en tu mail.</p>
+<div class="flex gap-2">
+<input class="bg-slate-800 border-none rounded-lg flex-1 text-sm focus:ring-1 focus:ring-primary" placeholder="Tu email" type="email"/>
+<button class="bg-primary px-4 py-2 rounded-lg font-bold">Unirse</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+            © 2024 AgroConecta. Todos los derechos reservados. Hecho con ❤️ para el agro.
+        </div>
+</footer>
+</body></html>
